@@ -1,18 +1,98 @@
 {
   "v2": {
     "transposit": {
+      "dependencies": [{
+        "name": "transposit/slack:v1.*.*",
+        "alias": "slack_identify"
+      }, {
+        "name": "transposit/slack:v1.*.*",
+        "alias": "slack_bot"
+      }],
       "operations": [{
-        "id": "hello_world",
-        "description": "Returns \"Hello, world\" in different languages",
+        "id": "webhook",
         "function": {
-          "js": "hello_world.js"
+          "parameters": [{
+            "name": "http_event",
+            "default": {
+              "text": "{   \"query_parameters\": {},   \"headers\": {     \"X-Slack-Signature\": \"v0=XXX\",     \"Accept\": \"application/json,*/*\",     \"X-Request-ID\": \"fXXX\",     \"X-Forwarded-Proto\": \"https\",     \"User-Agent\": \"Slackbot 1.0 (+https://api.slack.com/robots)\",     \"Host\": \"api.transposit.com\",     \"Accept-Encoding\": \"gzip,deflate\",     \"X-Forwarded-Port\": \"443\",     \"X-Amzn-Trace-Id\": \"Root=1-5cdec48b-69a949c8591a0c7d9943762d\",     \"X-Slack-Request-Timestamp\": \"1558103179\",     \"X-Forwarded-For\": \"18.209.110.231\",     \"Content-Length\": \"351\",     \"Content-Type\": \"application/x-www-form-urlencoded\"   },   \"http_method\": \"POST\",   \"body\": \"token=XXX&team_id=TXXX&team_domain=transposit&channel_id=DXXX&channel_name=directmessage&user_id=UXXX&user_name=iggy&command=%2Fcommand&text=sampletext&response_url=https%3A%2F%2Fhooks.slack.com%2Fcommands%2FXXX\" }"
+            },
+            "type": "OBJECT"
+          }],
+          "js": "webhook.js"
         },
         "access": {
-          "requireUser": true
+          "requireApiKey": true,
+          "webhook": true
+        }
+      }, {
+        "id": "map_users",
+        "function": {
+          "js": "map_users.js"
+        }
+      }, {
+        "id": "convert_slack_to_transposit_user",
+        "function": {
+          "parameters": [{
+            "name": "userId",
+            "type": "STRING"
+          }],
+          "js": "convert_slack_to_transposit_user.js"
+        }
+      }, {
+        "id": "found",
+        "function": {
+          "parameters": [{
+            "name": "slackBody",
+            "type": "OBJECT"
+          }],
+          "js": "found.js"
+        }
+      }, {
+        "id": "not_found",
+        "tql": {
+          "parameters": [{
+            "name": "slackUserId",
+            "type": "STRING"
+          }, {
+            "name": "slackChannelId",
+            "type": "STRING"
+          }],
+          "tql": "-- This operation gets run when the user has not yet visited the configuration page to connect their\n-- slack user. Please visit Users >> User Configuration for more details.\nSELECT * FROM slack_bot.post_chat_ephemeral\n  WHERE $body.channel = @slackChannelId\n  AND $body.user = @slackUserId\n  AND $body.text = \"User not found\"\n  AND $body.blocks = (SELECT [{\n      \"type\": \"section\",\n      \"text\": {\n        \"type\": \"mrkdwn\",\n        \"text\": \"Please configure your user\"\n      },\n    }])\n"
+        }
+      }],
+      "dataConnections": [{
+        "ref": "slack_identify.raw",
+        "requireConsumerSignin": true,
+        "overrides": {
+          "swagger": {
+            "oauthConfig": {
+              "scope": "identity.basic"
+            },
+            "executionLimits": {
+            }
+          }
+        },
+        "title": "Slack",
+        "description": "Used to identify you on Slack"
+      }, {
+        "ref": "slack_bot.raw",
+        "overrides": {
+          "swagger": {
+            "oauthConfig": {
+              "scope": "chat:write:bot"
+            },
+            "executionLimits": {
+            }
+          }
         }
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
+      "userSettings": [{
+        "name": "slack_id",
+        "type": "STRING",
+        "hidden": true
+      }],
       "userSettingsDisplay": "GENERATED"
     }
   }
