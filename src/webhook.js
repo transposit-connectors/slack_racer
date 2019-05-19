@@ -1,11 +1,9 @@
 ({ http_event }) => {
   let qs = require('qs.js');
   let body = qs.parse(http_event.body);
-  console.log(body);
   setImmediate(() => {
     let channelId = body.channel_id;
-    let userId = body.user_id
-    
+    let userId = body.user_id    
     let user = api.run('this.convert_slack_to_transposit_user')[0];
     if (user) {
       api.runForAllUsers("this.found", {slackBody: body}, {"users": [user.transpositId]});
