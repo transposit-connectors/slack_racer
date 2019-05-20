@@ -92,7 +92,8 @@
         "name": "slack_id",
         "type": "STRING",
         "hidden": true
-      }]
+      }],
+      "userSettingsDisplay": "GENERATED"
     }
   }
 }
