@@ -1,6 +1,5 @@
 ({slackBody}) => {
-  let text = api.run('this.get_random_paragraph')[0];
-
+  let { text, id }= api.run('this.get_random_paragraph')[0].fields;
   const elements = [{
     type: "textarea",
     name: "input",
