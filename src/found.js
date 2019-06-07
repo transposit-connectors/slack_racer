@@ -23,9 +23,9 @@
   })
   
   const dialogObj = {
-    callback_id: "send_report",
+    callback_id: "type_race",
     notify_on_cancel: false,
-    title: "Copy the text",
+    title: "SlackRacer - Typing Speed Test ",
     elements,
     state
   };
