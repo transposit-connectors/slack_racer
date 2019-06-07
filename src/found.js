@@ -3,6 +3,7 @@
 
   const elements = [{
     type: "textarea",
+    subtype: "email",
     name: "message",
     label: "text",
     value: text
