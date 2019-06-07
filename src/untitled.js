@@ -1,5 +1,5 @@
 (params) => {
-  return api.run('slack_bot.list_ims');
+
 }
 
 /*
