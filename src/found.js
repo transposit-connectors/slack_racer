@@ -1,22 +1,22 @@
 ({slackBody}) => {
   console.log(slackBody);
-    return api.run('slack_bot.open_dialog', {dialog: {body: {
-      "title": "Request a Ride",
-      "submit_label": "Request",
-      "state": "Limo",
-      "elements": [
-        {
-          type: "text",
-          label: "Pickup Location",
-          name: "loc_origin"
-        },
-        {
-          type: "text",
-          label: "Dropoff Location",
-          name: "loc_destination"
-        }
-      ]
-    }}, trigger_id: slackBody.trigger_id});
+  return api.run('slack_bot.open_dialog', {dialog: {body: {
+    "title": "Request a Ride",
+    "submit_label": "Request",
+    "state": "Limo",
+    "elements": [
+      {
+        type: "text",
+        label: "Pickup Location",
+        name: "loc_origin"
+      },
+      {
+        type: "text",
+        label: "Dropoff Location",
+        name: "loc_destination"
+      }
+    ]
+  }}, trigger_id: slackBody.trigger_id});
   let text = api.run('this.get_random_paragraph')[0];
   let post = {
     channel: slackBody.channel_id,
