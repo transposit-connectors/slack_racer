@@ -1,7 +1,6 @@
 ({slackBody}) => {
   console.log(slackBody);
     return api.run('slack_bot.open_dialog', {dialog: {body: {
-      "callback_id": "ryde-46e2b0",
       "title": "Request a Ride",
       "submit_label": "Request",
       "state": "Limo",
