@@ -7,7 +7,7 @@
 
     const old = state.ts/1000
     const newer = payload.action_ts
-	const wpm = payload.submission.original.split(' ').length / ((newer - old) / 60)
+	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
     if (wpm > 220) {
       let msg = {
