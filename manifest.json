@@ -83,6 +83,11 @@
           "requireApiKey": true,
           "webhook": true
         }
+      }, {
+        "id": "untitled",
+        "function": {
+          "js": "untitled.js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
