@@ -72,6 +72,18 @@
         "function": {
           "js": "untitled.js"
         }
+      }, {
+        "id": "webhook_finished",
+        "function": {
+          "parameters": [{
+            "name": "http_event",
+            "default": {
+              "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
+            },
+            "type": "OBJECT"
+          }],
+          "js": "webhook_finished.js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",

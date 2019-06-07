@@ -1,5 +1,5 @@
 (params) => {
-  api.run('slack_bot.get_im_replies')
+  api.run('slack_bot.get_channels_history', {channel: 'DGNG13MQB'});
 }
 
 /*
