@@ -13,7 +13,7 @@
     notify_on_cancel: false,
     title: "Report Message",
     elements,
-    state
+    // state
   };
 
   const trigger_id = slackBody.trigger_id;
