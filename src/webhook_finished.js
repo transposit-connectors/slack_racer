@@ -1,12 +1,10 @@
 ({ http_event }) => {
   let qs = require('qs.js');
   let payload = JSON.parse(http_event.parsed_body.payload);
-  console.log(payload);
-  return;
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
-    body: { "challenge": body.challenge, "greeting": "Hello World" }
+    body: { "greeting": "Hello World" }
   };
 }
 
