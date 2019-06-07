@@ -4,7 +4,6 @@
   setImmediate(() => {
     let channelId = body.channel_id;
     let userId = body.user_id;
-    console.log(body.channel_id);
     let user = api.run('this.convert_slack_to_transposit_user', {userId})[0];
     if (user) {
       api.runForAllUsers("this.serve_text", {slackBody: body}, {"users": [user.transpositId]});
