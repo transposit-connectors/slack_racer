@@ -14,7 +14,7 @@
     if (diffs.length === 0) {
       result = 'Success';
     }
-    console.log(diffs)
+    //console.log(diffs)
     
     // var toReturn = `${result}. Wpm = ${wpm}`;
     // diffs.forEach((diff) => {
