@@ -1,7 +1,5 @@
 ({ http_event }) => {
   let body = http_event.parsed_body;
-  console.log(body);
-  return;
   setImmediate(() => {
     let channelId = body.channel_id;
     let userId = body.user_id;
