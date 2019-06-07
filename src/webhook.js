@@ -1,7 +1,6 @@
 ({ http_event }) => {
-  let qs = require('qs.js');
-  let payload = qs.parse(http_event.parsed_body);
-  console.log(payload);
+  let body = http_event.parsed_body;
+  console.log(body);
   return;
   setImmediate(() => {
     let channelId = body.channel_id;
