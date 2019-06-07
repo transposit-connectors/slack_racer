@@ -5,6 +5,7 @@
     records.push({
       id: rec.fields.id,
       text: rec.fields.text,
+      wpm: rec.fields.wpm,
       user: (rec.fields.user) ? rec.fields.user : 'no highschore'
     })
   })
