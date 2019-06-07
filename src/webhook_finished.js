@@ -2,8 +2,9 @@
   setImmediate(() => {
     let qs = require('qs.js');
     let payload = JSON.parse(http_event.parsed_body.payload);
-	console.log(payload.action_ts)
-    console.log(payload.state.ts)
+    console.log(payload)
+	
+
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
     var result = 'Fail.';
     if (diffs.length === 0) {
