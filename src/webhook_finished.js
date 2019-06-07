@@ -14,13 +14,13 @@
     if (diffs.length === 0) {
       result = 'Success';
     }
+    console.log(diffs)
     
-    
-    var toReturn = `${result}. Wpm = ${wpm}`;
-    diffs.forEach((diff) => {
-      toReturn += `\n${diff}`
-    });
-    
+    // var toReturn = `${result}. Wpm = ${wpm}`;
+    // diffs.forEach((diff) => {
+    //   toReturn += `\n${diff}`
+    // });
+    // console.log(toReturn)
     
     
     
