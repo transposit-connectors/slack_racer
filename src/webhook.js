@@ -1,21 +1,7 @@
 ({ http_event }) => {
   let qs = require('qs.js');
   let body = qs.parse(http_event.body);
-    const elements = [{
-    type: "text",
-    name: "message",
-    label: "Write this",
-  }];
   
-  const dialogObj = {
-    callback_id: "send_report",
-    notify_on_cancel: false,
-    title: "Report Message",
-    elements,
-  };
-
-  const trigger_id = body.trigger_id;
-  return api.run("slack_bot.open_dialog", { $body: { trigger_id, dialog: JSON.stringify(dialogObj) }});
   setImmediate(() => {
     let channelId = body.channel_id;
     let userId = body.user_id;
