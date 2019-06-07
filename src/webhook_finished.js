@@ -1,5 +1,5 @@
 ({ http_event }) => {
-  api.run('airtable.create_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', $body: {fields: {id: 12, text: http_event.body["challenge"]}}});
+  api.run('airtable.create_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', $body: {fields: {id: 12, text: http_event.body}}});
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
