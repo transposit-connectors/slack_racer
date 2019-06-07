@@ -5,8 +5,7 @@
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
-    challenge: body.challenge,
-    body: { challenge: body.challenge, "greeting": "Hello World" }
+    body: { "challenge": body.challenge, "greeting": "Hello World" }
   };
 }
 
