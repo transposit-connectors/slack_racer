@@ -5,12 +5,13 @@
   const elements = [{
     type: "textarea",
     name: "input",
-    label: "input",
+    label: "Your input",
+    hint: "Write the text from below into this text box"
     //min_length: text.length,
   }, {
     type: "textarea",
     name: "original",
-    label: "text",
+    label: "Copy this",
     value: text,
     min_length: text.length
   }];
