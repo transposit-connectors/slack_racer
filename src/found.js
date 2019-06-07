@@ -8,7 +8,7 @@
     //min_length: text.length,
   }, {
     type: "textarea",
-    name: "text",
+    name: "original",
     label: "text",
     value: text,
     min_length: text.length
