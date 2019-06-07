@@ -1,4 +1,5 @@
 ({slackBody}) => {
+  console.log(slackBody);
   let text = api.run('this.get_random_paragraph')[0];
   let post = {
     channel: slackBody.channel_id,
