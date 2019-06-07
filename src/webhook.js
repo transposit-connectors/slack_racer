@@ -6,7 +6,7 @@
     let userId = body.user_id;
     let user = api.run('this.convert_slack_to_transposit_user', {userId})[0];
     if (user) {
-      api.runForAllUsers("this.serve_text", {slackBody: body}, {"users": [user.transpositId]});
+      api.run("this.serve_text", {slackBody: body}, {"users": [user.transpositId]});
     } else {
       api.run("this.not_found", {slackUserId: userId, slackChannelId: channelId});
     }
