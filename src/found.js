@@ -11,7 +11,7 @@
     callback_id: "send_report",
     notify_on_cancel: false,
     title: "Report Message",
-    elements,
+    elements
   };
 
   const trigger_id = slackBody.trigger_id;
