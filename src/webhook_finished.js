@@ -7,13 +7,7 @@
   if (payload.submission.text === payload.submission.input) {
     result = "success"
   }
-  return {
-    status_code: 200,
-    headers: { "Content-Type": "application/json" },
-    body: {
-      text: result
-    }
-  };
+  return { status_code: 200 };
 }
 
 /*
