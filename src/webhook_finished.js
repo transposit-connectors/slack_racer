@@ -9,14 +9,14 @@
     const newer = payload.action_ts
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
-    // if (wpm > 220) {
-    //   let msg = {
-    //     channel: payload.channel.id,
-    //     user: payload.user.id,
-    //     text: `${wpm} wpm? Interesting... :face_with_monocle:` 
-    //   }
-    //   return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
-    // }
+    if (wpm > 220) {
+      let msg = {
+        channel: payload.channel.id,
+        user: payload.user.id,
+        text: `${wpm} wpm? Interesting... :face_with_monocle:` 
+      }
+      return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
+    }
 
     var result = 'Sorry, input does not match!';
     if (payload.submission.input === payload.submission.original) {
@@ -27,14 +27,7 @@
         result = `\n Congratulations, you now hold the record for this text!`
       }
     }
-    //console.log(diffs)
-    
-    // var toReturn = `${result}. Wpm = ${wpm}`;
-    // diffs.forEach((diff) => {
-    //   toReturn += `\n${diff}`
-    // });
-    // console.log(toReturn)
-    
+
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
