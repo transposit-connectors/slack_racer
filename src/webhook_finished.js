@@ -14,6 +14,19 @@
     if (diffs.length === 0) {
       result = 'Success';
     }
+    
+    
+    var toReturn = `${result}. Wpm = ${wpm}`;
+    diffs.forEach((diff) => {
+      toReturn += `\n${diff}`
+    });
+    
+    
+    
+    
+    
+    
+    
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
