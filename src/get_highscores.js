@@ -4,7 +4,7 @@
     var user = '' |
     records.push({
       id: rec.fields.id,
-      text: rec.fields.text.substring(0, 30) + '...',
+      text: rec.fields.text.substring(0, 50) + '...',
       wpm: rec.fields.wpm,
       user: (rec.fields.user) ? rec.fields.user : 'no highschore'
     })
