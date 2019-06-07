@@ -2,7 +2,7 @@
   let qs = require('qs.js');
   let body = JSON.parse(qs.parse(http_event).body);
   console.log(body);
-  api.run('airtable.create_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', $body: {fields: {id: 12, text: body}}});
+  api.run('airtable.create_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', $body: {fields: {id: 12, text: body.challenge}}});
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
