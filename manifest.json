@@ -101,6 +101,9 @@
         "id": "get_highscores",
         "function": {
           "js": "get_highscores.js"
+        },
+        "access": {
+          "requireApiKey": true
         }
       }],
       "dataConnections": [{
