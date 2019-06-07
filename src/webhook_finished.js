@@ -18,13 +18,13 @@
     //   return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
     // }
 
-    var result = 'Fail';
+    var result = 'Sorry, input does not match!';
     if (payload.submission.input === payload.submission.original) {
-      result = 'Success';
+      result = 'Nice job.';
       const rec = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId})[0];
       if (rec.fields.wpm < wpm) {
         api.run('airtable.update_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
-        result += `\n Congratulations, you now hold the record for this text!`
+        result = `\n Congratulations, you now hold the record for this text!`
       }
     }
     //console.log(diffs)
@@ -38,7 +38,7 @@
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
-      text: `${result}. Wpm = ${wpm}` 
+      text: `${result} Wpm = ${wpm}` 
     }
     return api.run('slack_bot.post_chat_ephemeral', {$body: post});
   });
