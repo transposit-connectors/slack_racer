@@ -9,14 +9,14 @@
     const newer = payload.action_ts
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
-    if (wpm > 220) {
-      let msg = {
-        channel: payload.channel.id,
-        user: payload.user.id,
-        text: `${wpm} wpm? Interesting... :face_with_monocle:` 
-      }
-      return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
-    }
+    // if (wpm > 220) {
+    //   let msg = {
+    //     channel: payload.channel.id,
+    //     user: payload.user.id,
+    //     text: `${wpm} wpm? Interesting... :face_with_monocle:` 
+    //   }
+    //   return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
+    // }
 
     //const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.original});
     var result = 'Fail';
