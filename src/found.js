@@ -7,5 +7,5 @@
     text: text,
   }
   
-  return api.run('slack_bot.post_chat_ephemeral', {$body: post});
+  return api.run('slack_bot.post_chat_me_message', {$body: post});
 }
