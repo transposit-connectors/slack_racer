@@ -8,6 +8,15 @@
     const old = state.ts/1000
     const newer = payload.action_ts
 	const wpm = payload.submission.original.split(' ').length / ((newer - old) / 60)
+    
+    if (wpm > 220) {
+      let msg = {
+        channel: payload.channel.id,
+        user: payload.user.id,
+        text: `${wpm} wpm? :face_with_monocole:` 
+      }
+      return api.run('slack_bot.post_chat_ephemeral', {$body: post});
+    }
 
     //const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.original});
     var result = 'Fail';
@@ -16,7 +25,7 @@
       const rec = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId})[0];
       if (rec.fields.wpm > wpm) {
         api.run('airtable.update_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
-        result += `\n You're now the fastest typer for this text!`
+        result += `\n Congratulations, you now hold the record for this text!`
       }
     }
     //console.log(diffs)
