@@ -6,7 +6,7 @@
     console.log(payload)
 	console.log(payload.action_ts.split('.')[0])
     console.log(state.ts)
-    console.log(parseFloat(payload.action_ts) - state.ts)
+    console.log(payload.action_ts.split('.')[0] - state.ts)
 
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
     var result = 'Fail.';
