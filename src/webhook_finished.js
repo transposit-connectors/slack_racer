@@ -4,12 +4,11 @@
     let payload = JSON.parse(http_event.parsed_body.payload);
     let state = JSON.parse(payload.state);
     console.log(payload)
-	console.log(payload.action_ts)
-    console.log(state.ts/1000)
-    
+
     const old = state.ts/1000
     const newer = payload.action_ts
-	console.log((newer - old)/60)
+	const time = (newer - old) / 60
+	
 
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
     var result = 'Fail.';
