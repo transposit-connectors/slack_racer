@@ -18,13 +18,14 @@
       return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
     }
 
+    const userInput = payload.submission.input.trim();
     var result = 'Sorry, input does not match!';
     if (payload.submission.input === payload.submission.original) {
       result = 'Nice job!';
       const rec = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId})[0];
       if (rec.fields.wpm < wpm) {
         api.run('airtable.update_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
-        result = `\n :crown: Congratulations, you now hold the record for this text!`
+        result = `\n :crown: Congratulations, you beat ${rec.fields.user} and now hold the record for this text!`
       }
     }
 
