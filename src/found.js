@@ -3,14 +3,16 @@
 
   const elements = [{
     type: "textarea",
+    name: "text",
+    label: "text",
+        min_length: text.length
+
+  }, {
+    type: "textarea",
     name: "input",
     label: "input",
     value: text,
     min_length: text.length
-  }, {
-    type: "textarea",
-    name: "text",
-    label: "text"
   }];
   
   const dialogObj = {
