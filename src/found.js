@@ -3,13 +3,13 @@
 
   const elements = [{
     type: "textarea",
-    name: "text",
-    label: "text",
+    name: "input",
+    label: "input",
     min_length: text.length
   }, {
     type: "textarea",
-    name: "input",
-    label: "input",
+    name: "text",
+    label: "text",
     value: text,
     min_length: text.length
   }];
