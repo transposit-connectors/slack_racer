@@ -4,7 +4,8 @@
   const elements = [{
     type: "textarea",
     name: "message",
-    label: text,
+    label: "text",
+    hint: text
   }];
   
   const dialogObj = {
