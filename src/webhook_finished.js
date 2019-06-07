@@ -5,6 +5,7 @@
     let state = JSON.parse(payload.state);
     console.log(payload)
 	console.log(payload.action_ts)
+    console.log(new Date(payload.action_ts))
     console.log(state.ts)
 
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
