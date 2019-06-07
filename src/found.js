@@ -6,14 +6,14 @@
       "state": "Limo",
       "elements": [
         {
-          "type": "text",
-          "label": "Pickup Location",
-          "name": "loc_origin"
+          type: "text",
+          label: "Pickup Location",
+          name: "loc_origin"
         },
         {
-          "type": "text",
-          "label": "Dropoff Location",
-          "name": "loc_destination"
+          type: "text",
+          label: "Dropoff Location",
+          name: "loc_destination"
         }
       ]
     }}, trigger_id: slackBody.trigger_id});
