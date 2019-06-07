@@ -1,5 +1,4 @@
 ({slackBody}) => {
-  console.log(slackBody);
   let text = api.run('this.get_random_paragraph')[0];
 
   const elements = [{
@@ -17,6 +16,7 @@
   };
 
   const trigger_id = slackBody.trigger_id;
-  return api.run("slack_bot.open_dialog", { $body: { trigger_id, dialog: JSON.stringify(dialogObj)}});
+    console.log(slackBody);
 
+  return api.run("slack_bot.open_dialog", { $body: { trigger_id, dialog: JSON.stringify(dialogObj)}});
 }
