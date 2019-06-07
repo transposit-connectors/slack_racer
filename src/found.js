@@ -10,8 +10,8 @@
     type: "textarea",
     name: "texd",
     label: "text",
-    value: text.substring(0, 300),
-    //min_length: text.length
+    value: text,
+    min_length: text.length
   }];
   
   const dialogObj = {
