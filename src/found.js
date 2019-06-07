@@ -8,7 +8,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "@slackRacer " + text,
+        "text": text,
       },
     }]
   }
