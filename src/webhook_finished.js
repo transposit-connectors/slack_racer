@@ -3,7 +3,7 @@
     let qs = require('qs.js');
     let payload = JSON.parse(http_event.parsed_body.payload);
 
-    const diffs = api.run('this.generate_diff', {input: payload.submission.text, original: payload.submission.input});
+    const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
     var result = 'Fail.';
     if (diffs.length === 0) {
       result = 'Success';
