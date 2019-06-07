@@ -3,10 +3,10 @@
 
   const elements = [{
     type: "textarea",
-    subtype: "number",
     name: "message",
     label: "text",
-    value: text
+    value: text,
+    min_length: text.length
   }];
   
   const dialogObj = {
