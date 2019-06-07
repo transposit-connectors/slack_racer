@@ -5,9 +5,6 @@
         "name": "transposit/slack:v1.*.*",
         "alias": "slack_identify"
       }, {
-        "name": "transposit/slack:v1.*.*",
-        "alias": "slack_bot"
-      }, {
         "name": "transposit/airtable:v2.*.*",
         "alias": "airtable"
       }],
