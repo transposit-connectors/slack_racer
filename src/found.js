@@ -5,6 +5,7 @@
     type: "textarea",
     name: "message",
     label: "text",
+    value: text
   }];
   
   const dialogObj = {
