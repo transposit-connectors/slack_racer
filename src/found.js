@@ -11,7 +11,7 @@
   const dialogObj = {
     callback_id: "send_report",
     notify_on_cancel: false,
-    title: "Report Message",
+    title: text,
     elements
   };
 
