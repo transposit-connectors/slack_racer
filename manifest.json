@@ -10,6 +10,9 @@
       }, {
         "name": "transposit/slack:v1.*.*",
         "alias": "slack_bot"
+      }, {
+        "name": "transposit/slack:v1.*.*",
+        "alias": "slack_dialog"
       }],
       "operations": [{
         "id": "webhook",
