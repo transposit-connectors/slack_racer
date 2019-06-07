@@ -4,7 +4,7 @@
     let payload = JSON.parse(http_event.parsed_body.payload);
     let state = JSON.parse(payload.state);
     console.log(payload)
-	console.log(parseFloat(payload.action_ts))
+	console.log(payload.action_ts.split('.')[0])
     console.log(state.ts)
     console.log(parseFloat(payload.action_ts) - state.ts)
 
