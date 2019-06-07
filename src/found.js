@@ -1,4 +1,5 @@
 ({slackBody}) => {
+  let text = api.run('this.get_random_paragraph');
   let post = {
     channel: slackBody.channel_id,
     user: slackBody.user_id,
@@ -7,7 +8,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": `${api.user().email} has run the slack command`
+        "text": text,
       },
     }]
   }
