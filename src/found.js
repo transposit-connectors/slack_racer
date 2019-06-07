@@ -15,8 +15,7 @@
   }];
   
   const state = JSON.stringify({
-    sender: user,
-    ts,
+    ts: Date.now(),
     content: text.substring(0,2900)
   })
   
