@@ -3,7 +3,6 @@
   let post = {
     channel: slackBody.user_id,
   	user: slackBody.user_id,
-    as_user: 'true',
     text: `You've run the slack command`,
     blocks: [{
       "type": "section",
