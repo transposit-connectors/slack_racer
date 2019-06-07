@@ -11,7 +11,7 @@
       api.run("this.not_found", {slackUserId: userId, slackChannelId: channelId});
     }
   });
-  return { status_code: 200 };
+  return { status_code: 400 };
 }
 
 /*
