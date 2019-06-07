@@ -84,7 +84,7 @@
           "webhook": true
         }
       }, {
-        "id": "untitled",
+        "id": "generate_diff",
         "function": {
           "parameters": [{
             "name": "input",
