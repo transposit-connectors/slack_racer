@@ -67,9 +67,11 @@
         } else {
           const resultsHtml = $("<table>").addClass("table");
           for (const result of results) {
-            resultsHtml.append(
-                $("<li>").addClass("list-group-item").text(result.id + " || " + result.text + " || " + result.user)
-            );
+            resultsHtml.append($("<tr>").attr('id', result.id));
+            resultsHtml.append($("<td>").text(result.id));
+			resultsHtml.append($("<td>").text(result.text));
+            resultsHtml.append($("<td>").text(result.wpm));
+            resultsHtml.append($("<td>").text(result.user));
           }
           $("#results").append(resultsHtml);
         }
