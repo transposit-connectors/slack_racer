@@ -8,6 +8,7 @@
       user: (rec.fields.user) ? rec.fields.user : ''
     })
   })
+  return records;
 }
 
 /*
