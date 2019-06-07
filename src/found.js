@@ -1,6 +1,6 @@
 ({slackBody}) => {
   console.log(slackBody);
-  return api.run('slack_bot.open_dialog', {dialog: {body: {
+  return api.run('slack_bot.open_dialog', {dialog: {
     "title": "Request a Ride",
     "submit_label": "Request",
     "state": "Limo",
@@ -16,7 +16,7 @@
         name: "loc_destination"
       }
     ]
-  }}, trigger_id: slackBody.trigger_id});
+  }, trigger_id: slackBody.trigger_id});
   let text = api.run('this.get_random_paragraph')[0];
   let post = {
     channel: slackBody.channel_id,
