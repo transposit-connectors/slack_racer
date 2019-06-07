@@ -16,7 +16,8 @@
   
   // const ts = Date.now();
   const state = JSON.stringify({
-    ts: Date.now()
+    ts: Date.now(),
+    recordId: text.id
   })
   
   const dialogObj = {

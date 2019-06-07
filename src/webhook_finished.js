@@ -13,6 +13,7 @@
     var result = 'Fail';
     if (payload.submission.input === payload.submission.original) {
       result = 'Success';
+      
     }
     //console.log(diffs)
     
