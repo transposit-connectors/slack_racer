@@ -1,5 +1,7 @@
 ({slackBody}) => {
-  let { text, id }= api.run('this.get_random_paragraph')[0].fields;
+  let rec = api.run('this.get_random_paragraph')[0];
+  const text = rec.fields.text;
+  
   const elements = [{
     type: "textarea",
     name: "input",
@@ -16,7 +18,7 @@
   // const ts = Date.now();
   const state = JSON.stringify({
     ts: Date.now(),
-    recordId: text.id
+    recordId: rec.id
   })
   
   const dialogObj = {
