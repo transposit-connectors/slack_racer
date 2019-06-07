@@ -12,14 +12,7 @@
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
-      text: `You've run the slack command`,
-      blocks: [{
-        "type": "section",
-        "text": {
-          "type": "mrkdwn",
-          "text": events === '' ? 'You have no events today' : events
-        },
-      }]
+      text: result
     }
     return api.run('slack_bot.post_chat_ephemeral', {$body: post});
   });
