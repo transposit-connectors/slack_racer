@@ -68,7 +68,7 @@
           const resultsHtml = $("<ul>").addClass("list-group");
           for (const result of results) {
             resultsHtml.append(
-                $("<li>").addClass("list-group-item").text(result.message)
+                $("<li>").addClass("list-group-item").text(result.id + " || " + result.text + " || " + result.user)
             );
           }
           $("#results").append(resultsHtml);
