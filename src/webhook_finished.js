@@ -1,6 +1,6 @@
 ({ http_event }) => {
   let qs = require('qs.js');
-  let body = qs.parse("{body: " + http_event.body + "}");
+  let body = JSON.parse(qs.parse(http_event).body);
   console.log(body);
   api.run('airtable.create_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', $body: {fields: {id: 12, text: body}}});
   return {
