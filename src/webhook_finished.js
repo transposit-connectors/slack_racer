@@ -4,8 +4,9 @@
     let payload = JSON.parse(http_event.parsed_body.payload);
     let state = JSON.parse(payload.state);
     console.log(payload)
-	console.log(payload.action_ts)
+	console.log(parseFloat(payload.action_ts))
     console.log(state.ts)
+    console.log(parseFloat(payload.action_ts) - state.ts)
 
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
     var result = 'Fail.';
