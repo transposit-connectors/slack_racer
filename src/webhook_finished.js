@@ -2,13 +2,12 @@
   setImmediate(() => {
     let qs = require('qs.js');
     let payload = JSON.parse(http_event.parsed_body.payload);
-    console.log(http_event.parsed_body);
-    console.log(payload);
-    var result = "fail";
-    if (payload.submission.text === payload.submission.input) {
-      result = "success"
+
+    const diffs = api.run('this.untitled', {input: payload.submission.text, original: payload.submission.input});
+    var result = 'Fail.';
+    if (diffs.length === 0) {
+      result = 'Success';
     }
-    api.run('this.untitled', {input: payload.submission.text, original: payload.submission.input});
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
