@@ -8,7 +8,7 @@
     if (payload.submission.text === payload.submission.input) {
       result = "success"
     }
-    
+    api.run('this.untitled', {input: payload.submission.text, original: payload.submission.input});
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
