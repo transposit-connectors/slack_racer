@@ -5,7 +5,7 @@
     records.push({
       id: rec.fields.id,
       text: rec.fields.text,
-      user: (rec.fields.user) ? rec.fields.user : ''
+      user: (rec.fields.user) ? rec.fields.user : 'no highschore'
     })
   })
   return records;
