@@ -97,6 +97,11 @@
           }],
           "js": "untitled.js"
         }
+      }, {
+        "id": "get_highscores",
+        "function": {
+          "js": "get_highscores.js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
