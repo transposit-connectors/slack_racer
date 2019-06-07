@@ -7,8 +7,8 @@
 
     const old = state.ts/1000
     const newer = payload.action_ts
-	const time = (newer - old) / 60
-	
+	const wpm = payload.submission.text.split(' ').length / ((newer - old) / 60)
+	console.log(wpm)
 
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
     var result = 'Fail.';
