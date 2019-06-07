@@ -8,8 +8,8 @@
     min_length: text.length
   }, {
     type: "textarea",
-    name: "text",
-    label: text,
+    name: "afdasfas",
+    label: "text",
     value: text,
     min_length: text.length
   }];
