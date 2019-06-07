@@ -6,7 +6,7 @@
   }})[0];
   let text = api.run('this.get_random_paragraph')[0];
   let post = {
-    channel: im.id,//slackBody.channel_id,
+    channel: 'DGNG13MQB',//slackBody.channel_id,
   	user: slackBody.user_id,
     text: `You've run the slack command`,
     blocks: [{
