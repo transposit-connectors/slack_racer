@@ -7,9 +7,9 @@
 
     const old = state.ts/1000
     const newer = payload.action_ts
-	const wpm = payload.submission.text.split(' ').length / ((newer - old) / 60)
+	const wpm = payload.submission.original.split(' ').length / ((newer - old) / 60)
 
-    const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
+    const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.original});
     var result = 'Fail';
     if (diffs.length === 0) {
       result = 'Success';
