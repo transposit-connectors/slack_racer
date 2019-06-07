@@ -18,7 +18,6 @@
     //   return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
     // }
 
-    //const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.original});
     var result = 'Fail';
     if (payload.submission.input === payload.submission.original) {
       result = 'Success';
