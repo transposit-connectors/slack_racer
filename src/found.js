@@ -14,8 +14,9 @@
     min_length: text.length
   }];
   
+  const ts = Date.now();
   const state = JSON.stringify({
-    ts: Date.now(),
+    ts,
   })
   
   const dialogObj = {
