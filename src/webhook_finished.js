@@ -1,5 +1,6 @@
 ({ http_event }) => {
   let qs = require('qs.js');
+  console.log(http_event);
   let body = JSON.parse(qs.parse(http_event).body);
   console.log(body.challenge);
   return {
