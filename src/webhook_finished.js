@@ -9,7 +9,7 @@
     
     const old = state.ts/1000
     const newer = payload.action_ts
-console.log((newer - old)/1000/60)
+console.log((newer - old)/60)
 
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
     var result = 'Fail.';
