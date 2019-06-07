@@ -1,9 +1,13 @@
 ({slackBody}) => {
+  api.run('slack_bot.open_im', {$body: {
+    "return_im": true,
+    "include_locale": true,
+    "user": slackBody.user_id,
+  }})
   let text = api.run('this.get_random_paragraph')[0];
   let post = {
-    channel: slackBody.user_id,//slackBody.channel_id,
-  	as_user: false,
-    username: "SlackRacer",
+    channel: slackBody.channel_id,//slackBody.channel_id,
+  	user: slackBody.user_id,
     text: `You've run the slack command`,
     blocks: [{
       "type": "section",
