@@ -10,7 +10,7 @@
     type: "textarea",
     name: "texd",
     label: "text",
-    value: text.substring(0, 250),
+    value: text.substring(0, 300),
     //min_length: text.length
   }];
   
