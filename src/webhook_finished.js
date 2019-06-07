@@ -22,7 +22,7 @@
     if (payload.submission.input === payload.submission.original) {
       result = 'Success';
       const rec = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId})[0];
-      if (rec.fields.wpm > wpm) {
+      if (rec.fields.wpm < wpm) {
         api.run('airtable.update_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
         result += `\n Congratulations, you now hold the record for this text!`
       }
