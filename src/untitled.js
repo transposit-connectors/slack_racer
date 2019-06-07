@@ -37,6 +37,8 @@
       continue;
     }
   }
+  
+  return diffs;
 }
 
 /*
