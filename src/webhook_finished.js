@@ -9,7 +9,9 @@
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
-    text: result
+    body: {
+      text: result
+    }
   };
 }
 
