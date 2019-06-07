@@ -3,7 +3,7 @@
   let text = api.run('this.get_random_paragraph')[0];
   let post = {
     channel: slackBody.channel_id,
-  	user: 'AKCSFJ5MW',
+  	user: slackBody.user_id,
     text: text,
   }
   
