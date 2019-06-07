@@ -15,7 +15,7 @@
         user: payload.user.id,
         text: `${wpm} wpm? :face_with_monocole:` 
       }
-      return api.run('slack_bot.post_chat_ephemeral', {$body: post});
+      return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
     }
 
     //const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.original});
