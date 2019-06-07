@@ -9,7 +9,7 @@
   }, {
     type: "textarea",
     name: "text",
-    label: "text",
+    label: text,
     value: text,
     min_length: text.length
   }];
