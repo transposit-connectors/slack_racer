@@ -1,8 +1,8 @@
 ({ http_event }) => {
   let qs = require('qs.js');
-  console.log(http_event);
-  let body = JSON.parse(qs.parse(http_event).body);
-  console.log(body.challenge);
+  let payload = qs.parse(http_event.parsed_body);
+  console.log(payload);
+  return;
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
