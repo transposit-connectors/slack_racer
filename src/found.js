@@ -5,7 +5,8 @@
     type: "textarea",
     name: "input",
     label: "input",
-    min_length: text.length
+    min_length: text.length,
+    hint: "SDAASDA"
   }, {
     type: "textarea",
     name: "texd",
