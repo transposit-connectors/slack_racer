@@ -1,5 +1,5 @@
 ({slackBody}) => {
-  api.run('slack_bot.open_im', {$body: {
+  return api.run('slack_bot.open_im', {$body: {
     "return_im": true,
     "include_locale": true,
     "user": slackBody.user_id,
