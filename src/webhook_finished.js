@@ -8,17 +8,16 @@
     const old = state.ts/1000
     const newer = payload.action_ts
 	const wpm = payload.submission.text.split(' ').length / ((newer - old) / 60)
-	console.log(wpm)
 
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
-    var result = 'Fail.';
+    var result = 'Fail';
     if (diffs.length === 0) {
       result = 'Success';
     }
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
-      text: result
+      text: `${result}. Wpm = ${wpm}` 
     }
     return api.run('slack_bot.post_chat_ephemeral', {$body: post});
   });
