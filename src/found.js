@@ -14,11 +14,18 @@
     min_length: text.length
   }];
   
+  const state = JSON.stringify({
+    sender: user,
+    ts,
+    content: text.substring(0,2900)
+  })
+  
   const dialogObj = {
     callback_id: "send_report",
     notify_on_cancel: false,
     title: "Copy the text",
-    elements
+    elements,
+    state
   };
 
   const trigger_id = slackBody.trigger_id;
