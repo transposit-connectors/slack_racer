@@ -7,9 +7,6 @@
       }, {
         "name": "transposit/airtable:v2.*.*",
         "alias": "airtable"
-      }, {
-        "name": "transposit/slack:v1.*.*",
-        "alias": "slack_bot"
       }],
       "operations": [{
         "id": "webhook",
