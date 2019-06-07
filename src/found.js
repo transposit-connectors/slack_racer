@@ -2,23 +2,25 @@
   console.log(slackBody);
   return api.run('slack_bot.open_dialog', 
   {
-    "trigger_id": slackBody.trigger_id,
-    "dialog": {
-      "callback_id": "ryde-46e2b0",
-      "title": "Request a Ride",
-      "submit_label": "Request",
-      "notify_on_cancel": true,
-      "state": "Limo",
-      "elements": [
+    status_code: 200,
+    headers: { "Content-Type": "application/json" },
+    trigger_id: slackBody.trigger_id,
+    dialog: {
+      callback_id: "ryde-46e2b0",
+      title: "Request a Ride",
+      submit_label: "Request",
+      notify_on_cancel: true,
+      state: "Limo",
+      elements: [
           {
-              "type": "text",
-              "label": "Pickup Location",
-              "name": "loc_origin"
+              type: "text",
+              label: "Pickup Location",
+              name: "loc_origin"
           },
           {
-              "type": "text",
-              "label": "Dropoff Location",
-              "name": "loc_destination"
+              type: "text",
+              label: "Dropoff Location",
+              name: "loc_destination"
           }
       ]
     }
