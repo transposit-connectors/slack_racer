@@ -3,7 +3,7 @@
   api.run('airtable.get_records', {baseId: 'appcX3FvaawpLi3eF', table: 'texts'}).forEach((rec) => {
     var user = '' |
     records.push({
-      id: rec.field.id,
+      id: rec.fields.id,
       text: rec.fields.text,
       user: (rec.fields.user) ? rec.fields.user : ''
     })
