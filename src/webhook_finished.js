@@ -5,8 +5,9 @@
     let state = JSON.parse(payload.state);
     console.log(payload)
 	console.log(payload.action_ts)
-    console.log(new Date(payload.action_ts))
-    console.log(state.ts)
+    console.log(state.ts/1000)
+    
+    // (newTimestamp - oldTimestamp)/1000/60 
 
     const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.text});
     var result = 'Fail.';
