@@ -5,8 +5,7 @@
     type: "textarea",
     name: "text",
     label: "text",
-        min_length: text.length
-
+      min_length: text.length
   }, {
     type: "textarea",
     name: "input",
