@@ -8,7 +8,7 @@
     min_length: text.length
   }, {
     type: "textarea",
-    name: "afdasfas",
+    name: "texd",
     label: "text",
     value: text,
     min_length: text.length
