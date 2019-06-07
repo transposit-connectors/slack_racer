@@ -16,7 +16,6 @@
   
   const state = JSON.stringify({
     ts: Date.now(),
-    content: text.substring(0,2900)
   })
   
   const dialogObj = {
