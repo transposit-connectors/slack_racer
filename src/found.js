@@ -2,9 +2,9 @@
   let text = api.run('this.get_random_paragraph')[0];
 
   const elements = [{
-    type: "text",
+    type: "textarea",
     name: "message",
-    label: "Write this",
+    label: text,
   }];
   
   const dialogObj = {
