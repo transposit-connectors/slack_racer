@@ -1,5 +1,5 @@
 ({slackBody}) => {
-  // let text = api.run('this.get_random_paragraph')[0];
+   let text = api.run('this.get_random_paragraph')[0];
 
   const elements = [{
     type: "text",
