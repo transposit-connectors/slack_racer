@@ -68,11 +68,6 @@
           "js": "found.js"
         }
       }, {
-        "id": "untitled",
-        "function": {
-          "js": "untitled.js"
-        }
-      }, {
         "id": "webhook_finished",
         "function": {
           "parameters": [{
