@@ -1,7 +1,7 @@
 ({ http_event }) => {
   let qs = require('qs.js');
-  let payload = qs.parse(http_event.parsed_body).payload;
-  console.log(JSON.parse(payload));
+  let payload = JSON.parse(http_event.parsed_body.payload);
+  console.log(payload);
   return;
   return {
     status_code: 200,
