@@ -14,8 +14,9 @@
     title: "Report Message",
     elements,
     state
-  }
-  
-  return api.run("slack.open_dialog", { $body: { slackBody.trigger_id, dialog: JSON.stringify(dialogObj)}});
+  };
+
+  const trigger_id = slackBody.trigger_id;
+  return api.run("slack.open_dialog", { $body: { trigger_id, dialog: JSON.stringify(dialogObj)}});
 
 }
