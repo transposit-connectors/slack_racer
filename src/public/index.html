@@ -54,7 +54,7 @@
     $("#failure").hide();
     $("#success").hide();
 
-    transposit.runOperation("hello_world")
+    transposit.runOperation("get_highscores")
       .then((response) => {
         if (response.status !== "SUCCESS") {
           throw response;
