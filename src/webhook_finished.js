@@ -13,7 +13,7 @@
       let msg = {
         channel: payload.channel.id,
         user: payload.user.id,
-        text: `${wpm} wpm? :face_with_monocle:` 
+        text: `${wpm} wpm? Interesting... :face_with_monocle:` 
       }
       return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
     }
