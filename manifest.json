@@ -103,7 +103,7 @@
           "js": "get_highscores.js"
         },
         "access": {
-          "requireApiKey": true
+          "requireUser": true
         }
       }],
       "dataConnections": [{
