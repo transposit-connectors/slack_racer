@@ -1,5 +1,5 @@
 ({slackBody}) => {
-  let text = api.run('this.get_random_paragraph')[0];
+  // let text = api.run('this.get_random_paragraph')[0];
 
   const elements = [{
     type: "text",
@@ -15,5 +15,5 @@
   };
 
   const trigger_id = slackBody.trigger_id;
-  return api.run("slack_bot.open_dialog", { $body: { trigger_id, dialog: JSON.stringify(dialogObj)}});
+  return api.run("slack_bot.open_dialog", { $body: { trigger_id, dialog: JSON.stringify(dialogObj) }});
 }
