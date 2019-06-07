@@ -25,7 +25,7 @@
   const dialogObj = {
     callback_id: "type_race",
     notify_on_cancel: false,
-    title: "SlackRacer - Typing Speed Test ",
+    title: "Typing speed test",
     elements,
     state
   };
