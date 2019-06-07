@@ -9,9 +9,9 @@
     const newer = payload.action_ts
 	const wpm = payload.submission.original.split(' ').length / ((newer - old) / 60)
 
-    const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.original});
+    //const diffs = api.run('this.generate_diff', {input: payload.submission.input, original: payload.submission.original});
     var result = 'Fail';
-    if (diffs.length === 0) {
+    if (payload.submission.input === payload.submission.original) {
       result = 'Success';
     }
     //console.log(diffs)
@@ -21,11 +21,6 @@
     //   toReturn += `\n${diff}`
     // });
     // console.log(toReturn)
-    
-    
-    
-    
-    
     
     let post = {
       channel: payload.channel.id,
