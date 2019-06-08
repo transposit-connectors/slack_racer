@@ -9,15 +9,6 @@
     const newer = payload.action_ts
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
-    if (wpm > 220) {
-      let msg = {
-        channel: payload.channel.id,
-        user: payload.user.id,
-        text: `${wpm} wpm? Something smells fishy :fish: :face_with_monocle:` 
-      }
-      return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
-    }
-
     const userInput = payload.submission.input.trim();
     var result = 'Sorry, input does not match!';
     if (payload.submission.input === payload.submission.original) {
@@ -27,6 +18,15 @@
         api.run('airtable.update_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
         result = `\n :crown: Congratulations, you beat ${rec.fields.user} and now hold the record for this text!`
       }
+    }
+    
+    if (wpm > 220) {
+      let msg = {
+        channel: payload.channel.id,
+        user: payload.user.id,
+        text: `${wpm} wpm? Something smells fishy :fish: :face_with_monocle:` 
+      }
+      return api.run('slack_bot.post_chat_ephemeral', {$body: msg});
     }
 
     let post = {
