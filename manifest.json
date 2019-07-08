@@ -2,7 +2,7 @@
   "v2": {
     "transposit": {
       "dependencies": [{
-        "name": "transposit/slack:v1.*.*",
+        "name": "transposit/slack:latest",
         "alias": "slack_identify"
       }, {
         "name": "transposit/airtable:v2.*.*",
