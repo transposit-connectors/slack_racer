@@ -1,4 +1,5 @@
 ({ http_event }) => {
+  console.log(http_event);
   let body = http_event.parsed_body;
   setImmediate(() => {
     let channelId = body.channel_id;
