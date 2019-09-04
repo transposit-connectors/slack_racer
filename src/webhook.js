@@ -6,7 +6,7 @@
     let user = api.user({ type: "slack", workspaceId: team_id, userId: user_id });
     console.log(user);
     if (user) {
-      api.run("this.serve_text", {slackBody: body}, {asUser: user.id});
+      api.run("this.serve_text", {body: body}, {asUser: user.id});
     } else {
       api.run("this.not_found", {slackUserId: user_id, slackChannelId: channel_id});
     }
