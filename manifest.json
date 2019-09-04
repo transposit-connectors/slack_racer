@@ -117,6 +117,7 @@
         "description": "Used to identify you on Slack"
       }, {
         "ref": "slack_bot.raw",
+        "requireConsumerSignin": true,
         "overrides": {
           "swagger": {
             "oauthConfig": {
