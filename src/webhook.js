@@ -5,7 +5,7 @@
     const { channel_id, team_id, user_id } = body;
     let user = api.user({ type: "slack", workspaceId: team_id, userId: user_id });
     if (user) {
-      api.runForAllUsers("this.serve_text", {slackBody: body}, {"users": [user.transpositId]});
+      api.run("this.serve_text", {slackBody: body}, {asUser: user.transpositId});
     } else {
       api.run("this.not_found", {slackUserId: userId, slackChannelId: channelId});
     }
