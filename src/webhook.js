@@ -8,7 +8,7 @@
     if (user) {
       api.run("this.serve_text", {slackBody: body}, {asUser: user.transpositId});
     } else {
-      api.run("this.not_found", {slackUserId: userId, slackChannelId: channelId});
+      api.run("this.not_found", {slackUserId: user_id, slackChannelId: channel_id});
     }
   });
   return { status_code: 200 };
