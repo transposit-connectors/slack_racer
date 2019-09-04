@@ -2,9 +2,8 @@
   console.log(http_event);
   let body = http_event.parsed_body;
   setImmediate(() => {
-    let channelId = body.channel_id;
-    let userId = body.user_id;
-    let user = api.run('this.convert_slack_to_transposit_user', {userId})[0];
+    const {cha} = body;
+    let user = api.user({type: "slack", workspaceId:})
     if (user) {
       api.runForAllUsers("this.serve_text", {slackBody: body}, {"users": [user.transpositId]});
     } else {
