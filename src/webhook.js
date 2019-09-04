@@ -2,8 +2,8 @@
   console.log(http_event);
   let body = http_event.parsed_body;
   setImmediate(() => {
-    const {cha} = body;
-    let user = api.user({type: "slack", workspaceId:})
+    const { channel_id, team_id, user_id } = body;
+    let user = api.user({ type: "slack", workspaceId: team_id, userId: user_id });
     if (user) {
       api.runForAllUsers("this.serve_text", {slackBody: body}, {"users": [user.transpositId]});
     } else {
