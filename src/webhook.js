@@ -5,7 +5,7 @@
     const dialogJson = api.run("this.generate_dialog_json", {slackBody: body}); 
   	console.log(dialogJson);
     // console.log(dialogJson);
-    // console.log(api.run("slack.open_dialog", { $body: { trigger_id: body.trigger_id, dialog: dialogJson }}, { "asGroup": body.team_id }));
+    console.log(api.run("slack.open_dialog", { $body: { trigger_id: body.trigger_id, dialog: dialogJson }}, { "asGroup": body.team_id }));
   // });
   return { status_code: 200 };
 }
