@@ -1,6 +1,8 @@
 ({slackBody}) => {
-  let rec = api.run('this.get_random_paragraph')[0];
-  const text = rec.fields.text;
+  
+  const list = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Meta', recordId: 'recytAa5YjZi1OSJ9'})[0];
+  const idx = Math.floor(Math.random()*list.fields.count);
+  let rec = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: list.fields.texts[idx]})[0];
   
   const elements = [{
     type: "textarea",
