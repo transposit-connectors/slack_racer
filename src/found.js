@@ -31,5 +31,4 @@
   };
 
   return JSON.stringify(dialog);
-  const trigger_id = slackBody.trigger_id;
 }
