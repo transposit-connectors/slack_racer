@@ -22,7 +22,7 @@
     recordId: rec.id
   })
   
-  const dialogObj = {
+  const dialog = {
     callback_id: "type_race",
     notify_on_cancel: false,
     title: "SlackRacer Speed Test",
@@ -30,7 +30,7 @@
     state
   };
 
-  return JSON.stringify(dialogObj);
+  return JSON.stringify(dialog);
   const trigger_id = slackBody.trigger_id;
   return api.run("slack_bot.open_dialog", { $body: { trigger_id, dialog: JSON.stringify(dialogObj) }});
 }
