@@ -14,6 +14,7 @@
     const newer = payload.action_ts
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
+    console.log("calculate timings");
     // advanced anti-hack detection
     if (wpm > 220) {
       let msg = {
@@ -24,7 +25,7 @@
       return api.run('slack.post_chat_ephemeral', {$body: msg});
     }
 
-    
+    console.log("not hacking");
     /*
      * Validate and determine result
      */
@@ -41,6 +42,7 @@
       }
     }
 
+    console.log("validated and possibly updated airtable");
     /*
      * Notify user of result
      */
