@@ -19,7 +19,7 @@
      * Determine result
      */
     
-    // validate input and determing result
+    // validate input and determine result
     const userInput = payload.submission.input.trim();
     let result = 'Sorry, input does not match!';
     if (payload.submission.input === payload.submission.original) {
