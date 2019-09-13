@@ -1,10 +1,16 @@
 ({ http_event }) => {
   setImmediate(() => {
+    /*
+     * Parse submission 
+     */
+    
+    // parse json
     let qs = require('qs.js');
     let payload = JSON.parse(http_event.parsed_body.payload);
     let state = JSON.parse(payload.state);
     console.log(payload)
 
+    // calculate timings
     const old = state.ts/1000
     const newer = payload.action_ts
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
