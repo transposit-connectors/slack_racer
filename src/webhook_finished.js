@@ -17,7 +17,7 @@
     
     // validate input and determing result
     const userInput = payload.submission.input.trim();
-    var result = 'Sorry, input does not match!';
+    let result = 'Sorry, input does not match!';
     if (payload.submission.input === payload.submission.original) {
       result = 'Nice job!';
       const currRecord = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId})[0];
