@@ -99,7 +99,8 @@
         "function": {
           "parameters": [{
             "name": "slackBody",
-            "type": "OBJECT"
+            "type": "OBJECT",
+            "required": true
           }],
           "js": "found.js",
           "lang": "js"
