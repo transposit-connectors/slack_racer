@@ -132,7 +132,6 @@
           "swagger": {
             "oauthConfig": {
               "scope": "commands",
-              "accessTokenPath": "access_token",
               "enableGroupCredentials": "true"
             },
             "executionLimits": {
