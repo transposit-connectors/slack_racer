@@ -89,7 +89,7 @@
           "webhook": true
         }
       }, {
-        "id": "genetate_dialog_json",
+        "id": "generate_dialog_json",
         "function": {
           "parameters": [{
             "name": "slackBody",
