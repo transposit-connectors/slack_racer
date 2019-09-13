@@ -44,6 +44,7 @@
     /*
      * Notify user of result
      */
+    
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
@@ -51,10 +52,7 @@
     }
     return api.run('slack.post_chat_ephemeral', {$body: post});
   });
+  
+  // return to Slack right away to prevent timeout
   return { status_code: 200 };
 }
-
-/*
- * For sample code and reference material, visit
- * https://www.transposit.com/docs/building/webhooks
- */
