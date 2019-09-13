@@ -4,6 +4,9 @@
       "dependencies": [{
         "name": "transposit/airtable:v2.*.*",
         "alias": "airtable"
+      }, {
+        "name": "transposit/slack:v3.*.*",
+        "alias": "slack"
       }],
       "operations": [{
         "id": "map_users",
