@@ -54,5 +54,9 @@
   });
   
   // return to Slack right away to prevent timeout
-  return { status_code: 200,   body: {  text: 'A message from Transposit!'}};
+  return {
+    status_code: 200,
+    headers: { "Content-Type": "application/json" },
+    body: { "greeting": "Hello World" }
+  };
 }
