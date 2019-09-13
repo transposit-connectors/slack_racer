@@ -15,6 +15,10 @@
     const newer = payload.action_ts
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
+    /*
+     * Determine result
+     */
+    
     // validate input and determing result
     const userInput = payload.submission.input.trim();
     let result = 'Sorry, input does not match!';
@@ -27,6 +31,7 @@
       }
     }
     
+    // advanced anti-hack detection
     if (wpm > 220) {
       let msg = {
         channel: payload.channel.id,
