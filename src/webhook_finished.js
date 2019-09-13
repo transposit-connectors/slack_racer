@@ -14,6 +14,17 @@
     const newer = payload.action_ts
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
+    // advanced anti-hack detection
+    if (wpm > 220) {
+      let msg = {
+        channel: payload.channel.id,
+        user: payload.user.id,
+        text: `${wpm} wpm? Something smells fishy :fish: :face_with_monocle:` 
+      }
+      return api.run('slack.post_chat_ephemeral', {$body: msg});
+    }
+
+    
     /*
      * Validate and determine result
      */
@@ -28,16 +39,6 @@
         api.run('airtable.update_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
         result = `\n :crown: Congratulations, you beat ${currRecord.fields.user} and now hold the record for this text!`
       }
-    }
-    
-    // advanced anti-hack detection
-    if (wpm > 220) {
-      let msg = {
-        channel: payload.channel.id,
-        user: payload.user.id,
-        text: `${wpm} wpm? Something smells fishy :fish: :face_with_monocle:` 
-      }
-      return api.run('slack.post_chat_ephemeral', {$body: msg});
     }
 
     /*
