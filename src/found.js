@@ -37,5 +37,5 @@
   };
 
   const dialogJson =  JSON.stringify(dialog);
-  api.run("slack.open_dialog", { $body: { trigger_id: slackBody.trigger_id, dialog: dialogJson }}, { "asGroup": slackBody.team_id }))
+  api.run("slack.open_dialog", { $body: { trigger_id: slackBody.trigger_id, dialog: dialogJson }}, { "asGroup": slackBody.team_id });
 }
