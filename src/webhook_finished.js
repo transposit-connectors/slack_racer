@@ -54,6 +54,5 @@
   });
   
   // return to Slack right away to prevent timeout
-  return { status_code: 200,     text: 'A message from Transposit!'
- };
+  return { status_code: 200,     text: 'A message from Transposit!'};
 }
