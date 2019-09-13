@@ -41,6 +41,9 @@
       return api.run('slack.post_chat_ephemeral', {$body: msg});
     }
 
+    /*
+     * Notify user of result
+     */
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
