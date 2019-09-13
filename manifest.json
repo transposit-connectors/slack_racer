@@ -9,12 +9,6 @@
         "alias": "slack"
       }],
       "operations": [{
-        "id": "map_users",
-        "function": {
-          "js": "map_users.js",
-          "lang": "js"
-        }
-      }, {
         "id": "get_random_paragraph",
         "function": {
           "js": "get_random_paragraph.js",
