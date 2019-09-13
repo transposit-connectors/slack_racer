@@ -89,7 +89,7 @@
           "webhook": true
         }
       }, {
-        "id": "generate_dialog_json",
+        "id": "genetate_dialog_json",
         "function": {
           "parameters": [{
             "name": "slackBody",
@@ -132,7 +132,7 @@
           "swagger": {
             "oauthConfig": {
               "scope": "commands,bot",
-              "accessTokenPath": "bot.bot_access_token",
+              "accessTokenPath": "access_token",
               "enableGroupCredentials": "true"
             },
             "executionLimits": {
