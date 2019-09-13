@@ -9,12 +9,6 @@
         "alias": "slack"
       }],
       "operations": [{
-        "id": "get_random_paragraph",
-        "function": {
-          "js": "get_random_paragraph.js",
-          "lang": "js"
-        }
-      }, {
         "id": "webhook_finished",
         "function": {
           "parameters": [{
