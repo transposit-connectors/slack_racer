@@ -126,6 +126,19 @@
             }
           }
         }
+      }, {
+        "ref": "slack.raw",
+        "overrides": {
+          "swagger": {
+            "oauthConfig": {
+              "scope": "commands,bot",
+              "accessTokenPath": "bot.bot_access_token",
+              "enableGroupCredentials": "true"
+            },
+            "executionLimits": {
+            }
+          }
+        }
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
