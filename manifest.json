@@ -92,13 +92,17 @@
         "id": "slack_post_chat_ephemeral",
         "tql": {
           "parameters": [{
-            "name": "slackUserId",
+            "name": "userId",
             "type": "STRING"
           }, {
-            "name": "slackChannelId",
+            "name": "channelId",
             "type": "STRING"
+          }, {
+            "name": "text",
+            "type": "STRING",
+            "required": true
           }],
-          "tql": "-- This operation gets run when the user has not yet visited the configuration page to connect their\n-- slack user. Please visit Users >> User Configuration for more details.\nSELECT * FROM slack_bot.post_chat_ephemeral\n  WHERE $body.channel = @slackChannelId\n  AND $body.user = @slackUserId\n  AND $body.text = @text\n  -- AND $body.blocks = (SELECT [{\n  --     \"type\": \"section\",\n  --     \"text\": {\n  --       \"type\": \"mrkdwn\",\n  --       \"text\": \"Please configure your user: https://slack-racer-p0s5c.transposit.io/settings\"\n  --     },\n  --   }])\n"
+          "tql": "-- This operation gets run when the user has not yet visited the configuration page to connect their\n-- slack user. Please visit Users >> User Configuration for more details.\nSELECT * FROM slack_bot.post_chat_ephemeral\n  WHERE $body.channel = @slackChannelId\n  AND $body.user = @slackUserId\n  AND $body.text = @text\n  AND $body.blocks = (SELECT [{\n      \"type\": \"section\",\n      \"text\": {\n        \"type\": \"mrkdwn\",\n        \"text\": \"Please configure your user: https://slack-racer-p0s5c.transposit.io/settings\"\n      },\n    }])\n"
         }
       }],
       "dataConnections": [{
