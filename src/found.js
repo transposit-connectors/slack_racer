@@ -7,6 +7,7 @@
   const idx = Math.floor(Math.random()*list.fields.count);
   let rec = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: list.fields.texts[idx]})[0];
   let text = rec.fields.text;
+  
   const elements = [{
     type: "textarea",
     name: "input",
