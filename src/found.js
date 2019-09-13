@@ -38,7 +38,7 @@
 
   // strangely, cannot pass json between operations?
   const dialogJson = JSON.stringify(dialog);
-  api.run("slack.open_dialog", { $body: { trigger_id: slackBody.trigger_id, dialog: dialogJson }}, { "asGroup": slackBody.team_id });
-  console.log(dialogJson);
+  // api.run("slack.open_dialog", { $body: { trigger_id: slackBody.trigger_id, dialog: dialogJson }}, { "asGroup": slackBody.team_id });
+  // console.log(dialogJson);
   return dialogJson;
 }
