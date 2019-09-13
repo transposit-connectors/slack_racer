@@ -131,8 +131,8 @@
         "overrides": {
           "swagger": {
             "oauthConfig": {
-              "scope": "commands,bot",
-              "accessTokenPath": "bot.bot_access_token",
+              "scope": "commands",
+              "accessTokenPath": "access_token",
               "enableGroupCredentials": "true"
             },
             "executionLimits": {
