@@ -16,10 +16,9 @@
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
     /*
-     * Determine result
+     * Validate and determine result
      */
     
-    // validate input and determine result
     const userInput = payload.submission.input.trim();
     let result = 'Sorry, input does not match!';
     if (payload.submission.input === payload.submission.original) {
