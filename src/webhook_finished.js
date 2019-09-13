@@ -4,7 +4,6 @@
      * Parse submission 
      */
     
-    // parse json
     let qs = require('qs.js');
     let payload = JSON.parse(http_event.parsed_body.payload);
     let state = JSON.parse(payload.state);
@@ -21,6 +20,7 @@
     
     const userInput = payload.submission.input.trim();
     let result = 'Sorry, input does not match!';
+    
     if (payload.submission.input === payload.submission.original) {
       result = 'Nice job!';
       const currRecord = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId})[0];
