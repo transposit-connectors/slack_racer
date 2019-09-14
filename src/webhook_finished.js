@@ -63,6 +63,12 @@
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
-    body: { message: {}}
+    body: {
+    "attachments": [
+        {
+            "text": "And here’s an attachment!"
+        }
+    ]
+}
   };
 }
