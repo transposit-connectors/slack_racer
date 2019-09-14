@@ -61,9 +61,5 @@
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
-    body: { channel: "C3NN7DVS9",
-          user: "UGN2QKPDX",
-          as_user: "false",
-          "text": "Would you like to go to lunch today?",},
   };
 }
