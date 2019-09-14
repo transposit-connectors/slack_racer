@@ -2,7 +2,7 @@
   
   return {
     status_code: 200,
-    body: { text: "Hello World" }
+    text: "Hello World"
   };
   setImmediate(() => {
     /*
