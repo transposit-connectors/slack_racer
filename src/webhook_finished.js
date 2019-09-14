@@ -1,9 +1,4 @@
 ({ http_event }) => {
-  
-  return {
-    status_code: 200,
-    body: { text: "Hello World" }
-  };
   setImmediate(() => {
     /*
      * Parse submission 
