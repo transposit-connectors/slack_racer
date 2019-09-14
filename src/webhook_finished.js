@@ -1,4 +1,5 @@
 ({ http_event }) => {
+  
   setImmediate(() => {
     /*
      * Parse submission 
@@ -58,6 +59,7 @@
   
   // return to Slack right away to prevent timeout
   return {
-    status_code: 200
+    status_code: 200,
+    body: { text: "Hello World" }
   };
 }
