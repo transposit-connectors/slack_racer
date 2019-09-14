@@ -61,6 +61,6 @@
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
-    body: { message: { text: "asd"}}
+    body: { message: {}}
   };
 }
