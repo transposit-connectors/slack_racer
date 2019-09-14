@@ -23,7 +23,7 @@
         user: payload.user.id,
         text: `${wpm} wpm? Something smells fishy :fish: :face_with_monocle:` 
       }
-      return api.run('slack.post_chat_ephemeral', {$body: msg});
+      return api.run('slack.post_chat_ephemeral', {$body: msg}, {asGroup: payload.team.id});
     }
 
     console.log("not hacking");
@@ -54,7 +54,7 @@
       user: payload.user.id,
       text: `${result} Wpm = ${wpm}` 
     }
-    return api.run('slack.post_chat_ephemeral', {$body: post});
+    return api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
   });
   
   // return to Slack right away to prevent timeout
