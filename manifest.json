@@ -115,7 +115,6 @@
         "overrides": {
           "swagger": {
             "oauthConfig": {
-              "scope": "commands",
               "enableGroupCredentials": "true"
             },
             "executionLimits": {
