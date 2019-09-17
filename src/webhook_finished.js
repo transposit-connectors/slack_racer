@@ -20,7 +20,7 @@
       let msg = {
         channel: payload.channel.id,
         user: payload.user.id,
-        text: `${wpm} wpm? Something smells fishy :fish: :face_with_monocle:` 
+        text: `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:` 
       }
       api.run('slack.post_chat_ephemeral', {$body: msg}, {asGroup: payload.team.id});
       return;
@@ -40,7 +40,7 @@
       const currRecord = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId})[0];
       if (wpm > currRecord.fields.wpm) {
         api.run('airtable.update_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
-        result = `:crown: Congratulations, you beat ${currRecord.fields.user} and now hold the record for this text!`
+        result = `:crown: Congratulations, you beat *${currRecord.fields.user}* and now hold the record for this text!`
       }
     }
 
@@ -51,7 +51,7 @@
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
-      text: `${result} Wpm = ${wpm}` 
+      text: `${result} *Wpm = ${wpm}*` 
     }
     api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
     return;
