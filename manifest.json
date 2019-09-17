@@ -26,21 +26,6 @@
           "webhook": true
         }
       }, {
-        "id": "generate_diff",
-        "function": {
-          "parameters": [{
-            "name": "input",
-            "type": "STRING",
-            "required": true
-          }, {
-            "name": "original",
-            "type": "STRING",
-            "required": true
-          }],
-          "js": "untitled.js",
-          "lang": "js"
-        }
-      }, {
         "id": "get_highscores",
         "function": {
           "js": "get_highscores.js",
