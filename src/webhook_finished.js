@@ -32,6 +32,7 @@
     
     const userInput = payload.submission.input.trim();
     let result = 'Sorry, input does not match!';
+    // TODO: generate diff of response
     
     if (payload.submission.input === payload.submission.original) {
       result = 'Nice job!';
