@@ -12,7 +12,7 @@
     type: "textarea",
     name: "input",
     label: "Your input",
-    hint: "Write the text from below into this text box"
+    hint: "Write the below text into this box"
     //min_length: text.length,
   }, {
     type: "textarea",
