@@ -15,7 +15,6 @@
     const newer = payload.action_ts
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
-    console.log("calculate timings");
     // advanced anti-hack detection
     if (wpm > 220) {
       let msg = {
@@ -23,11 +22,10 @@
         user: payload.user.id,
         text: `${wpm} wpm? Something smells fishy :fish: :face_with_monocle:` 
       }
-      console.log(api.run('slack.post_chat_ephemeral', {$body: msg}, {asGroup: payload.team.id}));
+      api.run('slack.post_chat_ephemeral', {$body: msg}, {asGroup: payload.team.id});
       return;
     }
 
-    console.log("not hacking");
     /*
      * Validate and determine result
      */
@@ -45,7 +43,6 @@
       }
     }
 
-    console.log("validated and possibly updated airtable");
     /*
      * Notify user of result
      */
@@ -55,7 +52,7 @@
       user: payload.user.id,
       text: `${result} Wpm = ${wpm}` 
     }
-    console.log(api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id}));
+    api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
     return;
   });
   
