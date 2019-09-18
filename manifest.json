@@ -62,12 +62,6 @@
           "js": "found.js",
           "lang": "js"
         }
-      }, {
-        "id": "slack_post_chat_ephemeral",
-        "function": {
-          "js": "slack_post_chat_ephemeral.js",
-          "lang": "js"
-        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",

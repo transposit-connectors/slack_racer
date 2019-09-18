@@ -1,5 +1,0 @@
-(params) => {
-  return {
-    mission: "complete"
-  };
-}
