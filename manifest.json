@@ -100,7 +100,7 @@
         "overrides": {
           "swagger": {
             "oauthConfig": {
-              "scope": "chat:write:user commands",
+              "scope": "chat:write:bot commands",
               "enableGroupCredentials": "true"
             },
             "executionLimits": {
