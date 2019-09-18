@@ -91,6 +91,7 @@
         }
       }, {
         "ref": "slack.raw",
+        "requireConsumerSignin": true,
         "overrides": {
           "swagger": {
             "oauthConfig": {
