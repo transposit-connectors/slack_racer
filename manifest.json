@@ -60,6 +60,7 @@
           "lang": "js"
         },
         "access": {
+          "requireApiKey": true,
           "requireUser": true
         }
       }, {
@@ -74,6 +75,10 @@
           }],
           "js": "slash_help_webhook.js",
           "lang": "js"
+        },
+        "access": {
+          "requireApiKey": true,
+          "webhook": true
         }
       }],
       "dataConnections": [{
