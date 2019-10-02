@@ -37,7 +37,7 @@
     if (payload.submission.input === payload.submission.original) {
       result = 'Nice job!';
   	  // can store recordId -> fasted_wpm mapping in stash
-      const currRecord = api.run('airtable.get_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId})[0];
+      const currRecord = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: state.recordId})[0];
       if (wpm > currRecord.fields.wpm) {
         api.run('airtable.update_record', {baseId: 'appcX3FvaawpLi3eF', table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
         result = `:crown: Congratulations, you beat *${currRecord.fields.user}* and now hold the record for this text!`
