@@ -1,6 +1,6 @@
 (params) => {
   var records = [];
-  api.run('airtable.get_records', {baseId: 'appcX3FvaawpLi3eF', table: 'texts'}).forEach((rec) => {
+  api.run('airtable.get_records', {baseId: env.get("baseId"), table: 'texts'}).forEach((rec) => {
     var user = '' |
     records.push({
       id: rec.fields.id,
