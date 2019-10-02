@@ -1,5 +1,8 @@
-({slackBody}) => {
-  
+/*
+ * Generate the dialog object to send to Slack
+ */
+
+({slackBody}) => {  
   /*
    * Fetch paragraph text from Airtable
    */
