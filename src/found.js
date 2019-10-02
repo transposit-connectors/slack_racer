@@ -24,6 +24,7 @@
     min_length: text.length
   }];
   
+  // record start time
   const state = JSON.stringify({
     ts: Date.now(),
     recordId: rec.id
