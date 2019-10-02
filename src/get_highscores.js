@@ -1,3 +1,7 @@
+/*
+ * Fetches highscores from Airtable
+ */
+
 (params) => {
   var records = [];
   api.run('airtable.get_records', {baseId: env.get("baseId"), table: 'texts'}).forEach((rec) => {
@@ -11,8 +15,3 @@
   })
   return records;
 }
-
-/*
- * For sample code and reference material, visit
- * https://www.transposit.com/docs/references/js-operations
- */
