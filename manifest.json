@@ -126,6 +126,12 @@
         "name": "slack_id",
         "type": "STRING",
         "hidden": true
+      }],
+      "appSettings": [{
+        "name": "baseId",
+        "description": "BaseId for paragraphs table",
+        "type": "STRING",
+        "default": "appcX3FvaawpLi3eF"
       }]
     }
   }
