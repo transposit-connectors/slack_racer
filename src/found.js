@@ -9,6 +9,7 @@
   let rec = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: list.fields.texts[idx]})[0];
   let text = rec.fields.text;
   
+  // create elements for dialog box
   const elements = [{
     type: "textarea",
     name: "input",
