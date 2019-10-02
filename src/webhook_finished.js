@@ -48,7 +48,7 @@
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
-      text: `${result} *Wpm = ${wpm}*` 
+      text: `${result} \n*Wpm = ${wpm}*` 
     }
     api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
     return;
