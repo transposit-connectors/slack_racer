@@ -28,7 +28,7 @@
 
     // validate and determine result
     const userInput = payload.submission.input.trim();
-    let result = 'Sorry, input does not match!';
+    let result;
     if (payload.submission.input === payload.submission.original) {
       result = 'Nice job!';
   	  // can store recordId -> fasted_wpm mapping in stash
@@ -38,7 +38,7 @@
         result = `:crown: Congratulations, you beat *${currRecord.fields.user}* and now hold the record for this text!`
       }
     } else {
-      result = "\n" + api.run("this.generate_diff", {input: payload.submission.input, original: payload.submission.original})[0]
+      result += 'Sorry, input does not match!\n' + api.run("this.generate_diff", {input: payload.submission.input, original: payload.submission.original})[0]
     }
 
     /*
