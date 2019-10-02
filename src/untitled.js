@@ -160,7 +160,7 @@ function diff( o, n ) {
   return { o: o, n: n };
 }
   // diffString(their input, correct)
-	return diffString("hello bad sir", "hello my good sir")
+	return diffString("hello my good sir", "hello my good sir")
 }
 
 /*
