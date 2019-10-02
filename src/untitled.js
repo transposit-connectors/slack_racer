@@ -159,11 +159,6 @@ function diff( o, n ) {
   
   return { o: o, n: n };
 }
-  // diffString(their input, correct)
-	return diffString("hello my good sir", "hello my good sir")
+	
+  return diffString(params.submission, params.original)
 }
-
-/*
- * For sample code and reference material, visit
- * https://www.transposit.com/docs/references/js-operations
- */

@@ -83,6 +83,15 @@
       }, {
         "id": "untitled",
         "function": {
+          "parameters": [{
+            "name": "submission",
+            "type": "STRING",
+            "required": true
+          }, {
+            "name": "original",
+            "type": "STRING",
+            "required": true
+          }],
           "js": "untitled.js",
           "lang": "js"
         }
