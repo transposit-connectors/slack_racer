@@ -26,14 +26,9 @@
       return;
     }
 
-    /*
-     * Validate and determine result
-     */
-    
+    // validate and determine result
     const userInput = payload.submission.input.trim();
     let result = 'Sorry, input does not match!';
-    // TODO: generate diff of response
-    
     if (payload.submission.input === payload.submission.original) {
       result = 'Nice job!';
   	  // can store recordId -> fasted_wpm mapping in stash
