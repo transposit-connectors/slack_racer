@@ -101,7 +101,7 @@ function diffString2( o, n ) {
           os += '<span style="background-color: ' +colors[i]+ '">' + 
                 escape(out.o[i].text) + oSpace[i] + "</span>";
       } else {
-          os += "~" + escape(out.o[i])  + "~" + oSpace[i];
+          os += "~" + escape(out.o[i]) + "~" + oSpace[i];
       }
   }
 
