@@ -5,11 +5,13 @@ SlackRacer uses the **commands** and **chat:write:bot** scopes to provide a ligh
 Initiate a race with the **/race** slash command and when the dialog box pops up, copy the text by hand as fast as possible. Afterwards the bot will reply with your WPM and correctness.
 
 #### dialog
-![dialog](https://i.imgur.com/c9DRQFW.png)
+![dialog](https://i.imgur.com/S8LxTUR.png)
 
-#### response
-![response](https://i.imgur.com/21f5xy4.png)
+#### correct response
+![success](https://i.imgur.com/CiYgHWL.png)
 
+#### bad response
+![bad](https://i.imgur.com/KD2RPBO.png)
 
 Since there is no real-time feedback with Slack, errors in your submission will not be known until you submit. Make sure to be 100% accurate!
 
@@ -25,4 +27,4 @@ Simply click the **Add to Slack** button above and authorize the app.
 
 **/race**: start a quick race
 
-**/racer_help**: information on how to request help or give feedback
+**/race_help**: information on how to request help or give feedback
