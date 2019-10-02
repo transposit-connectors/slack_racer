@@ -42,23 +42,23 @@ function diffString( o, n ) {
 
   if (out.n.length == 0) {
       for (var i = 0; i < out.o.length; i++) {
-        str += '<del>' + escape(out.o[i]) + oSpace[i] + "</del>";
+        str += '*' + escape(out.o[i]) + oSpace[i] + "* ";
       }
   } else {
     if (out.n[0].text == null) {
       for (n = 0; n < out.o.length && out.o[n].text == null; n++) {
-        str += '<del>' + escape(out.o[n]) + oSpace[n] + "</del>";
+        str += '*' + escape(out.o[n]) + oSpace[n] + "* ";
       }
     }
 
     for ( var i = 0; i < out.n.length; i++ ) {
       if (out.n[i].text == null) {
-        str += '<ins>' + escape(out.n[i]) + nSpace[i] + "</ins>";
+        str += '~' + escape(out.n[i]) + nSpace[i] + "~ ";
       } else {
         var pre = "";
 
         for (n = out.n[i].row + 1; n < out.o.length && out.o[n].text == null; n++ ) {
-          pre += '<del>' + escape(out.o[n]) + oSpace[n] + "</del>";
+          pre += '*' + escape(out.o[n]) + oSpace[n] + "* ";
         }
         str += " " + out.n[i].text + nSpace[i] + pre;
       }
@@ -101,7 +101,7 @@ function diffString2( o, n ) {
           os += '<span style="background-color: ' +colors[i]+ '">' + 
                 escape(out.o[i].text) + oSpace[i] + "</span>";
       } else {
-          os += "<del>" + escape(out.o[i]) + oSpace[i] + "</del>";
+          os += "*" + escape(out.o[i]) + oSpace[i] + "* ";
       }
   }
 
@@ -111,7 +111,7 @@ function diffString2( o, n ) {
           ns += '<span style="background-color: ' +colors[out.n[i].row]+ '">' + 
                 escape(out.n[i].text) + nSpace[i] + "</span>";
       } else {
-          ns += "<ins>" + escape(out.n[i]) + nSpace[i] + "</ins>";
+          ns += "~" + escape(out.n[i]) + nSpace[i] + "~ ";
       }
   }
 
