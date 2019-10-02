@@ -1,3 +1,7 @@
+/*
+ * Return response for /race_help command
+ */
+
 ({ http_event }) => {
   return {
     status_code: 200,
