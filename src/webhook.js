@@ -1,3 +1,7 @@
+/*
+ * Return response for /race command
+ */
+
 ({ http_event }) => {
   console.log(http_event);
   let body = http_event.parsed_body;
