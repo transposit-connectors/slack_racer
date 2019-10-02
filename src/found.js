@@ -3,7 +3,7 @@
  */
 
 ({slackBody}) => {  
-  // Fetch paragraph text from Airtable
+  // fetch paragraph text from Airtable
   const list = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Meta', recordId: env.get("recordId")})[0];
   const idx = Math.floor(Math.random()*list.fields.count);
   let rec = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: list.fields.texts[idx]})[0];
