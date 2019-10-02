@@ -80,6 +80,12 @@
           "requireApiKey": true,
           "webhook": true
         }
+      }, {
+        "id": "untitled",
+        "function": {
+          "js": "untitled.js",
+          "lang": "js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
