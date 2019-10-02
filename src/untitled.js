@@ -60,7 +60,7 @@ function diffString( o, n ) {
         for (n = out.n[i].row + 1; n < out.o.length && out.o[n].text == null; n++ ) {
           pre += '~' + escape(out.o[n]) + oSpace[n] + "~";
         }
-        str += out.n[i].text + nSpace[i] + pre;
+        str += " " + out.n[i].text + nSpace[i] + pre;
       }
     }
   }
