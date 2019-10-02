@@ -132,6 +132,11 @@
         "description": "BaseId for paragraphs table",
         "type": "STRING",
         "default": "appcX3FvaawpLi3eF"
+      }, {
+        "name": "recordId",
+        "description": "RecordId for the list of paragraphs in Airtable",
+        "type": "STRING",
+        "default": "recytAa5YjZi1OSJ9"
       }]
     }
   }
