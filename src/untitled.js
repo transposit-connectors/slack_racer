@@ -160,5 +160,5 @@ function diff( o, n ) {
   return { o: o, n: n };
 }
 	
-  return diffString(params.submission, params.original)
+  return diffString(params.input, params.original)
 }

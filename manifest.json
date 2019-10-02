@@ -84,7 +84,7 @@
         "id": "generate_diff",
         "function": {
           "parameters": [{
-            "name": "submission",
+            "name": "input",
             "type": "STRING",
             "required": true
           }, {
