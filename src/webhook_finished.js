@@ -16,7 +16,7 @@
 	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
     
     // advanced anti-hack detection
-    if (wpm > 220) {
+    if (wpm > 200) {
       let msg = {
         channel: payload.channel.id,
         user: payload.user.id,
