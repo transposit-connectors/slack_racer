@@ -38,7 +38,7 @@
         result = `:crown: Congratulations, you beat *${currRecord.fields.user}* and now hold the record for this text!`
       }
     } else {
-      result = api.run("this.generate_diff", {input: payload.submission.input, original: payload.submission.original})
+      result = "\n" + api.run("this.generate_diff", {input: payload.submission.input, original: payload.submission.original})[0]
     }
 
     /*
