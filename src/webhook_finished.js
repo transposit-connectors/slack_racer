@@ -37,6 +37,8 @@
         api.run('airtable.update_record', {baseId: env.get("baseId"), table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
         result = `:crown: Congratulations, you beat *${currRecord.fields.user}* and now hold the record for this text!`
       }
+    } else {
+      result = api.run("this.generate_diff", {input: payload.submission.input, original: payload.submission.original})
     }
 
     /*
