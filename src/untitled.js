@@ -161,9 +161,11 @@ function diff( o, n ) {
 }
 	
   let tmp = diffString(params.input, params.original);
-  let extraRegex = new RegExp(/<del>|\s<\/del>/, 'g');
-  let missingRegex = new RegExp(/<ins>|\s<\/ins>/, 'g');
+  let extraRegex = new RegExp(/<del>/, 'g');
+  let endExtraRegex = new RegExp(/\s<\/del>/, 'g');
+  let missingRegex = new RegExp(/<ins>/, 'g');
+  let endMissingRegex = new RegExp(/\s<\/ins>/, 'g');
   console.log(tmp)
   let finalRegex = new RegExp(/\*\s|~\s/, 'g');
-  return tmp.replace(extraRegex, "* ").replace(missingRegex, "~ ").replace(finalRegex, "");
+  return tmp.replace(extraRegex, "*").replace(endExtraRegex, "* ").replace(missingRegex, "~").replace(endMissingRegex, "~ ")//.replace(finalRegex, "");
 }
