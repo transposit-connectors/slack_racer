@@ -4,10 +4,7 @@
 
 ({ http_event }) => {
   setImmediate(() => {
-    /*
-     * Parse submission 
-     */
-    
+    // parse submission 
     let qs = require('qs.js');
     let payload = JSON.parse(http_event.parsed_body.payload);
     let state = JSON.parse(payload.state);
