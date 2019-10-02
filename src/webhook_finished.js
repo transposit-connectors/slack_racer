@@ -1,5 +1,8 @@
+/*
+ * Called by Slack when dialog box is submitted
+ */
+
 ({ http_event }) => {
-  
   setImmediate(() => {
     /*
      * Parse submission 
