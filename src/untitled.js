@@ -1,3 +1,4 @@
+(params) => {
 /*
  * Javascript Diff Algorithm
  *  By John Resig (http://ejohn.org/)
@@ -158,3 +159,10 @@ function diff( o, n ) {
   
   return { o: o, n: n };
 }
+
+}
+
+/*
+ * For sample code and reference material, visit
+ * https://www.transposit.com/docs/references/js-operations
+ */
