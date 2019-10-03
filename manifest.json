@@ -98,6 +98,11 @@
       }, {
         "id": "untitled_1",
         "function": {
+          "parameters": [{
+            "name": "workspaceId",
+            "type": "STRING",
+            "required": true
+          }],
           "js": "untitled_1.js",
           "lang": "js"
         }
