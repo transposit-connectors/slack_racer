@@ -1392,7 +1392,7 @@ params => {
           html[x] = '%00%00%20%0B*' + text.trim()  + "* ";
           break;
         case DIFF_DELETE:
-          html[x] = '\u200B~' + text.trim() + "~ "; // \u2063
+          html[x] = '%00%00%20%0B~' + text.trim() + "~ "; // \u2063 \u200B
           break;
         case DIFF_EQUAL:
           html[x] = text;
