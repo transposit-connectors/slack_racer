@@ -48,7 +48,8 @@
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
-      text: `${result} \n*Wpm = ${wpm}*` 
+      text: `${result} \n*Wpm = ${wpm}*`,
+      parse: none
     }
     
     console.log(post);
