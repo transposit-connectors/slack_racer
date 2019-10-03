@@ -99,7 +99,7 @@
             "type": "STRING",
             "required": true
           }, {
-            "name": "paragraphId",
+            "name": "textId",
             "type": "STRING",
             "required": true
           }, {
