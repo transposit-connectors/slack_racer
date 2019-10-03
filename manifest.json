@@ -10,6 +10,7 @@
       }],
       "operations": [{
         "id": "generate_dialog_json",
+        "description": "generate the dialog object to send to Slack",
         "function": {
           "parameters": [{
             "name": "slackBody",
@@ -21,6 +22,7 @@
         }
       }, {
         "id": "slash_race_webhook",
+        "description": "return response for /race command",
         "function": {
           "parameters": [{
             "name": "http_event",
@@ -38,6 +40,7 @@
         }
       }, {
         "id": "event_race_finish_webhook",
+        "description": "called by Slack when dialog box is submitted",
         "function": {
           "parameters": [{
             "name": "http_event",
@@ -55,6 +58,7 @@
         }
       }, {
         "id": "slash_help_webhook",
+        "description": "returns response for /race_help command",
         "function": {
           "parameters": [{
             "name": "http_event",
@@ -72,6 +76,7 @@
         }
       }, {
         "id": "generate_diff",
+        "description": "generate a diff of the text to give as feedback",
         "function": {
           "parameters": [{
             "name": "input",
@@ -87,6 +92,7 @@
         }
       }, {
         "id": "update_best_record",
+        "description": "helper method to handle record keeping",
         "function": {
           "parameters": [{
             "name": "workspaceId",
@@ -110,6 +116,7 @@
         }
       }, {
         "id": "slash_highscores_webhook",
+        "description": "return response for /race_highscores command",
         "function": {
           "parameters": [{
             "name": "http_event",

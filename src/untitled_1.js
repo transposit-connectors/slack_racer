@@ -1,3 +1,7 @@
+/*
+ * Helper method to handle record keeping
+ */
+
 ({ workspaceId, paragraphId, username, wpm }) => {
   let rec = api.run("airtable.get_records", {
     baseId: env.get("baseId"),
