@@ -1,5 +1,5 @@
 /*
- * Helper method to handle record keeping
+ * Helper method to handle record keeping and generate success messages
  */
 
 ({ workspaceId, textId, username, wpm }) => {
