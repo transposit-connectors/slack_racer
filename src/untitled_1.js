@@ -42,7 +42,7 @@
       $body: { fields }
     });
     
-    let message;
+    var message;
     if (oldName == "") {
       message = `Congratulations! You now hold the record for text *#${textId}*! :crown: :tada:`;
     } else {
