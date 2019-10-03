@@ -28,7 +28,8 @@
   // record start time
   const state = JSON.stringify({
     ts: Date.now(),
-    recordId: rec.id
+    recordId: rec.id,
+    paragraphId: rec.fields.id
   })
   
   const dialog = {
