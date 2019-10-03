@@ -3,7 +3,7 @@
   let blob = rec.fields[params.paragraphId]
   
   let meta = {username: "", wpm: -1};
-  if (blob ~= null) {
+  if (blob != null) {
   	meta = JSON.parse(rec.fields[params.paragraphId]);  
   }
   
@@ -15,7 +15,6 @@
     fields[params.paragraphId] = JSON.stringify(meta);
     api.run('airtable.update_record', {baseId: env.get("baseId"), table: 'Workspaces', recordId: rec.recordId, $body: {fields}});
   }
-  return meta
 }
 
 /*
