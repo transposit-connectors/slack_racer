@@ -1047,5 +1047,6 @@ params => {
 
   var dmp = new diff_match_patch();
   let diff = dmp.diff_main(params.input, params.original);
+  console.log(diff)
   return dmp.diff_prettyHtml(diff);
 }

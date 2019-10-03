@@ -98,6 +98,19 @@
       }, {
         "id": "untitled_1",
         "function": {
+          "parameters": [{
+            "name": "input",
+            "default": {
+              "text": "Do you knowww they call a Quarter-pounder with cheese in France? Royale with cheese. Do you know why they call it a Royale with cheese? Because of the metric system."
+            },
+            "type": "STRING"
+          }, {
+            "name": "original",
+            "default": {
+              "text": "Do you know what they call a Quarter-pounder with cheese in France? Royale with cheese. Do you know why they call it a Royale with cheese? Because of the metric system."
+            },
+            "type": "STRING"
+          }],
           "js": "untitled_1.js",
           "lang": "js"
         }
