@@ -1,3 +1,7 @@
+/*
+ * Generate a diff of the text to give as feedback
+ */
+
 params => {
   /**
    * Diff Match and Patch
