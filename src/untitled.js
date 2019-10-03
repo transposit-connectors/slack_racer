@@ -98,8 +98,7 @@
         colors[i] = randomColor();
 
         if (out.o[i].text != null) {
-            os += '<span style="background-color: ' +colors[i]+ '">' + 
-                  escape(out.o[i].text) + oSpace[i] + "</span>";
+            os += escape(out.o[i].text) + oSpace[i] + "</span>";
         } else {
             os += "~" + escape(out.o[i]) + "~" + oSpace[i];
         }
@@ -108,8 +107,7 @@
     var ns = "";
     for (var i = 0; i < out.n.length; i++) {
         if (out.n[i].text != null) {
-            ns += '<span style="background-color: ' +colors[out.n[i].row]+ '">' + 
-                  escape(out.n[i].text) + nSpace[i] + "</span>";
+            ns += escape(out.n[i].text) + nSpace[i] + "</span>";
         } else {
             ns += "*" + escape(out.n[i]) + "*";
         }
