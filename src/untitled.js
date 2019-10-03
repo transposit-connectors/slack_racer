@@ -73,8 +73,6 @@
     var ns = new Object();
     var os = new Object();
 
-    console.log(o)
-    console.log(n)
     for ( var i = 0; i < n.length; i++ ) {
       if ( ns[ n[i] ] == null )
         ns[ n[i] ] = { rows: new Array(), o: null };
@@ -94,6 +92,7 @@
       }
     }
 
+
     for ( var i = 0; i < n.length - 1; i++ ) {
       if ( n[i].text != null && n[i+1].text == null && n[i].row + 1 < o.length && o[ n[i].row + 1 ].text == null && 
            n[i+1] == o[ n[i].row + 1 ] ) {
@@ -101,14 +100,23 @@
         o[n[i].row+1] = { text: o[n[i].row+1], row: i + 1 };
       }
     }
+	console.log(o)
+	console.log(n)
+	console.log(os)
+	console.log(ns)
 
     for ( var i = n.length - 1; i > 0; i-- ) {
-      if ( n[i].text != null && n[i-1].text == null && n[i].row > 0 && o[ n[i].row - 1 ].text == null && 
-           n[i-1] == o[ n[i].row - 1 ] ) {
+      if ( n[i].text != null && n[i-1].text == null && n[i].row > 0 && o[ n[i].row - 1 ].text == null && n[i-1] == o[ n[i].row - 1 ] ) {
+        console.log(n[i])
+        console.log(n[i-1])
+        console.log(o[n[i].row - 1])
+        console.log("@@@@@@@@@")
         n[i-1] = { text: n[i-1], row: n[i].row - 1 };
         o[n[i].row-1] = { text: o[n[i].row-1], row: i - 1 };
       }
     }
+    console.log(o)
+    console.log(n)
 
     return { o: o, n: n };
   }
