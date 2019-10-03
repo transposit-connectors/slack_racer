@@ -21,7 +21,6 @@
   }
   
   let blob = rec.fields[textId];
-
   let meta = { username: "", wpm: -1 };
   if (blob != null) {
     meta = JSON.parse(rec.fields[textId]);
