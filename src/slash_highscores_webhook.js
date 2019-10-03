@@ -68,6 +68,6 @@
     return api.run("slack.post_chat_ephemeral", { $body: post }, { asGroup: body.team_id });
   });
 
-  // return 200 immideatly to prevent Slack timeout
+  // return 200 immediately to prevent Slack timeout
   return { status_code: 200 };
 }
