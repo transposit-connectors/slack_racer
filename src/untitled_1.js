@@ -1047,9 +1047,4 @@ params => {
 
   var dmp = new diff_match_patch();
   return dmp.diff_prettyHtml(dmp.diff_main("do do do", "do do"));
-};
-
-/*
- * For sample code and reference material, visit
- * https://www.transposit.com/docs/references/js-operations
- */
+}
