@@ -4,25 +4,25 @@
 
 ({ http_event }) => {
   setImmediate(() => {
-    // parse submission 
-    let qs = require('qs.js');
+    // parse submission
+    let qs = require("qs.js");
     let payload = JSON.parse(http_event.parsed_body.payload);
     let state = JSON.parse(payload.state);
-    console.log(payload)
+    console.log(payload);
 
     // calculate timings
-    const old = state.ts/1000
-    const newer = payload.action_ts
-	const wpm = Math.floor(payload.submission.original.split(' ').length / ((newer - old) / 60))
-    
+    const old = state.ts / 1000;
+    const newer = payload.action_ts;
+    const wpm = Math.floor(payload.submission.original.split(" ").length / ((newer - old) / 60));
+
     // advanced anti-hack detection
     if (wpm > 1000000000000) {
       let msg = {
         channel: payload.channel.id,
         user: payload.user.id,
-        text: `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:` 
-      }
-      api.run('slack.post_chat_ephemeral', {$body: msg}, {asGroup: payload.team.id});
+        text: `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`
+      };
+      api.run("slack.post_chat_ephemeral", { $body: msg }, { asGroup: payload.team.id });
       return;
     }
 
@@ -30,42 +30,52 @@
     const userInput = payload.submission.input.trim();
     let result;
     if (payload.submission.input === payload.submission.original) {
-      result = 'Nice job!';
-  	        
+      result = "Nice job!";
+
       // if user beats record, then set it and notify user
-      let highscore = api.run('this.update_best_record', {workspaceId: payload.team.id, paragraphId: state.paragraphId, username: payload.user.name, wpm: wpm});
+      let highscore = api.run("this.update_best_record", {
+        workspaceId: payload.team.id,
+        paragraphId: state.paragraphId,
+        username: payload.user.name,
+        wpm: wpm
+      });
       if (highscore.updated) {
-        result = `:crown: Congratulations, you beat *${highscore.oldName}* and now hold the record for this text!`
+        result = `:crown: Congratulations, you beat *${highscore.oldName}* and now hold the record for this text!`;
       }
     } else {
-      result = 'Sorry, input does not match!\n\n' + api.run("this.generate_diff", {input: payload.submission.input, original: payload.submission.original})[0]
+      result =
+        "Sorry, input does not match!\n\n" +
+        api.run("this.generate_diff", {
+          input: payload.submission.input,
+          original: payload.submission.original
+        })[0];
     }
 
     /*
      * Notify user of result
      */
-    
+
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
       // text: `${result} \n*Wpm = ${wpm}*`,
-      blocks: 
-        [
-          {
-              "type": "section",
-              "text": {
-                  "type": "mrkdwn",
-                  "text": `${result} \n*Wpm=${wpm}*`
-              }
+      blocks: [
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: `${result} \n*Wpm=${wpm}*`
           }
-        ]}
-    
+        }
+      ]
+    };
+
     console.log(post);
-    return api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
+    return api.run("slack.post_chat_ephemeral", { $body: post }, { asGroup: payload.team.id });
   });
-  
+
   // return to Slack right away to prevent timeout
   return {
-    status_code: 200,
+    status_code: 200
   };
-}
+};
