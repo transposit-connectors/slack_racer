@@ -33,7 +33,7 @@
       result = 'Nice job!';
   	        
       // if user beats record, then set it and notify user
-      let recordUpdated = api.run('this.update_best_record', {workspaceId: payload.team.id, paragraphId: rec.})
+      let recordUpdated = api.run('this.update_best_record', {workspaceId: payload.team.id, paragraphId: state.paragraphId, username: payload.user.name, wpm: wpm});
       if (wpm > currRecord.fields.wpm) {
         api.run('airtable.update_record', {baseId: env.get("baseId"), table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
         result = `:crown: Congratulations, you beat *${currRecord.fields.user}* and now hold the record for this text!`
