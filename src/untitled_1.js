@@ -7,7 +7,7 @@
   	meta = JSON.parse(rec.fields[params.paragraphId]);  
   }
   
-  let oldName = meta.username:
+  let oldName = meta.username;
   if (meta.wpm < params.wpm) {
     meta.username = params.username;
     meta.wpm = params.wpm;
