@@ -42,6 +42,9 @@
 				"type": "mrkdwn",
 				"text": `>>>${original}`
 			}
+		},
+        {
+			"type": "divider"
 		}
 	];
 }
