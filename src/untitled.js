@@ -2423,6 +2423,5 @@ params => {
   var dmp = new diff_match_patch();
   let diff = dmp.diff_main(params.input, params.original);
   dmp.diff_cleanupSemantic(diff);
-  console.log(diff)
   return dmp.diff_prettyHtml(diff);
 }
