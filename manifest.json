@@ -26,10 +26,8 @@
         "function": {
           "parameters": [{
             "name": "http_event",
-            "default": {
-              "text": "{   \"query_parameters\": {},   \"headers\": {     \"X-Slack-Signature\": \"v0=XXX\",     \"Accept\": \"application/json,*/*\",     \"X-Request-ID\": \"fXXX\",     \"X-Forwarded-Proto\": \"https\",     \"User-Agent\": \"Slackbot 1.0 (+https://api.slack.com/robots)\",     \"Host\": \"api.transposit.com\",     \"Accept-Encoding\": \"gzip,deflate\",     \"X-Forwarded-Port\": \"443\",     \"X-Amzn-Trace-Id\": \"Root=1-5cdec48b-69a949c8591a0c7d9943762d\",     \"X-Slack-Request-Timestamp\": \"1558103179\",     \"X-Forwarded-For\": \"18.209.110.231\",     \"Content-Length\": \"351\",     \"Content-Type\": \"application/x-www-form-urlencoded\"   },   \"http_method\": \"POST\",   \"body\": \"token=XXX&team_id=TXXX&team_domain=transposit&channel_id=DXXX&channel_name=directmessage&user_id=UXXX&user_name=iggy&command=%2Fcommand&text=sampletext&response_url=https%3A%2F%2Fhooks.slack.com%2Fcommands%2FXXX\" }"
-            },
-            "type": "OBJECT"
+            "type": "OBJECT",
+            "required": true
           }],
           "js": "webhook.js",
           "lang": "js"
@@ -44,10 +42,8 @@
         "function": {
           "parameters": [{
             "name": "http_event",
-            "default": {
-              "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
-            },
-            "type": "OBJECT"
+            "type": "OBJECT",
+            "required": true
           }],
           "js": "webhook_finished.js",
           "lang": "js"
@@ -62,10 +58,8 @@
         "function": {
           "parameters": [{
             "name": "http_event",
-            "default": {
-              "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
-            },
-            "type": "OBJECT"
+            "type": "OBJECT",
+            "required": true
           }],
           "js": "slash_help_webhook.js",
           "lang": "js"
@@ -120,10 +114,8 @@
         "function": {
           "parameters": [{
             "name": "http_event",
-            "default": {
-              "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
-            },
-            "type": "OBJECT"
+            "type": "OBJECT",
+            "required": true
           }],
           "js": "slash_highscores_webhook.js",
           "lang": "js"
