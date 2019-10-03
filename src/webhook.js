@@ -3,7 +3,6 @@
  */
 
 ({ http_event }) => {
-  console.log(http_event);
   let body = http_event.parsed_body;
   setImmediate(() => {
     const dialogJson = api.run("this.generate_dialog_json", {slackBody: body})[0]; 
