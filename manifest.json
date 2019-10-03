@@ -54,16 +54,6 @@
           "webhook": true
         }
       }, {
-        "id": "display_highscores",
-        "function": {
-          "js": "get_highscores.js",
-          "lang": "js"
-        },
-        "access": {
-          "requireApiKey": true,
-          "requireUser": true
-        }
-      }, {
         "id": "slash_help_webhook",
         "function": {
           "parameters": [{
