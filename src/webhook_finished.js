@@ -33,9 +33,9 @@
       result = 'Nice job!';
   	        
       // if user beats record, then set it and notify user
-      let recordUpdated = api.run('this.update_best_record', {workspaceId: payload.team.id, paragraphId: state.paragraphId, username: payload.user.name, wpm: wpm});
-      if (recordUpdated) {
-        result = `:crown: Congratulations, you beat *${currRecord.fields.user}* and now hold the record for this text!`
+      let highscore = api.run('this.update_best_record', {workspaceId: payload.team.id, paragraphId: state.paragraphId, username: payload.user.name, wpm: wpm});
+      if (highscore.updated) {
+        result = `:crown: Congratulations, you beat *${highscore.oldName}* and now hold the record for this text!`
       }
     } else {
       result = 'Sorry, input does not match!\n\n' + api.run("this.generate_diff", {input: payload.submission.input, original: payload.submission.original})[0]
