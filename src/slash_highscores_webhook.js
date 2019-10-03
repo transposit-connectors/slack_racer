@@ -18,7 +18,7 @@
           type: "section",
           text: {
             type: "mrkdwn",
-            text: `*Id*: ${rec.fields.id} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`
+            text: `*Id*: ${key} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`
           }
         });
         blocks.push({
