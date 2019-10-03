@@ -8,7 +8,7 @@
   const idx = Math.floor(Math.random()*list.fields.count);
   let rec = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: list.fields.texts[idx]})[0];
   let text = rec.fields.text;
-  let id = rec.fields.id;
+  let paragraphId = rec.fields.id;
   
   // create elements for dialog box
   const elements = [{
@@ -29,13 +29,13 @@
   const state = JSON.stringify({
     ts: Date.now(),
     recordId: rec.id,
-    paragraphId: rec.fields.id
+    paragraphId: paragraphId
   })
   
   const dialog = {
     callback_id: "type_race",
     notify_on_cancel: false,
-    title: `SlackRacer: Test #${id}`,
+    title: `SlackRacer: Test #${paragraphId}`,
     elements,
     state
   };
