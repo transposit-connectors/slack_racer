@@ -102,6 +102,10 @@
             "name": "workspaceId",
             "type": "STRING",
             "required": true
+          }, {
+            "name": "paragraphId",
+            "type": "STRING",
+            "required": true
           }],
           "js": "untitled_1.js",
           "lang": "js"
