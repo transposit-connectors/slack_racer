@@ -69,22 +69,6 @@
           "webhook": true
         }
       }, {
-        "id": "generate_diff",
-        "description": "generate a diff of the text to give as feedback",
-        "function": {
-          "parameters": [{
-            "name": "input",
-            "type": "STRING",
-            "required": true
-          }, {
-            "name": "original",
-            "type": "STRING",
-            "required": true
-          }],
-          "js": "untitled.js",
-          "lang": "js"
-        }
-      }, {
         "id": "update_best_record",
         "description": "helper method to handle record keeping",
         "function": {
@@ -123,6 +107,28 @@
         "access": {
           "requireApiKey": true,
           "webhook": true
+        }
+      }, {
+        "id": "generate_diff_experimental",
+        "description": "generate a diff of the text to give as feedback",
+        "function": {
+          "parameters": [{
+            "name": "input",
+            "type": "STRING",
+            "required": true
+          }, {
+            "name": "original",
+            "type": "STRING",
+            "required": true
+          }],
+          "js": "untitled.js",
+          "lang": "js"
+        }
+      }, {
+        "id": "generate_diff",
+        "function": {
+          "js": "generate_diff.js",
+          "lang": "js"
         }
       }],
       "dataConnections": [{

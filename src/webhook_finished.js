@@ -41,12 +41,11 @@
       })[0].message;
       
     } else {
-      result =
-        "Sorry, input does not match!\n\n" +
+      result = 
         api.run("this.generate_diff", {
           input: payload.submission.input,
           original: payload.submission.original
-        })[0];
+        });
     }
 
     // notify user of result
