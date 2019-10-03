@@ -55,7 +55,7 @@
               "type": "section",
               "text": {
                   "type": "mrkdwn",
-                  "text": `${result} \n*Wpm=${wpm}* \u0040`
+                  "text": `${result} \n*Wpm=${wpm}*`
               }
           }
         ]}
