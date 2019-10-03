@@ -11,13 +11,14 @@
     })[0];
     let blocks = [];
 
-    for (field in rec.fields) {
-      if (parseInt(field)) {
+    for (key in rec.fields) {
+      if (parseInt(key)) {
+        let blob = JSON.parse(rec.fields[key])
         blocks.push({
           type: "section",
           text: {
             type: "plain_text",
-            text: "This is a plain text section block.",
+            text: `*Id*: ${rec.fields.id} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`,
             emoji: true
           }
         });
