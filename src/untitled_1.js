@@ -11,7 +11,7 @@
     filterByFormula: `id="${workspaceId}"`
   })[0];
 
-  // create record for this workspace if first time
+  // create main record for this workspace if first time
   if (rec == null) {
     let fields = {};
     fields.id = workspaceId;
