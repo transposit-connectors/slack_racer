@@ -38,14 +38,15 @@
         workspaceId: payload.team.id,
         textId: state.textId,
         username: payload.user.name,
-        wpm: wpm
+        wpm
       })[0].message;
       
     } else {
       blocks = 
         api.run("this.generate_diff", {
           input: payload.submission.input,
-          original: payload.submission.original
+          original: payload.submission.original,
+          wpm,
         });
     }
 
