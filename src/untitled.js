@@ -1389,10 +1389,10 @@ params => {
         .replace(pattern_para, "&para;<br>");
       switch (op) {
         case DIFF_INSERT:
-          html[x] = '\u200d*' + text.trim()  + "* ";
+          html[x] = '‍*' + text.trim()  + "* ";
           break;
         case DIFF_DELETE:
-          html[x] = '\u200d~' + text.trim() + "~ "; // \u2063 \u200B
+          html[x] = '‍~' + text.trim() + "~ "; // \u2063 \u200B
           break;
         case DIFF_EQUAL:
           html[x] = text;
