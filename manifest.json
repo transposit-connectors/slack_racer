@@ -120,6 +120,10 @@
           }],
           "js": "slash_highscores_webhook.js",
           "lang": "js"
+        },
+        "access": {
+          "requireApiKey": true,
+          "webhook": true
         }
       }],
       "dataConnections": [{
