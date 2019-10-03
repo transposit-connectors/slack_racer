@@ -7,7 +7,7 @@
     let fields = {};
     fields.id = workspaceId;
     fields[paragraphId] = JSON.stringify({username, wpm})
-    api.run('airtable.create_record', {baseId: env.get("baseId"), table: 'Workspaces', $body: {fields}}})
+    api.run('airtable.create_record', {baseId: env.get("baseId"), table: 'Workspaces', $body: {fields}})
     return;
   }
   let blob = rec.fields[paragraphId]
