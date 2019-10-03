@@ -4,6 +4,8 @@
  */
 
 ({ http_event }) => {
+  
+  // requires significant processing, delay execution of this code block
   setImmediate(() => {
     var _ = require("underscore.js");
     let body = http_event.parsed_body;
@@ -66,5 +68,6 @@
     return api.run("slack.post_chat_ephemeral", { $body: post }, { asGroup: body.team_id });
   });
 
+  // return 200 immideatly to prevent Slack timeout
   return { status_code: 200 };
 }
