@@ -11,12 +11,14 @@
     let body = http_event.parsed_body;
     console.log(body);
 
+    // get workspace record from airtable
     let rec = api.run("airtable.get_records", {
       baseId: env.get("baseId"),
       table: "Workspaces",
       filterByFormula: `id="${body.team_id}"`
     })[0];
 
+    // if no runs, return immediately
     if (rec == null) {
       return api.run(
         "slack.post_chat_ephemeral",
@@ -31,8 +33,8 @@
       );
     }
 
+    // parse record and marshall data into blocks
     let blocks = [];
-
     for (key in rec.fields) {
       if (parseInt(key)) {
         let blob = JSON.parse(rec.fields[key]);
@@ -49,22 +51,12 @@
       }
     }
 
-    if (blocks.length === 0) {
-      blocks.push({
-        type: "section",
-        text: {
-          type: "mrkdwn",
-          text: "No high scores! Please finish a race first."
-        }
-      });
-    }
-
+    // post message
     let post = {
       channel: body.channel_id,
       user: body.user_id,
       blocks: blocks
     };
-
     return api.run("slack.post_chat_ephemeral", { $body: post }, { asGroup: body.team_id });
   });
 
