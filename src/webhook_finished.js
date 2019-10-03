@@ -49,7 +49,6 @@
       channel: payload.channel.id,
       user: payload.user.id,
       text: `${result} \n*Wpm = ${wpm}*`,
-      parse: "full"
     }
     
     console.log(post);
