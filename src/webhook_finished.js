@@ -31,8 +31,13 @@
     let result;
     if (payload.submission.input === payload.submission.original) {
       result = 'Nice job!';
-  	  // can store recordId -> fasted_wpm mapping in stash
+  	  
+      // get current record for that workspace
       const currRecord = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: state.recordId})[0];
+      
+      // if no record for that workspace, create it
+      
+      // if user beats record, then set it and notify user
       if (wpm > currRecord.fields.wpm) {
         api.run('airtable.update_record', {baseId: env.get("baseId"), table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})
         result = `:crown: Congratulations, you beat *${currRecord.fields.user}* and now hold the record for this text!`
