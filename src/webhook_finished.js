@@ -29,6 +29,7 @@
     // validate and determine result
     const userInput = payload.submission.input.trim();
     let result;
+    let blocks;
     if (payload.submission.input === payload.submission.original) {
       result = "Nice job!";
 
@@ -41,7 +42,7 @@
       })[0].message;
       
     } else {
-      result = 
+      blocks = 
         api.run("this.generate_diff", {
           input: payload.submission.input,
           original: payload.submission.original
@@ -52,8 +53,15 @@
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
-      text: `${result} \n*Wpm = ${wpm}*`,
+      // text: `${result} \n*Wpm = ${wpm}*`,
     };
+    
+    if (result != null) {
+      post.text = `${result} \n*Wpm = ${wpm}*`;
+    } else {
+      post.blocks = blocks;
+    }
+    
     return api.run("slack.post_chat_ephemeral", { $body: post }, { asGroup: payload.team.id });
   });
 
