@@ -1,16 +1,13 @@
 ({ http_event }) => {
   // console.log(http_event)
+  var _ = require('underscore.js');
   let body = http_event.parsed_body;
   // console.log(body)
   
   let rec = api.run('airtable.get_records', {baseId: env.get("baseId"), table: 'Workspaces', filterByFormula: `id="${body.team_id}"`});
   let blocks = [];
   console.log(rec);
-  for (field in rec.fields) {
-    
-    console.log(field)
-  }
-  
+  Object.values(rec.fields)//.forEach(() => console.log("asd"))
   
   
   
