@@ -58,16 +58,7 @@
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
-      // text: `${result} \n*Wpm = ${wpm}*`,
-      blocks: [
-        {
-          type: "section",
-          text: {
-            type: "mrkdwn",
-            text: `${result} \n*Wpm=${wpm}*`
-          }
-        }
-      ]
+      text: `${result} \n*Wpm = ${wpm}*`,
     };
 
     console.log(post);
