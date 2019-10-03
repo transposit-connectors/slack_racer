@@ -43,7 +43,7 @@
     });
     return { updated: true, messsage: `:crown: Congratulations, you beat *${highscore.oldName}* and now hold the record for this text!` };
   }
-  return { updated: false };
+  return { updated: false, message: `Nice job!` };
 }
 
 /*
