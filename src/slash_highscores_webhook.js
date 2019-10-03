@@ -1,3 +1,8 @@
+/*
+ * Return response for /race_highscores command
+ * Lists fastest records for each completed text in a workspace
+ */
+
 ({ http_event }) => {
   setImmediate(() => {
     var _ = require("underscore.js");
