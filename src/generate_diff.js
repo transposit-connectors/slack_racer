@@ -1,4 +1,4 @@
-(params) => {
+({input, original}) => {
 	return [
 		{
 			"type": "context",
@@ -13,7 +13,7 @@
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": ">>>This is a mrkdwn section block :ghost: *this is bold*, and ~this is crossed out~, and <https://google.com|this is a link>"
+				"text": `>>>${input}`
 			}
             
 		},
@@ -33,7 +33,7 @@
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": ">>>This is a plain text section block."
+				"text": `>>>${original}`
 			}
 		}
 	];
