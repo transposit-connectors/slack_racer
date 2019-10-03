@@ -27,6 +27,7 @@
     var out = diff(o == "" ? [] : o.split(/\s+/), n == "" ? [] : n.split(/\s+/) );
     var str = "";
 
+    console.log(out)
     var oSpace = o.match(/\s+/g);
     if (oSpace == null) {
       oSpace = ["\n"];
@@ -72,6 +73,8 @@
     var ns = new Object();
     var os = new Object();
 
+    console.log(o)
+    console.log(n)
     for ( var i = 0; i < n.length; i++ ) {
       if ( ns[ n[i] ] == null )
         ns[ n[i] ] = { rows: new Array(), o: null };
@@ -111,5 +114,5 @@
   }
 
   let regex = new RegExp('\\*\\*', 'g');
-  return diffString(params.input, params.original).replace(regex, "* *");
+  return diffString(params.input, params.original)//.replace(regex, "* *");
 }
