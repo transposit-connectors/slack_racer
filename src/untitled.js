@@ -160,6 +160,6 @@
     return { o: o, n: n };
   }
 
-  let regex = new RegExp('\*\*', 'g');
+  let regex = new RegExp('\\*\\*', 'g');
   return diffString(params.input, params.original).replace(regex, "* *");
 }
