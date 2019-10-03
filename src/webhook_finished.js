@@ -49,7 +49,16 @@
       channel: payload.channel.id,
       user: payload.user.id,
       text: `${result} \n*Wpm = ${wpm}*`,
-    }
+      blocks: 
+        [
+          {
+              "type": "section",
+              "text": {
+                  "type": "mrkdwn",
+                  "text": "Do⁣~o~"
+              }
+          }
+        ]}
     
     console.log(post);
     return api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
