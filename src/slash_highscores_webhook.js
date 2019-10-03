@@ -18,8 +18,7 @@
           type: "section",
           text: {
             type: "mrkdwn",
-            text: `*Id*: ${rec.fields.id} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`,
-            emoji: true
+            text: `*Id*: ${rec.fields.id} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`
           }
         });
         blocks.push({
