@@ -51,10 +51,7 @@
         })[0];
     }
 
-    /*
-     * Notify user of result
-     */
-
+    // notify user of result
     let post = {
       channel: payload.channel.id,
       user: payload.user.id,
