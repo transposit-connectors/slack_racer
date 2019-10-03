@@ -9,7 +9,6 @@
   setImmediate(() => {
     var _ = require("underscore.js");
     let body = http_event.parsed_body;
-    console.log(body);
 
     // get workspace record from airtable
     let rec = api.run("airtable.get_records", {
