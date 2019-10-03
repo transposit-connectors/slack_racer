@@ -8,6 +8,7 @@
   const idx = Math.floor(Math.random()*list.fields.count);
   let rec = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: list.fields.texts[idx]})[0];
   let text = rec.fields.text;
+  let id = rec.fields.id;
   
   // create elements for dialog box
   const elements = [{
