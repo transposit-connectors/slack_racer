@@ -6,6 +6,6 @@
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
-    body: { "text": "Please e-mail puya@transposit.com with any help inquiries or feedback!" }
+    body: { "text": "Please e-mail puya@transposit.com for help, inquiries, or feedback!" }
   };
 }
