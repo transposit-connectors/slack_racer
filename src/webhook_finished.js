@@ -35,7 +35,7 @@
       // if user beats record, then set it and notify user
       let highscore = api.run("this.update_best_record", {
         workspaceId: payload.team.id,
-        textId: state.paragraphId,
+        textId: state.textId,
         username: payload.user.name,
         wpm: wpm
       });
