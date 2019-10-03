@@ -36,7 +36,7 @@
     return api.run(
       "slack.post_chat_ephemeral",
       { $body: post },
-      { asGroup: payload.team.id }
+      { asGroup: body.team_id }
     );
   });
 
