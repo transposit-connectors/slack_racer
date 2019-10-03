@@ -50,8 +50,7 @@
       user: payload.user.id,
       text: `${result} \n*Wpm = ${wpm}*` 
     }
-    api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
-    return;
+    return api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
   });
   
   // return to Slack right away to prevent timeout
