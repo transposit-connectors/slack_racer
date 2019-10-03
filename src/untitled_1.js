@@ -4,7 +4,7 @@
 
 ({ workspaceId, textId, username, wpm }) => {
   
-  // get workspace record for this paragraph
+  // get workspace record for the text
   let rec = api.run("airtable.get_records", {
     baseId: env.get("baseId"),
     table: "Workspaces",
