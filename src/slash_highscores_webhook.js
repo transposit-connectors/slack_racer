@@ -17,7 +17,7 @@
         blocks.push({
           type: "section",
           text: {
-            type: "plain_text",
+            type: "mrkdwn",
             text: `*Id*: ${rec.fields.id} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`,
             emoji: true
           }
