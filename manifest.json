@@ -153,6 +153,8 @@
         "type": "STRING",
         "default": "recytAa5YjZi1OSJ9"
       }]
-    }
+    },
+    "description": "TypeRacer recreated for Slack! Compete to get the fastest typing speed",
+    "displayName": "Slack Racer"
   }
 }
