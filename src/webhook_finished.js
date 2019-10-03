@@ -51,7 +51,7 @@
       text: `${result} \n*Wpm = ${wpm}*` 
     }
     
-    api.log(post);
+    console.log(post);
     return api.run('slack.post_chat_ephemeral', {$body: post}, {asGroup: payload.team.id});
   });
   
