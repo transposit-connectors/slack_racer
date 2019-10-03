@@ -17,7 +17,7 @@
     fields.id = workspaceId;
     fields[textId] = JSON.stringify({ username, wpm });
     api.run("airtable.create_record", { baseId: env.get("baseId"), table: "Workspaces", $body: { fields } });
-    return;
+	return { updated: true, oldName };
   }
   
   // parse json
