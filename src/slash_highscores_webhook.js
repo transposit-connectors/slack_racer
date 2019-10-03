@@ -1,4 +1,7 @@
 ({ http_event }) => {
+  console.log(http_event)
+  let body = http_event.parsed_body;
+  console.log(body)
   return {
     status_code: 200,
     headers: { "Content-Type": "application/json" },
