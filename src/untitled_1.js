@@ -17,7 +17,7 @@
     fields.id = workspaceId;
     fields[textId] = JSON.stringify({ username, wpm });
     api.run("airtable.create_record", { baseId: env.get("baseId"), table: "Workspaces", $body: { fields } });
-	return { updated: true, message: `You now hold the record for text #${textId}! :crown: :tada:`};
+	return { updated: true, message: `You now hold the record for text *#${textId}*! :crown: :tada:`};
   }
   
   // parse json
@@ -41,7 +41,7 @@
       recordId: rec.id,
       $body: { fields }
     });
-    return { updated: true, messsage: `:crown: Congratulations, you beat *${oldName}* and now hold the record for this text!` };
+    return { updated: true, messsage: `:crown: Congratulations, you beat *${oldName}* and now hold the record for text #${textId}!` };
   }
   return { updated: false, message: `Nice job!` };
 }
