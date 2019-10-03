@@ -134,6 +134,10 @@
           }, {
             "name": "original",
             "type": "STRING"
+          }, {
+            "name": "wpm",
+            "type": "STRING",
+            "required": true
           }],
           "js": "generate_diff.js",
           "lang": "js"

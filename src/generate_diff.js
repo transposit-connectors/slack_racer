@@ -1,10 +1,10 @@
-({input, original}) => {
+({input, original, wpm}) => {
 	return [
         {
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "Sorry, your input was incorrect! *Wpm:* ${wpm}"
+				"text": `Sorry, your input was incorrect! *Wpm:* ${wpm}`
 			}
 		},
 		{
