@@ -27,6 +27,18 @@
       }
     }
 
+    if (blocks.length === 0) {
+      blocks.push(
+        {
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "No high scores! Please finish a race first."
+			}
+		}
+      )
+    }
+    
     let post = {
       channel: body.channel_id,
       user: body.user_id,
