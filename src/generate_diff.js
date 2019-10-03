@@ -1,5 +1,12 @@
 ({input, original}) => {
 	return [
+        {
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Sorry, your input was incorrect! *Wpm:* ${wpm}"
+			}
+		},
 		{
 			"type": "context",
 			"elements": [
