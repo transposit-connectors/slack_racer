@@ -9,6 +9,19 @@
       table: "Workspaces",
       filterByFormula: `id="${body.team_id}"`
     })[0];
+    
+    if (rec == null) {
+      return api.run(
+      "slack.post_chat_ephemeral",
+      { $body: {
+              channel: body.channel_id,
+      user: body.user_id,
+				"text": "No high scores! Please finish a race first."
+      } },
+      { asGroup: body.team_id }
+    );
+    }
+    
     let blocks = [];
 
     for (key in rec.fields) {
