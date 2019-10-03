@@ -1,27 +1,15 @@
 ({ http_event }) => {
-  console.log(http_event)
+  // console.log(http_event)
   let body = http_event.parsed_body;
-  console.log(body)
+  // console.log(body)
   
-  let records = api.run('airtable.get_records', {baseId: env.get("baseId"), table: 'Workspaces', filterByFormula: `id="${body.team_id}"`});
+  let rec = api.run('airtable.get_records', {baseId: env.get("baseId"), table: 'Workspaces', filterByFormula: `id="${body.team_id}"`});
   let blocks = [];
-  
-  for (rec in records) {
-    let blob = rec.fields[]
-    blocks.push(
-        {
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": `Do you know what they ca... \t\t *${rec.fields.}* | *wpm: 58*`
-			}
-		},
-		{
-			"type": "divider"
-		}
-    )
+  console.log(rec);
+  for (field in rec.fields) {
+    
+    console.log(field)
   }
-  return records
   
   
   
