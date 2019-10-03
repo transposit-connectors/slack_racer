@@ -41,9 +41,5 @@
   });
 
   return { status_code: 200 };
-};
+}
 
-/*
- * For sample code and reference material, visit
- * https://www.transposit.com/docs/building/webhooks
- */
