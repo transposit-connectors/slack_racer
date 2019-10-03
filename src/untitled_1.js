@@ -11,7 +11,7 @@
     filterByFormula: `id="${workspaceId}"`
   })[0];
 
-  // create main record for this workspace if first time
+  // create main record for this workspace if first time and just return
   if (rec == null) {
     let fields = {};
     fields.id = workspaceId;
@@ -20,12 +20,14 @@
     return;
   }
   
+  // pare json
   let blob = rec.fields[textId];
   let meta = { username: "", wpm: -1 };
   if (blob != null) {
     meta = JSON.parse(rec.fields[textId]);
   }
 
+  // 
   let oldName = meta.username;
   if (meta.wpm < wpm) {
     meta.username = username;
