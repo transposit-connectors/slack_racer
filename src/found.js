@@ -34,7 +34,7 @@
   const dialog = {
     callback_id: "type_race",
     notify_on_cancel: false,
-    title: "SlackRacer Speed Test",
+    title: `SlackRacer: Test #${id}`,
     elements,
     state
   };
