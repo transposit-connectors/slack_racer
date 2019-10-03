@@ -41,7 +41,7 @@
       recordId: rec.id,
       $body: { fields }
     });
-    return { updated: true, messsage: `:crown: Congratulations, you beat *${highscore.oldName}* and now hold the record for this text!` };
+    return { updated: true, messsage: `:crown: Congratulations, you beat *${oldName}* and now hold the record for this text!` };
   }
   return { updated: false, message: `Nice job!` };
 }

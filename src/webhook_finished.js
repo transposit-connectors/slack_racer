@@ -33,15 +33,13 @@
       result = "Nice job!";
 
       // if user beats record, then set it and notify user
-      let highscore = api.run("this.update_best_record", {
+      result = api.run("this.update_best_record", {
         workspaceId: payload.team.id,
         textId: state.textId,
         username: payload.user.name,
         wpm: wpm
-      });
-      if (highscore.updated) {
-        result = `:crown: Congratulations, you beat *${highscore.oldName}* and now hold the record for this text!`;
-      }
+      })[0].message;
+      
     } else {
       result =
         "Sorry, input does not match!\n\n" +
