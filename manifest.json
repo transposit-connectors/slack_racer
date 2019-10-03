@@ -108,6 +108,19 @@
           "js": "untitled_1.js",
           "lang": "js"
         }
+      }, {
+        "id": "slash_highscores_webhook",
+        "function": {
+          "parameters": [{
+            "name": "http_event",
+            "default": {
+              "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
+            },
+            "type": "OBJECT"
+          }],
+          "js": "slash_highscores_webhook.js",
+          "lang": "js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
