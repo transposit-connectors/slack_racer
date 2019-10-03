@@ -34,9 +34,7 @@
   	  
       // get current record for that workspace
       const currRecord = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: state.recordId})[0];
-      
-      // if no record for that workspace, create it
-      
+            
       // if user beats record, then set it and notify user
       if (wpm > currRecord.fields.wpm) {
         api.run('airtable.update_record', {baseId: env.get("baseId"), table: 'Texts', recordId: state.recordId, $body: {fields: {wpm: wpm, user: payload.user.name}}})

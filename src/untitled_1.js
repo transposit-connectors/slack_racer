@@ -14,7 +14,9 @@
     let fields = {};
     fields[params.paragraphId] = JSON.stringify(meta);
     api.run('airtable.update_record', {baseId: env.get("baseId"), table: 'Workspaces', recordId: rec.id, $body: {fields}});
+    return true;
   }
+  return false;
 }
 
 /*
