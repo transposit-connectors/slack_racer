@@ -165,6 +165,7 @@
         "type": "STRING",
         "hidden": true
       }],
+      "userSettingsDisplay": "GENERATED",
       "appSettings": [{
         "name": "baseId",
         "description": "BaseId for paragraphs table",
