@@ -1,5 +1,5 @@
 (params) => {
-  return  api.run('airtable.get_records', {baseId: env.get("baseId"), table: 'Workspaces', filterByFormula: "id=${params.workspaceId}"})
+  return  api.run('airtable.get_records', {baseId: env.get("baseId"), table: 'Workspaces', filterByFormula: `id=${params.workspaceId}`})
 }
 
 /*
