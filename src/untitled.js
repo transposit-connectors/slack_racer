@@ -1,5 +1,6 @@
 /*
  * Generate a diff of the text to give as feedback
+ * Correct output, may appear weird in Slack however
  */
 
 params => {
