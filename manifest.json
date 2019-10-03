@@ -96,7 +96,7 @@
           "lang": "js"
         }
       }, {
-        "id": "untitled_1",
+        "id": "update_best_record",
         "function": {
           "parameters": [{
             "name": "workspaceId",
@@ -105,6 +105,14 @@
           }, {
             "name": "paragraphId",
             "type": "STRING",
+            "required": true
+          }, {
+            "name": "username",
+            "type": "STRING",
+            "required": true
+          }, {
+            "name": "wpm",
+            "type": "NUMBER",
             "required": true
           }],
           "js": "untitled_1.js",

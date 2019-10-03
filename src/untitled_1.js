@@ -7,7 +7,14 @@
   	meta = JSON.parse(rec.fields[params.paragraphId]);  
   }
   
-  
+  if (meta.wpm < params.wpm) {
+    meta.username = params.username;
+    meta.wpm = params.wpm;
+    
+    let fields = {};
+    fields[params.paragraphId] = JSON.stringify(meta);
+    api.run('airtable.update_record', {baseId: env.get("baseId"), table: 'Workspaces', recordId: rec.recordId, $body: {fields}});
+  }
   return meta
 }
 
