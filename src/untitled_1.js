@@ -36,7 +36,7 @@
     return { updated: true, oldName };
   }
   return { updated: false };
-};
+}
 
 /*
  * For sample code and reference material, visit
