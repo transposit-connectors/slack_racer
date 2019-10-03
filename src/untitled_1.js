@@ -46,7 +46,7 @@
     if (oldName == "") {
       message = `Congratulations! You now hold the record for text *#${textId}*! :crown: :tada:`;
     } else {
-      message = `:crown: Congratulations, you beat *${oldName}* and now hold the record for text #${textId}!`;
+      message = `:crown: Congratulations, you beat *${oldName}* and now hold the record for text *#${textId}*!`;
     }
     return { updated: true, message};
   }
