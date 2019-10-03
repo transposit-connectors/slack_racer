@@ -542,14 +542,14 @@ params => {
           .replace(f, "&para;<br>");
       switch (h) {
         case DIFF_INSERT:
-          b[g] = " *" + l.trim() + "*";
-          break;
+            b[g] = '<ins style="background:#e6ffe6;">' + l + "</ins>";
+            break;
         case DIFF_DELETE:
-          b[g] = " ~" + l.trim() + "~";
-          break;
+            b[g] = '<del style="background:#ffe6e6;">' + l + "</del>";
+            break;
         case DIFF_EQUAL:
-          b[g] = l;
-      }
+            b[g] = "<span>" + l + "</span>"
+        }
     }
     return b.join("");
   };
@@ -1046,5 +1046,6 @@ params => {
   this.DIFF_EQUAL = DIFF_EQUAL;
 
   var dmp = new diff_match_patch();
-  return dmp.diff_prettyHtml(dmp.diff_main("do do do", "do do"));
+  let diff = dmp.diff_main(params.input, params.original);
+  return dmp.diff_prettyHtml(diff);
 }
