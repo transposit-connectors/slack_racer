@@ -20,14 +20,14 @@
     return;
   }
   
-  // pare json
+  // parse json
   let blob = rec.fields[textId];
   let meta = { username: "", wpm: -1 };
   if (blob != null) {
     meta = JSON.parse(rec.fields[textId]);
   }
 
-  // 
+  // update record if better time
   let oldName = meta.username;
   if (meta.wpm < wpm) {
     meta.username = username;
