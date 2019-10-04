@@ -193,8 +193,7 @@
       }, {
         "name": "recordId",
         "description": "RecordId for the list of paragraphs in Airtable",
-        "type": "STRING",
-        "default": "recytAa5YjZi1OSJ9"
+        "type": "STRING"
       }]
     },
     "description": "TypeRacer recreated for Slack! Compete to get the fastest typing speed",
