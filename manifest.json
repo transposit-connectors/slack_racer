@@ -126,7 +126,7 @@
         }
       }, {
         "id": "generate_diff",
-        "description": "returns input and prompt for user to look at if they want",
+        "description": "on incorrect submits, returns input and prompt for user to look at if they want",
         "function": {
           "parameters": [{
             "name": "input",
