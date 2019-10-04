@@ -189,8 +189,7 @@
       "appSettings": [{
         "name": "baseId",
         "description": "BaseId for paragraphs table",
-        "type": "STRING",
-        "default": "appcX3FvaawpLi3eF"
+        "type": "STRING"
       }, {
         "name": "recordId",
         "description": "RecordId for the list of paragraphs in Airtable",
