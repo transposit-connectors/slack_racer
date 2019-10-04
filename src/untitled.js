@@ -2423,6 +2423,7 @@ params => {
 
   var dmp = new diff_match_patch();
   let diff = dmp.diff_main(params.input, params.original);
+  //dmp.diff_levenshtein(diff);
   dmp.diff_cleanupSemantic(diff);
   return dmp.diff_prettyHtml(diff);
 }
