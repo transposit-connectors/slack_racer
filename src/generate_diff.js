@@ -1,5 +1,5 @@
 /*
- * Returns input and prompt for user to look at if they want
+ * On incorrect submits, returns input and prompt for user to look at if they want
  */
 
 ({ input, original, wpm }) => {
