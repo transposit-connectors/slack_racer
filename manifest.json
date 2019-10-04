@@ -185,11 +185,6 @@
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
-      "userSettings": [{
-        "name": "slack_id",
-        "type": "STRING",
-        "hidden": true
-      }],
       "userSettingsDisplay": "GENERATED",
       "appSettings": [{
         "name": "baseId",
