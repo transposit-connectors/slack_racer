@@ -34,12 +34,21 @@
     
   let view = {
 	type: "modal",
+    callback_id: "race",
     title: 
     {
       type: "plain_text",
       text: `SlackRacer: Text ${textId}`
     },
-    
+    "close": {
+    "type": "plain_text",
+    "text": "Cancel"
+    },
+    "submit": {
+      "type": "plain_text",
+      "text": "Save"
+    },
+    blocks
   };
 
   if (stringify) {
