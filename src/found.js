@@ -37,7 +37,7 @@
     title: 
     {
       type: "plain_text",
-      text: `SlackRacer: Test ${textId}`
+      text: `SlackRacer: Text ${textId}`
     }
   };
 
