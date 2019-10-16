@@ -11,7 +11,7 @@
   let textId = rec.fields.id;
   
   // create blocks for modal
-  const blocks: [
+  const blocks = [
 		{
 			"type": "input",
             "label": {
@@ -34,7 +34,7 @@
 				"text": `*Text*\n${text}`
 			}
 		}
-	]
+	];
   
   
   
