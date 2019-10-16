@@ -19,7 +19,10 @@
 				"type": "plain_text",
 				"text": "Your Input"
 			},
-          	"hint": "copy the text below into this box",
+          	"hint": {
+              "type": "plain_text",
+              "text": "copy the text below into this box",
+            },
 			"element": {
 				"type": "plain_text_input",
 				"multiline": true,
