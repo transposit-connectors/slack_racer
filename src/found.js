@@ -2,7 +2,7 @@
  * Generate the dialog object to send to Slack
  */
 
-({slackBody}) => {  
+({ stringify }) => {  
   // fetch paragraph text from Airtable
   const list = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Meta', recordId: env.get("recordId")})[0];
   const idx = Math.floor(Math.random()*list.fields.count);
@@ -32,7 +32,7 @@
     textId: textId
   })
   
-  const dialog = {
+  const view = {
     callback_id: "type_race",
     notify_on_cancel: false,
     title: `SlackRacer: Test #${textId}`,
@@ -40,5 +40,8 @@
     state
   };
 
-  return JSON.stringify(dialog);
+  if (stringify) {
+    return JSON.stringify(view);
+  }
+  return view;
 }

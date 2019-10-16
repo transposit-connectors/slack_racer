@@ -13,9 +13,11 @@
         "description": "generate the dialog object to send to Slack",
         "function": {
           "parameters": [{
-            "name": "slackBody",
-            "type": "OBJECT",
-            "required": true
+            "name": "stringify",
+            "default": {
+              "text": "false"
+            },
+            "type": "BOOLEAN"
           }],
           "js": "found.js",
           "lang": "js"
