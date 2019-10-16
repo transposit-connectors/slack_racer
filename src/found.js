@@ -33,11 +33,12 @@
   })
   
   const view = {
-    callback_id: "race",
-    notify_on_cancel: false,
-    title: `SlackRacer: Test #${textId}`,
-    elements,
-    state
+	type: "modal",
+    title: 
+    {
+      type: "plain_text",
+      text: `SlackRacer: Test ${textId}`
+    }
   };
 
   if (stringify) {
