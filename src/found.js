@@ -26,23 +26,27 @@
   }];
   
   // record start time
-  const state = JSON.stringify({
+  const private_metadata = JSON.stringify({
     ts: Date.now(),
     recordId: rec.id,
     textId: textId
   })
-  
-  const view = {
+    
+  let view = {
 	type: "modal",
     title: 
     {
       type: "plain_text",
       text: `SlackRacer: Text ${textId}`
-    }
+    },
+    
   };
 
   if (stringify) {
+    view.private_metadata = JSON.stringify(private_metadata);
     return JSON.stringify(view);
   }
+  
+  view.private_metadata = private_metadata;
   return view;
 }
