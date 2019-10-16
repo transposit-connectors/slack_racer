@@ -9,20 +9,6 @@
         "alias": "slack"
       }],
       "operations": [{
-        "id": "generate_dialog_json",
-        "description": "generate the dialog object to send to Slack",
-        "function": {
-          "parameters": [{
-            "name": "stringify",
-            "default": {
-              "text": "false"
-            },
-            "type": "BOOLEAN"
-          }],
-          "js": "found.js",
-          "lang": "js"
-        }
-      }, {
         "id": "slash_race_webhook",
         "description": "return response for /race command",
         "function": {
@@ -144,6 +130,20 @@
         "access": {
           "requireApiKey": true,
           "webhook": true
+        }
+      }, {
+        "id": "generate_test_view",
+        "description": "generate the dialog object to send to Slack",
+        "function": {
+          "parameters": [{
+            "name": "stringify",
+            "default": {
+              "text": "false"
+            },
+            "type": "BOOLEAN"
+          }],
+          "js": "found.js",
+          "lang": "js"
         }
       }],
       "dataConnections": [{

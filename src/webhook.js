@@ -5,8 +5,8 @@
 ({ http_event }) => {
   let body = http_event.parsed_body;
   setImmediate(() => {
-    const dialogJson = api.run("this.generate_dialog_json", {slackBody: body})[0]; 
-    api.run("slack.open_dialog", { $body: { trigger_id: body.trigger_id, dialog: dialogJson }}, { asGroup: body.team_id });
+    const viewJson = api.run("this.generate_test_view", {stringify: true})[0]; 
+    api.run("slack.views_open", { $body: { trigger_id: body.trigger_id, dialog: dialogJson }}, { asGroup: body.team_id });
   });
   return { status_code: 200 };
 }
