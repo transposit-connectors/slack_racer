@@ -10,7 +10,7 @@
   let text = rec.fields.text;
   let textId = rec.fields.id;
   
-  // create blocks for dialog box
+  // create blocks for view payload
   const blocks: [
 		{
 			"type": "input",
