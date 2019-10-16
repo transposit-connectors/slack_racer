@@ -37,22 +37,6 @@
           "webhook": true
         }
       }, {
-        "id": "event_race_finish_webhook",
-        "description": "called by Slack when dialog box is submitted",
-        "function": {
-          "parameters": [{
-            "name": "http_event",
-            "type": "OBJECT",
-            "required": true
-          }],
-          "js": "webhook_finished.js",
-          "lang": "js"
-        },
-        "access": {
-          "requireApiKey": true,
-          "webhook": true
-        }
-      }, {
         "id": "slash_help_webhook",
         "description": "returns response for /race_help command",
         "function": {
@@ -142,6 +126,22 @@
           }],
           "js": "generate_diff.js",
           "lang": "js"
+        }
+      }, {
+        "id": "events_webhook",
+        "description": "called by Slack when dialog box is submitted",
+        "function": {
+          "parameters": [{
+            "name": "http_event",
+            "type": "OBJECT",
+            "required": true
+          }],
+          "js": "webhook_finished.js",
+          "lang": "js"
+        },
+        "access": {
+          "requireApiKey": true,
+          "webhook": true
         }
       }],
       "dataConnections": [{
