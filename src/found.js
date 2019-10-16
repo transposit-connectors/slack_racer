@@ -10,23 +10,7 @@
   let text = rec.fields.text;
   let textId = rec.fields.id;
   
-  // create elements for dialog box
-  const elements = [{
-    type: "textarea",
-    name: "input",
-    label: "Your input",
-    hint: "Write the below text into this box",
-    //min_length: text.length,
-  }, {
-    type: "textarea",
-    name: "original",
-    label: "Copy this",
-    value: text,
-    //min_length: text.length
-  }];
-  
-  
-  
+  // create blocks for dialog box
   const blocks: [
 		{
 			"type": "input",
@@ -37,21 +21,31 @@
           	"hint": "copy the text below into this box",
 			"element": {
 				"type": "plain_text_input",
-				"multiline": true
+				"multiline": true,
+              	"action_id": "input"
+				// min_length
 			}
 
 		},
-		{
-			"type": "input",
-			"element": {
-				"type": "plain_text_input",
-				"multiline": true
-			},
-			"label": {
+        {
+			"type": "section",
+			"text": {
 				"type": "plain_text",
-				"text": "Text"
+				"text": "",
+				"emoji": true
 			}
 		}
+		// {
+		// 	"type": "input",
+		// 	"element": {
+		// 		"type": "plain_text_input",
+		// 		"multiline": true
+		// 	},
+		// 	"label": {
+		// 		"type": "plain_text",
+		// 		"text": "Text"
+		// 	}
+		// }
 	]
   
   
