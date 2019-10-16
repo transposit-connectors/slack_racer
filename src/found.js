@@ -14,6 +14,7 @@
   const blocks = [
 		{
 			"type": "input",
+          	"block_id": "input",
             "label": {
 				"type": "plain_text",
 				"text": "Your Input"
@@ -29,6 +30,7 @@
 		},
         {
 			"type": "section",
+          	"block_id": "original",
 			"text": {
 				"type": "mrkdwn",
 				"text": `*Text*\n${text}`
