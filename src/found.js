@@ -10,7 +10,7 @@
   let text = rec.fields.text;
   let textId = rec.fields.id;
   
-  // create blocks for view payload
+  // create blocks for modal
   const blocks: [
 		{
 			"type": "input",
@@ -30,22 +30,10 @@
         {
 			"type": "section",
 			"text": {
-				"type": "plain_text",
-				"text": "",
-				"emoji": true
+				"type": "mrkdwn",
+				"text": `*Text*\n${text}`
 			}
 		}
-		// {
-		// 	"type": "input",
-		// 	"element": {
-		// 		"type": "plain_text_input",
-		// 		"multiline": true
-		// 	},
-		// 	"label": {
-		// 		"type": "plain_text",
-		// 		"text": "Text"
-		// 	}
-		// }
 	]
   
   
