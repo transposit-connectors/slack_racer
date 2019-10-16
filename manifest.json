@@ -128,7 +128,7 @@
           "lang": "js"
         }
       }, {
-        "id": "events_webhook",
+        "id": "interactive_components_webhook",
         "description": "called by Slack when dialog box is submitted",
         "function": {
           "parameters": [{
