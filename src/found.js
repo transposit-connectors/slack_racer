@@ -25,6 +25,51 @@
     //min_length: text.length
   }];
   
+  
+  
+  const blocks: [
+		{
+			"type": "input",
+			"element": {
+				"type": "plain_text_input",
+				"multiline": true
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Your Input"
+			}
+		},
+		{
+			"type": "input",
+			"element": {
+				"type": "plain_text_input",
+				"multiline": true
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Text"
+			}
+		}
+	]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   // record start time
   const private_metadata = JSON.stringify({
     ts: Date.now(),
