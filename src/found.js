@@ -30,14 +30,16 @@
   const blocks: [
 		{
 			"type": "input",
+            "label": {
+				"type": "plain_text",
+				"text": "Your Input"
+			},
+          	"hint": "copy the text below into this box",
 			"element": {
 				"type": "plain_text_input",
 				"multiline": true
-			},
-			"label": {
-				"type": "plain_text",
-				"text": "Your Input"
 			}
+
 		},
 		{
 			"type": "input",
