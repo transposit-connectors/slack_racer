@@ -33,7 +33,7 @@
   })
   
   const view = {
-    callback_id: "submit",
+    callback_id: "race",
     notify_on_cancel: false,
     title: `SlackRacer: Test #${textId}`,
     elements,
