@@ -4,8 +4,12 @@
   
   
 	let resultBlocks = [
-      
+      // blocks
     ]
+    
+    blocks.concat(resultBlocks) // or whateva
+  
+  
 }
 
 /*
