@@ -19,10 +19,10 @@
     // calculate timings
     const old = metadata.ts / 1000;
     const newer = payload.action_ts / 1000;
-    const wpm = Math.floor(payload.submission.original.split(" ").length / ((newer - old) / 60));
+    const wpm = Math.floor(original.split(" ").length / ((newer - old) / 60));
 
     // validate and determine result
-    const userInput = payload.submission.input.trim();
+    const userInput = input.trim();
     let result;
     let blocks;
     
