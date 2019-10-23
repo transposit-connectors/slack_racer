@@ -44,6 +44,7 @@
     }
 
     // notify user of result
+    api.run("this.generate_results_view", {testView: view});
 	let reply = {
       view: 
     }
