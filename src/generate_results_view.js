@@ -29,6 +29,8 @@
     },
     blocks
   };
+  
+  return view;
 }
 
 /*
