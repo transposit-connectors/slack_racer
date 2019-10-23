@@ -44,24 +44,6 @@
 		}
 	];
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   // record start time
   const private_metadata = JSON.stringify({
     ts: Date.now(),
