@@ -11,6 +11,10 @@
     console.log(payload);
     let state = JSON.parse(payload.view.state);
     console.log(state);
+    
+    // pull out submission (dependent on order of blocks; for speed)
+    let input = state.values.input.input.value;
+    let original = 
 
     // calculate timings
     const old = state.ts / 1000;
