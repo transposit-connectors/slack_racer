@@ -1,9 +1,11 @@
 ({ testView }) => {
   	console.log(testView);
+  	let blocks = testView.blocks;	
   
-	let resultsView = {
+  
+	let resultBlocks = [
       
-    }
+    ]
 }
 
 /*
