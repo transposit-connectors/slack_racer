@@ -148,6 +148,11 @@
       }, {
         "id": "generate_results_view",
         "function": {
+          "parameters": [{
+            "name": "testView",
+            "type": "OBJECT",
+            "required": true
+          }],
           "js": "generate_results_view.js",
           "lang": "js"
         }
