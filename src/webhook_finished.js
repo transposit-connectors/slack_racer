@@ -44,19 +44,11 @@
     }
 
     // notify user of result
-    let post = {
-      channel: payload.channel.id,
-      user: payload.user.id,
-      // text: `${result} \n*Wpm = ${wpm}*`,
-    };
+	
     
-    if (result != null) {
-      post.text = `${result} \n*Wpm = ${wpm}*`;
-    } else {
-      post.blocks = blocks;
-    }
     
-    return api.run("slack.post_chat_ephemeral", { $body: post }, { asGroup: payload.team.id });
+    //`${result} \n*Wpm = ${wpm}*`
+    return api.run("slack.views_update", { $body: post }, { asGroup: payload.team.id });
   });
 
   // return to Slack right away to prevent timeout
