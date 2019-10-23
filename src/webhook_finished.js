@@ -22,15 +22,10 @@
     const newer = payload.action_ts;
     const wpm = Math.floor(payload.submission.original.split(" ").length / ((newer - old) / 60));
 
+    let result;
     // advanced anti-hack detection
     if (wpm > 30000000) {
-      let msg = {
-        channel: payload.channel.id,
-        user: payload.user.id,
-        text: `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`
-      };
-      api.run("slack.post_chat_ephemeral", { $body: msg }, { asGroup: payload.team.id });
-      return;
+      result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
     }
 
     // validate and determine result
