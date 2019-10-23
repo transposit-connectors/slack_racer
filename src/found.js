@@ -13,6 +13,15 @@
   // create blocks for modal
   const blocks = [
         {
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*Text*"
+				}
+			]
+		},
+        {
 			"type": "section",
           	"block_id": "original",
 			"text": {
