@@ -15,7 +15,7 @@
     
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
-    let original = 
+    // let original = 
 
     // calculate timings
     const old = metadata.ts / 1000;
