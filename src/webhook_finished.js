@@ -29,7 +29,7 @@
     // advanced anti-hack detection
     if (wpm > 30000000) {
       result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
-    } else if (payload.submission.input === payload.submission.original) {
+    } else if (input === original) {
       // if user beats record, then set it and notify user
       result = api.run("this.update_best_record", {
         workspaceId: payload.team.id,
