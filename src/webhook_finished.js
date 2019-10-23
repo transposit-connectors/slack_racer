@@ -18,7 +18,7 @@
     let original = 
 
     // calculate timings
-    const old = state.ts / 1000;
+    const old = metadata.ts / 1000;
     const newer = payload.action_ts;
     const wpm = Math.floor(payload.submission.original.split(" ").length / ((newer - old) / 60));
 
