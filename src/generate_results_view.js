@@ -1,10 +1,6 @@
 ({ testView, result }) => {
-  	console.log(testView);
   	let blocks = testView.blocks;	
-  
-  
 	let resultBlocks = [
-      // blocks
       {
           "type": "divider"
       },
@@ -17,10 +13,11 @@
           }
       }
     ]
-    
-    blocks.concat(resultBlocks) // or whateva
-  
-  
+    blocks.concat(resultBlocks)
+  	
+  	let view = {
+      
+    }
 }
 
 /*
