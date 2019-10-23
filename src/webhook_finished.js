@@ -9,7 +9,7 @@
     let qs = require("qs.js");
     let payload = JSON.parse(http_event.parsed_body.payload);
     console.log(payload);
-    let state = JSON.parse(payload.state);
+    let state = JSON.parse(payload.view.state);
     console.log(state);
 
     // calculate timings
