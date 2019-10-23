@@ -20,6 +20,9 @@
 				"text": `*Text*\n${text}`
 			}
 		},
+        {
+			"type": "divider"
+		},
 		{
 			"type": "input",
           	"block_id": "input",
