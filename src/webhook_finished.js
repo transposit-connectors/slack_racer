@@ -14,7 +14,7 @@
     let metadata = JSON.parse(payload.view.)
     
     // pull out submission (dependent on order of blocks; for speed)
-    let input = state.values.input.input.value;
+    let input = view.state.values.input.input.value;
     let original = 
 
     // calculate timings
