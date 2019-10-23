@@ -39,12 +39,8 @@
         wpm
       })[0].message;
     } else {
-      blocks = 
-        api.run("this.generate_diff", {
-          input: payload.submission.input,
-          original: payload.submission.original,
-          wpm,
-        });
+      result = "Sorry, input did not match.";
+      /* generate diff here */
     }
 
     // notify user of result
