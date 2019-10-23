@@ -9,8 +9,9 @@
     let qs = require("qs.js");
     let payload = JSON.parse(http_event.parsed_body.payload);
     console.log(payload);
-    let state = JSON.parse(payload.view.state);
-    console.log(state);
+    let view = JSON.parse(payload.view);
+    console.log(view);
+    let metadata = JSON.parse(payload.view.)
     
     // pull out submission (dependent on order of blocks; for speed)
     let input = state.values.input.input.value;
