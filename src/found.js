@@ -12,6 +12,14 @@
   
   // create blocks for modal
   const blocks = [
+        {
+			"type": "section",
+          	"block_id": "original",
+			"text": {
+				"type": "mrkdwn",
+				"text": `*Text*\n${text}`
+			}
+		},
 		{
 			"type": "input",
           	"block_id": "input",
@@ -30,14 +38,6 @@
 				// min_length
 			}
 
-		},
-        {
-			"type": "section",
-          	"block_id": "original",
-			"text": {
-				"type": "mrkdwn",
-				"text": `*Text*\n${text}`
-			}
 		}
 	];
   
