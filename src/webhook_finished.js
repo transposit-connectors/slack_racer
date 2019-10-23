@@ -11,7 +11,8 @@
     console.log(payload);
     let view = JSON.parse(payload.view);
     console.log(view);
-    let metadata = JSON.parse(payload.view.)
+    let metadata = JSON.parse(payload.view.private_metadata);
+    console.log(metadata);
     
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
