@@ -3,7 +3,6 @@
  */
 
 ({ http_event }) => {
-  setImmediate(() => {
     // parse submission
     console.log(http_event);
     let qs = require("qs.js");
@@ -50,10 +49,4 @@
     
     //`${result} \n*Wpm = ${wpm}*`
     return api.run("slack.views_update", { $body: post }, { asGroup: payload.team.id });
-  });
-
-  // return to Slack right away to prevent timeout
-  return {
-    status_code: 200
-  };
 }
