@@ -145,6 +145,12 @@
           "js": "found.js",
           "lang": "js"
         }
+      }, {
+        "id": "generate_results_view",
+        "function": {
+          "js": "generate_results_view.js",
+          "lang": "js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",

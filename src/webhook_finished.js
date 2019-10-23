@@ -44,7 +44,9 @@
     }
 
     // notify user of result
-	
+	let reply = {
+      view: 
+    }
     
     
     //`${result} \n*Wpm = ${wpm}*`
