@@ -8,8 +8,9 @@
     console.log(http_event);
     let qs = require("qs.js");
     let payload = JSON.parse(http_event.parsed_body.payload);
-    let state = JSON.parse(payload.state);
     console.log(payload);
+    let state = JSON.parse(payload.state);
+    console.log(state);
 
     // calculate timings
     const old = state.ts / 1000;
