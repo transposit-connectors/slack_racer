@@ -9,7 +9,12 @@
           "type": "divider"
       },
       {
-        
+          "type": "section",
+          "block_id": "original",
+          "text": {
+              "type": "mrkdwn",
+              "text": `*Text*\n${text}`
+          }
       }
     ]
     
