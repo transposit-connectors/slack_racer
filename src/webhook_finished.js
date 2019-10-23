@@ -48,5 +48,5 @@
     
     
     //`${result} \n*Wpm = ${wpm}*`
-    return api.run("slack.views_update", { $body: post }, { asGroup: payload.team.id });
+    // return api.run("slack.views_update", { $body: "asd" }, { asGroup: payload.team.id });
 }
