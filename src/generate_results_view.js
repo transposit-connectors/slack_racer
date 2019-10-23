@@ -1,4 +1,6 @@
 ({ testView }) => {
+  	console.log(testView);
+  
 	let resultsView = {
       
     }
