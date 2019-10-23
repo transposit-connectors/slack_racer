@@ -32,7 +32,7 @@
 			},
           	"hint": {
               "type": "plain_text",
-              "text": "copy the text below into this box",
+              "text": "Copy the text into this box",
             },
 			"element": {
 				"type": "plain_text_input",
