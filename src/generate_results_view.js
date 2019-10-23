@@ -1,4 +1,4 @@
-({ testView }) => {
+({ testView, result }) => {
   	console.log(testView);
   	let blocks = testView.blocks;	
   
@@ -13,7 +13,7 @@
           "block_id": "original",
           "text": {
               "type": "mrkdwn",
-              "text": `*Text*\n${text}`
+              "text": `${result}`
           }
       }
     ]

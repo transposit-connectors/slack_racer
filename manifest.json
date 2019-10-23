@@ -152,6 +152,10 @@
             "name": "testView",
             "type": "OBJECT",
             "required": true
+          }, {
+            "name": "result",
+            "type": "STRING",
+            "required": true
           }],
           "js": "generate_results_view.js",
           "lang": "js"
