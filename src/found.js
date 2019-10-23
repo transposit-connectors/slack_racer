@@ -26,7 +26,7 @@
           	"block_id": "original",
 			"text": {
 				"type": "mrkdwn",
-				"text": `${text}`
+				"text": `*Text*:\n${text}`
 			}
 		},
         {
