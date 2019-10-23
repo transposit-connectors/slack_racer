@@ -18,11 +18,7 @@
   let view = {
 	type: "modal",
     callback_id: "results",
-    title: 
-    {
-      type: "plain_text",
-      text: `SlackRacer: Text ${textId}`
-    },
+    title: testView.title,
     "close": {
     "type": "plain_text",
     "text": "Cancel"
