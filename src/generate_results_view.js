@@ -5,6 +5,12 @@
   
 	let resultBlocks = [
       // blocks
+      {
+          "type": "divider"
+      },
+      {
+        
+      }
     ]
     
     blocks.concat(resultBlocks) // or whateva
