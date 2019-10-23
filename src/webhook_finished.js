@@ -9,8 +9,7 @@
     let qs = require("qs.js");
     let payload = JSON.parse(http_event.parsed_body.payload);
     console.log(payload);
-    let view = JSON.parse(payload.view);
-    console.log(view);
+    let view = payload.view;
     let metadata = JSON.parse(payload.view.private_metadata);
     console.log(metadata);
     
