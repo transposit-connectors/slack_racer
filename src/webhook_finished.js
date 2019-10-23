@@ -22,19 +22,15 @@
     const newer = payload.action_ts;
     const wpm = Math.floor(payload.submission.original.split(" ").length / ((newer - old) / 60));
 
-    let result;
-    // advanced anti-hack detection
-    if (wpm > 30000000) {
-      result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
-    }
-
     // validate and determine result
     const userInput = payload.submission.input.trim();
     let result;
     let blocks;
-    if (payload.submission.input === payload.submission.original) {
-      result = "Nice job!";
-
+    
+    // advanced anti-hack detection
+    if (wpm > 30000000) {
+      result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
+    } else if (payload.submission.input === payload.submission.original) {
       // if user beats record, then set it and notify user
       result = api.run("this.update_best_record", {
         workspaceId: payload.team.id,
@@ -42,7 +38,6 @@
         username: payload.user.name,
         wpm
       })[0].message;
-      
     } else {
       blocks = 
         api.run("this.generate_diff", {
