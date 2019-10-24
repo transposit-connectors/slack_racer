@@ -14,7 +14,10 @@
   	if (type === "results") {
       return {
         status_code: 200,
-
+        body: {
+          response_action: "update",
+          view: api.run("this.generate_test_view")[0],
+        }
       }    
     }
   
