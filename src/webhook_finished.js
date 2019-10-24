@@ -9,10 +9,6 @@
     console.log(payload);
     let view = payload.view;
     let type = view.callback_id;  
-
-  	if (payload.actions && payload.action[0].action_id === "retry") {
-		
-    }
   
   	if (type === "results") {
       setImmediate(() => {
@@ -22,9 +18,12 @@
       return {status_code: 200}
     }
   
-  
-    // pull out submission (dependent on order of blocks; for speed)
     let metadata = JSON.parse(payload.view.private_metadata);
+    if (payload.actions && payload.action[0].action_id === "retry") {
+		return api.run("this.generate_test_view", {stringify: true, recordId: metadata.recordId})[0];
+    }
+                       
+    // pull out submission (dependent on order of blocks; for speed)                   
     let input = view.state.values.input.input.value;
     let original = view.blocks[0].text.text;
 
