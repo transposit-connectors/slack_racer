@@ -11,7 +11,9 @@
     let view = payload.view;
     let metadata = JSON.parse(payload.view.private_metadata);
     console.log(metadata);
-    
+  	let type = view.callback_id;  
+  
+  
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
     let original = view.blocks[0].text.text;
