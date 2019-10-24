@@ -23,6 +23,7 @@
     // validate and determine result
     const userInput = input.trim();
     let result;  
+  
     // advanced anti-hack detection
     if (wpm > 30000000) {
       result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
@@ -39,15 +40,12 @@
       /* generate diff here */
     }
 
-    // notify user of result
-    let resultsView = api.run("this.generate_results_view", {testView: view, input, result})[0];
-
     // using response_action, must respond with everything within 3 seconds
     return {
       status_code: 200,
       body: {
         response_action: "update",
-        view: resultsView
+        view: api.run("this.generate_results_view", {testView: view, input, result})[0]
       }
     }
 }
