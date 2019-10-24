@@ -48,7 +48,7 @@
     return {
       status_code: 200,
       body: {
-        response_type: "update",
+        response_action: "update",
         view: resultsView
       }
     }
