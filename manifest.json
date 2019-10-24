@@ -156,6 +156,10 @@
             "name": "result",
             "type": "STRING",
             "required": true
+          }, {
+            "name": "input",
+            "type": "STRING",
+            "required": true
           }],
           "js": "generate_results_view.js",
           "lang": "js"

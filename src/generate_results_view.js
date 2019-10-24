@@ -1,6 +1,14 @@
-({ testView, result }) => {
+({ testView, input, result }) => {
   let blocks = testView.blocks;	
   let resultBlocks = [
+    {
+        "type": "section",
+        "block_id": "input",
+        "text": {
+            "type": "mrkdwn",
+            "text": `*Your Input*\n${}`
+        }
+    },
     {
         "type": "divider"
     },
