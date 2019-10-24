@@ -45,6 +45,7 @@
       "type": "plain_text",
       "text": "New Race"
     },
+    private_metadata: testView.private_metadata,
     blocks: resultBlocks,
   };
   
