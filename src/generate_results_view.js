@@ -15,26 +15,18 @@
         "type": "divider"
     },
     {
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": `*Results*\n${result}`
-			},
-			"accessory": {
-				"type": "button",
-				"text": {
-					"type": "plain_text",
-					"text": "Retry"
-				},
-				"value": "retry"
-			}
-		},
-    {
         "type": "section",
-        "block_id": "result",
         "text": {
             "type": "mrkdwn",
             "text": `*Results*\n${result}`
+        },
+        "accessory": {
+            "type": "button",
+            "text": {
+                "type": "plain_text",
+                "text": "Retry"
+            },
+            "value": "retry"
         }
     }
   ]
