@@ -6,7 +6,7 @@
     },
     {
         "type": "section",
-        "block_id": "original",
+        "block_id": "result",
         "text": {
             "type": "mrkdwn",
             "text": `${result}`
