@@ -2,11 +2,16 @@
  * Generate the dialog object to send to Slack
  */
 
-({ stringify }) => {  
+({ stringify, recordId }) => {  
+  if (!recordId) {
+    const list = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Meta', recordId: env.get("recordId")})[0];
+  	const idx = Math.floor(Math.random()*list.fields.count);
+    recordId = list.fields.texts[idx];
+  }
+  
   // fetch paragraph text from Airtable
-  const list = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Meta', recordId: env.get("recordId")})[0];
-  const idx = Math.floor(Math.random()*list.fields.count);
-  let rec = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: list.fields.texts[idx]})[0];
+
+  let rec = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: recordId})[0];
   let text = rec.fields.text;
   let textId = rec.fields.id;
   

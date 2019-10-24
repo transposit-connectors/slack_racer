@@ -141,6 +141,9 @@
               "text": "false"
             },
             "type": "BOOLEAN"
+          }, {
+            "name": "recordId",
+            "type": "STRING"
           }],
           "js": "found.js",
           "lang": "js"
