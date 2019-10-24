@@ -9,7 +9,7 @@
     let payload = JSON.parse(http_event.parsed_body.payload);
     console.log(payload);
     let view = payload.view;
-    let metadata = JSON.parse(payload.view.private_metadata);
+    let metadata = qs.parse(payload.view.private_metadata);
     console.log(metadata);
     
     // pull out submission (dependent on order of blocks; for speed)
@@ -20,7 +20,7 @@
     const old = metadata.ts / 1000;
     const newer = Date.now() / 1000;
   	console.log(newer)
-  console.log(old);
+  	console.log(old);
     const wpm = Math.floor(original.split(" ").length / ((newer - old) / 60));
 
     // validate and determine result
