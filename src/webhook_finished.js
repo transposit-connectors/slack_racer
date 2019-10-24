@@ -11,10 +11,10 @@
     let type = view.callback_id;  
   
   	if (!payload.actions && type === "results") {
-      // setImmediate(() => {
+      setImmediate(() => {
         let testView = api.run("this.generate_test_view", {stringify: true})[0];
         api.run("slack.views_open", {$body: {trigger_id: payload.trigger_id, view: testView}}, {asGroup: payload.team.id});
-      // });
+      });
       return {status_code: 200}
     }
   
