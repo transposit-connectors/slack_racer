@@ -45,6 +45,7 @@
     // notify user of result
     let resultsView = api.run("this.generate_results_view", {testView: view, input, result})[0];
 
+    // using response_action, must respond with everything within 3 seconds
     return {
       status_code: 200,
       body: {
