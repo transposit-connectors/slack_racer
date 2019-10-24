@@ -9,9 +9,9 @@
     let payload = JSON.parse(http_event.parsed_body.payload);
     console.log(payload);
     let view = payload.view;
+    let type = view.callback_id;  
     let metadata = JSON.parse(payload.view.private_metadata);
     console.log(metadata);
-  	let type = view.callback_id;  
   
   	if (type === "results") {
       return {
