@@ -4,13 +4,12 @@
  */
 
 ({ http_event }) => {
-  
   // requires significant processing, delay execution of this code block
   setImmediate(() => {
     var _ = require("underscore.js");
     let body = http_event.parsed_body;
-	console.log(body)
-    
+    console.log(body);
+
     // get workspace record from airtable
     let rec = api.run("airtable.get_records", {
       baseId: env.get("baseId"),
@@ -51,22 +50,25 @@
       }
     }
 
-    
-  let view = {
-	type: "modal",
-    callback_id: "highscores",
-    title: {
-      "type": "plain_text",
-      "text": `Workspace highscores`
-    },
-    "close": {
-      "type": "plain_text",
-      "text": "Cancel"
-    },
-    blocks,
-  };
-    
-    return api.run("slack.views_open", { $body: {trigger_id: body.trigger_id, view} }, { asGroup: body.team_id });
+    let view = {
+      type: "modal",
+      callback_id: "highscores",
+      title: {
+        type: "plain_text",
+        text: `Workspace highscores`
+      },
+      close: {
+        type: "plain_text",
+        text: "Cancel"
+      },
+      blocks
+    };
+
+    return api.run(
+      "slack.views_open",
+      { $body: { trigger_id: body.trigger_id, view } },
+      { asGroup: body.team_id }
+    );
   });
 
   // return 200 immediately to prevent Slack timeout
