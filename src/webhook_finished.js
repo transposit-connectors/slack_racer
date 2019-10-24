@@ -13,7 +13,9 @@
 
   	
   	if (type === "results") {
-      setImmediate(() => {});
+      setImmediate(() => {
+        api.run("slack.views_update", {}, {asGroup: payload.team.id});
+      });
       return {status_code: 200}
     }
   
