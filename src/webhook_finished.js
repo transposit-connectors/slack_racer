@@ -24,6 +24,8 @@
     const userInput = input.trim();
     let result;  
   
+  console.log(input)
+  console.log(original)
     // advanced anti-hack detection
     if (wpm > 30000000) {
       result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
