@@ -10,7 +10,6 @@
   }
   
   // fetch paragraph text from Airtable
-
   let rec = api.run('airtable.get_record', {baseId: env.get("baseId"), table: 'Texts', recordId: recordId})[0];
   let text = rec.fields.text;
   let textId = rec.fields.id;
