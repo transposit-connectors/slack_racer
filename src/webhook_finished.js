@@ -19,7 +19,7 @@
     }
   
     let metadata = JSON.parse(payload.view.private_metadata);
-    if (payload.actions && payload.action[0].action_id === "retry") {
+    if (payload.actions && payload.actions[0].action_id === "retry") {
 		return {
           status_code: 200,
           body: {
