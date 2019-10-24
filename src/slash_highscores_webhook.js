@@ -42,7 +42,7 @@
           type: "section",
           text: {
             type: "mrkdwn",
-            text: `*Id*: ${key} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`
+            text: `*Text*: ${key} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`
           }
         });
         blocks.push({
