@@ -52,7 +52,4 @@
         view: resultsView
       }
     }
-    
-    //`${result} \n*Wpm = ${wpm}*`
-    // return api.run("slack.views_update", { $body: "asd" }, { asGroup: payload.team.id });
 }
