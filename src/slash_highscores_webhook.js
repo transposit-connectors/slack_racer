@@ -52,16 +52,19 @@
     }
 
     
-//   let view = {
-// 	type: "modal",
-//     callback_id: "highscores",
-//     title: ,
-//     "close": {
-//     "type": "plain_text",
-//     "text": "Cancel"
-//     },
-//     blocks: resultBlocks,
-//   };
+  let view = {
+	type: "modal",
+    callback_id: "highscores",
+    title: {
+      "type": "plain_text",
+      "text": `SlackRacer: ${body.team_domain} highscores`
+    },
+    "close": {
+      "type": "plain_text",
+      "text": "Cancel"
+    },
+    blocks: resultBlocks,
+  };
     
     // return api.run("slack.open_view", { $body: {trigger_id: , view} }, { asGroup: body.team_id });
   });
