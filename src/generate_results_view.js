@@ -22,6 +22,7 @@
         },
         "accessory": {
             "type": "button",
+          "action_id": "retry",
           "style": "primary",
             "text": {
                 "type": "plain_text",
