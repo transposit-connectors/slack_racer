@@ -13,6 +13,16 @@
     console.log(metadata);
   	let type = view.callback_id;  
   
+  	if (callback_id === "results") {
+      return {
+        status_code: 200,
+        body: {
+          response_action: "update",
+          view: resultsView
+        }
+      }    
+    }
+  
   
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
