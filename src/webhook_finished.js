@@ -14,7 +14,8 @@
   	
   	if (type === "results") {
       setImmediate(() => {
-        api.run("slack.views_update", {}, {asGroup: payload.team.id});
+        let testView = api.run("this.generate_test_view")[0];
+        api.run("slack.views_update", {view_id: view.root_view_id, view: testView}, {asGroup: payload.team.id});
       });
       return {status_code: 200}
     }
