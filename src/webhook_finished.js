@@ -30,7 +30,7 @@
     if (wpm > 30000000) {
       result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
     } else if (input === original) {
-      // record keeping
+      // recordkeeping
       result = api.run("this.update_best_record", {
         workspaceId: payload.team.id,
         textId: metadata.textId,
