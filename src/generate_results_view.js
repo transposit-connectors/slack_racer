@@ -15,6 +15,7 @@
   ]
   blocks = blocks.concat(resultBlocks)
   	
+  console.log(blocks)
   let view = {
 	type: "modal",
     callback_id: "results",
