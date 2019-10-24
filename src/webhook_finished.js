@@ -3,6 +3,7 @@
  */
 
 ({ http_event }) => {
+  setImmediate(() => {
     // parse submission
     console.log(http_event);
     let qs = require("qs.js");
@@ -56,6 +57,9 @@
     let resultsView = api.run("this.generate_results_view", {testView: view, input, result})[0];
 
   	console.log(api.run("slack.views_push", {trigger_id: payload.trigger_id, view: resultsView}, {asGroup: payload.team.id}))
+    
+  });
+  return {status_code: 200};
     // using response_action, must respond with everything within 3 seconds
     // return {
     //   status_code: 200,
