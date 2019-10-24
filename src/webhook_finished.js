@@ -14,6 +14,7 @@
   	let type = view.callback_id;  
   
   	if (type === "results") {
+      console.log(api.run("this.generate_test_view")[0]);
       return {
         status_code: 200,
         body: {
