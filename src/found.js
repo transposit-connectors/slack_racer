@@ -16,14 +16,6 @@
   
   // create blocks for modal
   const blocks = [
-    {
-			"type": "section",
-          	"block_id": "asdfa",
-			"text": {
-				"type": "mrkdwn",
-				"text": `*Text*`
-			}
-		},
         {
 			"type": "section",
           	"block_id": "original",
