@@ -43,9 +43,15 @@
     }
 
     // notify user of result
-    api.run("this.generate_results_view", {testView: view, result});
+    let resultsView = api.run("this.generate_results_view", {testView: view, result});
 
-    
+    return {
+      status_code: 200,
+      body: {
+        action: "update",
+        view: resultsView
+      }
+    }
     
     //`${result} \n*Wpm = ${wpm}*`
     // return api.run("slack.views_update", { $body: "asd" }, { asGroup: payload.team.id });
