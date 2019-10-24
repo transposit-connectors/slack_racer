@@ -19,6 +19,8 @@
     // calculate timings
     const old = metadata.ts / 1000;
     const newer = Date.now() / 1000;
+  	console.log(newer)
+  console.log(old);
     const wpm = Math.floor(original.split(" ").length / ((newer - old) / 60));
 
     // validate and determine result
