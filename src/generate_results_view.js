@@ -18,11 +18,10 @@
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "*Results*\n${result}"
+				"text": `*Results*\n${result}`
 			},
 			"accessory": {
 				"type": "button",
-              	style: "danger",
 				"text": {
 					"type": "plain_text",
 					"text": "Retry"
