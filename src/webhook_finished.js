@@ -15,7 +15,7 @@
         let testView = api.run("this.generate_test_view", {stringify: true})[0];
         api.run("slack.views_open", {$body: {trigger_id: payload.trigger_id, view: testView}}, {asGroup: payload.team.id});
       // });
-      // return {status_code: 200}
+      return {status_code: 200}
     }
   
     let metadata = JSON.parse(payload.view.private_metadata);
