@@ -19,15 +19,13 @@
     // calculate timings
     const old = metadata.ts / 1000;
     const newer = Date.now() / 1000;
-  	console.log(newer)
-  	console.log(old);
     const wpm = Math.floor(original.split(" ").length / ((newer - old) / 60));
 
     // validate and determine result
     const userInput = input.trim();
     let result;
     let blocks;
-    
+  
     // advanced anti-hack detection
     if (wpm > 30000000) {
       result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
