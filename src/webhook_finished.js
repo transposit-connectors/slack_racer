@@ -18,7 +18,7 @@
         status_code: 200,
         body: {
           response_action: "update",
-          view: resultsView
+          view: api.run('this.generate_test_view')[0];
         }
       }    
     }
