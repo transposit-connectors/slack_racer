@@ -13,6 +13,19 @@
         }
     }
   ]
+  
+  blocks.push({
+        "type": "divider"
+    })
+  
+  blocks.push(    {
+        "type": "section",
+        "block_id": "original",
+        "text": {
+            "type": "mrkdwn",
+            "text": `${result}`
+        }
+    })
   // blocks = blocks.concat(resultBlocks)
   	
   let view = {
