@@ -11,14 +11,10 @@
     let view = payload.view;
     let type = view.callback_id;  
 
+  	
   	if (type === "results") {
-      return {
-        status_code: 200,
-        body: {
-          response_action: "update",
-          view: api.run("this.generate_test_view")[0],
-        }
-      }    
+      setImmediate(() => {});
+      return {status_code: 200}
     }
   
   
