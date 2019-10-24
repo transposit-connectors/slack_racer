@@ -44,7 +44,6 @@
       "type": "plain_text",
       "text": "New Race"
     },
-    clear_on_close: true,
     blocks: resultBlocks,
   };
   
