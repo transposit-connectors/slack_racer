@@ -45,11 +45,11 @@
 	];
   
   // record start time
-  const private_metadata = JSON.stringify({
+  const private_metadata = {
     ts: Date.now(),
     recordId: rec.id,
     textId: textId
-  })
+  }
     
   let view = {
 	type: "modal",
