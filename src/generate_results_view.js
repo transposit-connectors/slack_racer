@@ -1,6 +1,8 @@
 ({ testView, input, result }) => {
   let blocks = testView.blocks;	
   let resultBlocks = [
+    blocks[0],
+    blocks[1],
     {
         "type": "section",
         "block_id": "input",
@@ -21,8 +23,6 @@
         }
     }
   ]
-
-  blocks = blocks.concat(resultBlocks)
   	
   let view = {
 	type: "modal",
@@ -36,7 +36,7 @@
       "type": "plain_text",
       "text": "Retry"
     },
-    blocks
+    blocks: resultBlocks,
   };
   
   return view;
