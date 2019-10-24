@@ -10,7 +10,6 @@
     let view = payload.view;
     let type = view.callback_id;  
 
-  	
   	if (type === "results") {
       setImmediate(() => {
         let testView = api.run("this.generate_test_view", {stringify: true})[0];
