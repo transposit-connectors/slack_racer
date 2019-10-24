@@ -9,7 +9,8 @@
   setImmediate(() => {
     var _ = require("underscore.js");
     let body = http_event.parsed_body;
-
+	console.log(body)
+    
     // get workspace record from airtable
     let rec = api.run("airtable.get_records", {
       baseId: env.get("baseId"),
@@ -50,13 +51,19 @@
       }
     }
 
-    // post message
-    let post = {
-      channel: body.channel_id,
-      user: body.user_id,
-      blocks: blocks
-    };
-    return api.run("slack.post_chat_ephemeral", { $body: post }, { asGroup: body.team_id });
+    
+  let view = {
+	type: "modal",
+    callback_id: "highscores",
+    title: ,
+    "close": {
+    "type": "plain_text",
+    "text": "Cancel"
+    },
+    blocks: resultBlocks,
+  };
+    
+    return api.run("slack.open_view", { $body: {trigger_id: , view} }, { asGroup: body.team_id });
   });
 
   // return 200 immediately to prevent Slack timeout
