@@ -10,10 +10,8 @@
     let view = payload.view;
     let type = view.callback_id;  
 
-  	if (payload.actions) {
-      if (payload.action[0].action_id === "retry") {
-        
-      }
+  	if (payload.actions && payload.action[0].action_id === "retry") {
+		
     }
   
   	if (type === "results") {
