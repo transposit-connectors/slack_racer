@@ -57,7 +57,7 @@
     callback_id: "highscores",
     title: {
       "type": "plain_text",
-      "text": `SlackRacer: ${body.team_domain} highscores`
+      "text": `${body.team_domain} highscores`
     },
     "close": {
       "type": "plain_text",
