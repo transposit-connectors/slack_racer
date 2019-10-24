@@ -23,9 +23,7 @@
 
     // validate and determine result
     const userInput = input.trim();
-    let result;
-    let blocks;
-  
+    let result;  
     // advanced anti-hack detection
     if (wpm > 30000000) {
       result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
