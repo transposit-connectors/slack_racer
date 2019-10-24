@@ -38,7 +38,7 @@
         wpm
       })[0].message;
     } else {
-      result = "Sorry, input did not match.";
+      result = `Sorry, input did not match. *${wpm} wpm*`;
       /* generate diff here */
     }
 
