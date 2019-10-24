@@ -20,7 +20,13 @@
   
     let metadata = JSON.parse(payload.view.private_metadata);
     if (payload.actions && payload.action[0].action_id === "retry") {
-		return api.run("this.generate_test_view", {stringify: true, recordId: metadata.recordId})[0];
+		return {
+          status_code: 200,
+          body: {
+            response_action: "update",
+          	view: api.run("this.generate_test_view", {stringify: true, recordId: metadata.recordId})[0]
+          }
+    	}
     }
                        
     // pull out submission (dependent on order of blocks; for speed)                   
