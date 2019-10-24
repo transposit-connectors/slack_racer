@@ -4,7 +4,6 @@
 
 ({ http_event }) => {
     // parse submission
-    console.log(http_event);
     let qs = require("qs.js");
     let payload = JSON.parse(http_event.parsed_body.payload);
     console.log(payload);
@@ -24,7 +23,6 @@
   
     // pull out submission (dependent on order of blocks; for speed)
     let metadata = JSON.parse(payload.view.private_metadata);
-    console.log(metadata);
     let input = view.state.values.input.input.value;
     let original = view.blocks[0].text.text;
 
