@@ -43,7 +43,7 @@
     }
 
     // notify user of result
-    let resultsView = api.run("this.generate_results_view", {testView: view, result});
+    let resultsView = api.run("this.generate_results_view", {testView: view, result})[0];
 
     return {
       status_code: 200,
