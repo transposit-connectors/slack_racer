@@ -13,7 +13,7 @@
         }
     }
   ]
-  blocks.concat(resultBlocks)
+  blocks = blocks.concat(resultBlocks)
   	
   let view = {
 	type: "modal",
