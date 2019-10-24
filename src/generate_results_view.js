@@ -42,7 +42,7 @@
     },
     "submit": {
       "type": "plain_text",
-      "text": "Retry"
+      "text": "New Race"
     },
     blocks: resultBlocks,
   };
