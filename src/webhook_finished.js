@@ -10,9 +10,7 @@
     console.log(payload);
     let view = payload.view;
     let type = view.callback_id;  
-    let metadata = JSON.parse(payload.view.private_metadata);
-    console.log(metadata);
-  
+
   	if (type === "results") {
       return {
         status_code: 200,
@@ -25,6 +23,8 @@
   
   
     // pull out submission (dependent on order of blocks; for speed)
+    let metadata = JSON.parse(payload.view.private_metadata);
+    console.log(metadata);
     let input = view.state.values.input.input.value;
     let original = view.blocks[0].text.text;
 
