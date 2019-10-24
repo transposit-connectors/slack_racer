@@ -9,26 +9,6 @@
     console.log(payload);
     let view = payload.view;
     let type = view.callback_id;  
-  
-  	if (!payload.actions && type === "results") {
-      setImmediate(() => {
-        let testView = api.run("this.generate_test_view", {stringify: true})[0];
-        api.run("slack.views_open", {$body: {trigger_id: payload.trigger_id, view: testView}}, {asGroup: payload.team.id});
-      });
-      return {status_code: 200}
-    }
-  
-    let metadata = JSON.parse(payload.view.private_metadata);
-    if (payload.actions && payload.actions[0].action_id === "retry") {
-      return { status_code: 200}
-		// return {
-		// status_code: 200,
-		// body: {
-		// response_action: "update",
-		// view: api.run("this.generate_test_view", {stringify: true, recordId: metadata.recordId})[0]
-		// }
-		// }
-    }
                        
     // pull out submission (dependent on order of blocks; for speed)                   
     let input = view.state.values.input.input.value;
