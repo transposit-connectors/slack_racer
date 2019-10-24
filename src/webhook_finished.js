@@ -13,7 +13,7 @@
     console.log(metadata);
   	let type = view.callback_id;  
   
-  	if (callback_id === "results") {
+  	if (type === "results") {
       return {
         status_code: 200,
         body: {
