@@ -63,7 +63,7 @@
       "type": "plain_text",
       "text": "Cancel"
     },
-    blocks: resultBlocks,
+    blocks,
   };
     
     // return api.run("slack.open_view", { $body: {trigger_id: , view} }, { asGroup: body.team_id });
