@@ -9,7 +9,7 @@
     let payload = JSON.parse(http_event.parsed_body.payload);
     console.log(payload);
     let view = payload.view;
-    let metadata = qs.parse(payload.view.private_metadata);
+    let metadata = JSON.parse(payload.view.private_metadata);
     console.log(metadata);
     
     // pull out submission (dependent on order of blocks; for speed)
