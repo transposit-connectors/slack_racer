@@ -25,7 +25,7 @@
   let result;
 
   // advanced anti-hack detection
-  if (wpm > 30000000) {
+  if (wpm > 250) {
     result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
   } else if (input === original) {
     // recordkeeping
