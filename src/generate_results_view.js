@@ -19,16 +19,6 @@
         "text": {
             "type": "mrkdwn",
             "text": `*Results*\n${result}`
-        },
-        "accessory": {
-            "type": "button",
-          "action_id": "retry",
-          "style": "primary",
-            "text": {
-                "type": "plain_text",
-                "text": "Retry"
-            },
-            "value": "retry"
         }
     }
   ]
@@ -41,11 +31,6 @@
     "type": "plain_text",
     "text": "Cancel"
     },
-    "submit": {
-      "type": "plain_text",
-      "text": "New Race"
-    },
-    private_metadata: testView.private_metadata,
     blocks: resultBlocks,
   };
   
