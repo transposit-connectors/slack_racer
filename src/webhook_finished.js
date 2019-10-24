@@ -59,7 +59,7 @@
     return {
       status_code: 200,
       body: {
-        response_action: "update",
+        response_action: "push",
         view: resultsView
       }
     }
