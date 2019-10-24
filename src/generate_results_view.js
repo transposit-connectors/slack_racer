@@ -6,7 +6,7 @@
         "block_id": "input",
         "text": {
             "type": "mrkdwn",
-            "text": `*Your Input*\n${}`
+            "text": `*Your Input*\n${input}`
         }
     },
     {
