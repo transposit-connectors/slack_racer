@@ -13,7 +13,16 @@
     console.log(metadata);
   	let type = view.callback_id;  
   
-
+  	if (type === "results") {
+      return {
+        status_code: 200,
+        body: {
+          response_action: "update",
+          view: api.run("this.generate_text_view")[0],
+        }
+      }    
+    }
+  
   
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
