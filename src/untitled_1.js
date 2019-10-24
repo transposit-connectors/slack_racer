@@ -50,7 +50,7 @@
     }
     return { updated: true, message};
   }
-  return { updated: false, message: `Nice job!` };
+  return { updated: false, message: `Nice job! *${wpm} wpm*` };
 }
 
 /*
