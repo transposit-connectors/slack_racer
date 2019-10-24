@@ -66,7 +66,7 @@
     blocks,
   };
     
-    return console.log(api.run("slack.open_view", { $body: {trigger_id: body.trigger_id, view} }, { asGroup: body.team_id }));
+    return api.run("slack.open_view", { $body: {trigger_id: body.trigger_id, view} }, { asGroup: body.team_id });
   });
 
   // return 200 immediately to prevent Slack timeout
