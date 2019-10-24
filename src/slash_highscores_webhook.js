@@ -57,7 +57,7 @@
     callback_id: "highscores",
     title: {
       "type": "plain_text",
-      "text": `${body.team_domain} highscores`
+      "text": `Workspace highscores`
     },
     "close": {
       "type": "plain_text",
