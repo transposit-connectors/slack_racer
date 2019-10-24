@@ -13,8 +13,7 @@
   	if (type === "results") {
       setImmediate(() => {
         let testView = api.run("this.generate_test_view", {stringify: true})[0];
-        console.log(testView);
-        console.log(api.run("slack.views_open", {$body: {trigger_id: payload.trigger_id, view: testView}}, {asGroup: payload.team.id}));
+        api.run("slack.views_open", {$body: {trigger_id: payload.trigger_id, view: testView}}, {asGroup: payload.team.id});
       });
       return {status_code: 200}
     }
