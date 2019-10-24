@@ -21,7 +21,7 @@
           	"block_id": "asdfa",
 			"text": {
 				"type": "mrkdwn",
-				"text": `*Text*}`
+				"text": `*Text*`
 			}
 		},
         {
@@ -29,7 +29,7 @@
           	"block_id": "original",
 			"text": {
 				"type": "mrkdwn",
-				"text": `*Text*\n${text}`
+				"text": `${text}`
 			}
 		},
         {
