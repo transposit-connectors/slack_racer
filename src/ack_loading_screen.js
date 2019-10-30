@@ -25,6 +25,7 @@
   
   view = {
 	"type": "modal",
+        callback_id: "loading",
 	"title": {
 		"type": "plain_text",
 		"text": "My App",
