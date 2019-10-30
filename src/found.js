@@ -4,7 +4,7 @@
 
 ({ stringify, textId }) => {
   let rec;
-  
+
   // if no textId, get random record
   if (textId < 0) {
     const list = api.run("airtable.get_record", {
@@ -12,12 +12,12 @@
       table: "Meta",
       recordId: env.get("recordId")
     })[0];
-    const idx = Math.floor(Math.random() * list.fields.count);    
+    const idx = Math.floor(Math.random() * list.fields.count);
     rec = api.run("airtable.get_record", {
       baseId: env.get("baseId"),
       table: "Texts",
       recordId: list.fields.texts[idx]
-  	})[0];
+    })[0];
   } else {
     rec = api.run("airtable.get_records", {
       baseId: env.get("baseId"),
@@ -25,7 +25,7 @@
       filterByFormula: `id=${textId}`
     })[0];
   }
-  
+
   textId = rec.fields.id;
   let text = rec.fields.text;
 
