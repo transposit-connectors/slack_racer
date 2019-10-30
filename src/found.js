@@ -3,7 +3,7 @@
  */
 
 ({ stringify, textId }) => {
-  let recordId;
+  let rec;
   if (!textId) {
     const list = api.run("airtable.get_record", {
       baseId: env.get("baseId"),
@@ -11,7 +11,15 @@
       recordId: env.get("recordId")
     })[0];
     const idx = Math.floor(Math.random() * list.fields.count);
-    recordId = list.fields.texts[idx];
+    let recordId = list.fields.texts[idx];
+    
+    rec = api.run("airtable.get_record", {
+      baseId: env.get("baseId"),
+      table: "Texts",
+      recordId: recordId
+  	})[0];
+  } else {
+    
   }
 
   
@@ -20,11 +28,7 @@
   
   
   // fetch paragraph text from Airtable
-  let rec = api.run("airtable.get_record", {
-    baseId: env.get("baseId"),
-    table: "Texts",
-    recordId: recordId
-  })[0];
+  
   let text = rec.fields.text;
   let textId = rec.fields.id;
 
