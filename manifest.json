@@ -167,6 +167,17 @@
           "js": "generate_results_view.js",
           "lang": "js"
         }
+      }, {
+        "id": "ack_loading_screen",
+        "function": {
+          "parameters": [{
+            "name": "title",
+            "type": "STRING",
+            "required": true
+          }],
+          "js": "ack_loading_screen.js",
+          "lang": "js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
