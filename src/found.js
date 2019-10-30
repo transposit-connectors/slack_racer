@@ -23,7 +23,8 @@
       baseId: env.get("baseId"),
       table: "Texts",
       filterByFormula: `id=${textId}`
-    })
+    })[0];
+    console.log(rec);
   }
 
   
