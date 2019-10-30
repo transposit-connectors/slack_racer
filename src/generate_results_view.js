@@ -4,11 +4,11 @@
   let view = payload.view;
   let type = view.callback_id;
   let metadata = JSON.parse(view.private_metadata);
-console.log("A")
+  
   // pull out submission (dependent on order of blocks; for speed)
   let input = view.state.values.input.input.value;
   let original = view.blocks[0].text.text;
-console.log("A")
+
   // calculate timings
   const old = metadata.ts / 1000;
   const newer = Date.now() / 1000;
@@ -17,7 +17,7 @@ console.log("A")
   // validate and determine result
   const userInput = input.trim();
   let result;
-console.log("A")
+
   // advanced anti-hack detection
   if (wpm > 250) {
     result = `*${wpm} wpm?* Something smells fishy :fish: :face_with_monocle:`;
@@ -33,7 +33,7 @@ console.log("A")
     result = `Sorry, input did not match! *${wpm} wpm*`;
     /* generate diff here */
   }
-console.log("A")
+
   /* TODO: clean this up */
   let blocks = view.blocks;
   let resultBlocks = [
@@ -59,7 +59,6 @@ console.log("A")
     }
   ];
 
-  console.log("A")
   let resultView = {
     type: "modal",
     callback_id: "results",
@@ -75,6 +74,6 @@ console.log("A")
     blocks: resultBlocks,
     private_metadata: view.private_metadata,
   };
-console.log("A")
+
   return api.run("slack.views_update", { $body: { view_id: view.id, view: resultView } }, { asGroup: payload.team.id });
 }
