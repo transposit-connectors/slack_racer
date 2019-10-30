@@ -48,7 +48,7 @@
   
   
   
-  let blocks = testView.blocks;	
+  let blocks = view.blocks;	
   let resultBlocks = [
     blocks[0],
     blocks[1],
