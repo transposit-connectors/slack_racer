@@ -17,9 +17,10 @@
       text: title,
     },
     "close": {
-    "type": "plain_text",
-    "text": "Cancel"
+    	"type": "plain_text",
+    	"text": "Cancel"
     },
+    blocks
   }
   
   return {
