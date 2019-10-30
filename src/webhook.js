@@ -3,7 +3,6 @@
  */
 
 ({ http_event }) => {
-  console.log(http_event)
   let body = http_event.parsed_body;
   setImmediate(() => {
     let textId = parseInt(body.text);
