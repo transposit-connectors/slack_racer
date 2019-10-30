@@ -9,7 +9,7 @@
             "accessory": {
                   "type": "image",
                   "image_url": api.run("dog_ceo.get_random_dog")[0].message,
-                  "alt_text": "boo!"
+                  "alt_text": "henlo!"
               }
 		}
 	]
