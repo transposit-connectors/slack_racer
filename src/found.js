@@ -29,7 +29,7 @@
       block_id: "original",
       text: {
         type: "mrkdwn",
-        text: `fsfasf*dsadfasd*fasdfasfd\n${text}`
+        text: `\n${text}`
       }
     },
     {
