@@ -14,10 +14,10 @@
         return api.run("this.process_test_response", {payload});
       case "results":
         // retry
-        return api.run("this.generate")
-        break;
+        const viewJson = api.run("this.generate_test_view", {stringify: true, textId: (textId || -1)})[0]; 
+        return api.run("slack.views_open", { $body: { trigger_id: body.trigger_id, view: viewJson }}, { asGroup: body.team_id });
       case "loading":
-        break;
+        return {status_code: 400};
       default:
         return {status_code: 400};
     }
