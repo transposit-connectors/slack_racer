@@ -5,7 +5,7 @@
 ({ stringify, textId }) => {
   let recordId;
   if (!textId) {
-    const list = api.run("airtable.get_records", {
+    const list = api.run("airtable.get_record", {
       baseId: env.get("baseId"),
       table: "Meta",
       recordId: env.get("recordId")
