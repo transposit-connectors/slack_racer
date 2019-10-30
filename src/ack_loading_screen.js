@@ -32,9 +32,8 @@
     },
 	"close": {
 		"type": "plain_text",
-		"text": "Cancel",
-		"emoji": true
-	},
+		"text": "Cancel"
+    },
 	"blocks": [
 		{
 			"type": "section",
