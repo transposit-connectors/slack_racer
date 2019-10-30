@@ -28,6 +28,7 @@
     body: {
       response_action: "update",
       view: view,
+    }
   };
 }
 
