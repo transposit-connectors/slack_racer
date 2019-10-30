@@ -37,10 +37,8 @@
     /* generate diff here */
   }
 
-  /* TODO: clean this up */
-  let blocks = view.blocks;
-  let resultBlocks = [
-    blocks[0],	// test's text section
+  let blocks = [
+    view.block[0],	// test's text section
     {
       type: "divider"
     },
@@ -76,7 +74,7 @@
       type: "plain_text",
       text: "Cancel"
     },
-    blocks: resultBlocks,
+    blocks,
     private_metadata: view.private_metadata,
   };
 
