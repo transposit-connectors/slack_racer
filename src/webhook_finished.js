@@ -46,7 +46,7 @@
         input,
         result
       })[0]
-    // api.run("slack.views_update", {$body: {view_id: view.id, view: resultView}}, {asGroup: payload.team.id})
+    api.run("slack.views_update", {$body: {view_id: view.id, view: resultView}}, {asGroup: payload.team.id})
   });
 
   // using response_action, must respond with everything within 3 seconds
