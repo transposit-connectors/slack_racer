@@ -4,6 +4,8 @@
 
 ({ stringify, textId }) => {
   let rec;
+  
+  // if no textId, get random record
   if (textId < 0) {
     const list = api.run("airtable.get_record", {
       baseId: env.get("baseId"),
