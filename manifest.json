@@ -151,17 +151,6 @@
           "js": "generate_results_view.js",
           "lang": "js"
         }
-      }, {
-        "id": "process_retry_response",
-        "function": {
-          "parameters": [{
-            "name": "payload",
-            "type": "OBJECT",
-            "required": true
-          }],
-          "js": "process_retry_response.js",
-          "lang": "js"
-        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
