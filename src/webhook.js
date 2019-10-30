@@ -3,6 +3,7 @@
  */
 
 ({ http_event }) => {
+  console.log(http_event)
   let body = http_event.parsed_body;
   setImmediate(() => {
     const viewJson = api.run("this.generate_test_view", {stringify: true})[0]; 
