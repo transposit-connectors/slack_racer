@@ -19,14 +19,14 @@
     return { updated: true, message: `Congratulations! You now hold the record for text *#${textId}* with a speed of *${wpm} wpm*! :crown: :tada:` };
   }
 
-  // parse json
+  // get text's record and parse json
   let blob = rec.fields[textId];
   let meta = { username: "", wpm: -1 };
   if (blob != null) {
     meta = JSON.parse(rec.fields[textId]);
   }
 
-  // update record if better time
+  // update accordingly
   let oldName = meta.username;
   if (meta.wpm < wpm) {
     meta.username = username;
@@ -42,7 +42,7 @@
     });
 
     var message;
-    if (oldName == "") {
+    if (oldName === "") {
       message = `Congratulations! You now hold the record for text *#${textId}* with a speed of *${wpm} wpm*! :crown: :tada:`;
     } else {
       message = `:crown: Congratulations, you beat *${oldName}* and now hold the record for text *#${textId}* with a speed of *${wpm} wpm*!`;
