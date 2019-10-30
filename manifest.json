@@ -125,6 +125,9 @@
           }, {
             "name": "recordId",
             "type": "STRING"
+          }, {
+            "name": "textId",
+            "type": "NUMBER"
           }],
           "js": "found.js",
           "lang": "js"

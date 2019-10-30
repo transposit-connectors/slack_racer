@@ -2,9 +2,10 @@
  * Generate the dialog object to send to Slack
  */
 
-({ stringify, recordId }) => {
-  if (!recordId) {
-    const list = api.run("airtable.get_record", {
+({ stringify, textId }) => {
+  let recordId;
+  if (!textId) {
+    const list = api.run("airtable.get_records", {
       baseId: env.get("baseId"),
       table: "Meta",
       recordId: env.get("recordId")
@@ -13,6 +14,11 @@
     recordId = list.fields.texts[idx];
   }
 
+  
+  
+  
+  
+  
   // fetch paragraph text from Airtable
   let rec = api.run("airtable.get_record", {
     baseId: env.get("baseId"),
