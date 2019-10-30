@@ -9,7 +9,7 @@
   console.log(payload);
   
   setImmediate(() => {
-    switch (type) {
+    switch (payload.view.callback_id) {
       case "test":
         api.run("this.process_test_response", {payload});
         break;
