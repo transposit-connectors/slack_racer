@@ -15,8 +15,6 @@
       case "results":
         // retry
         return api.run("this.process_retry_response", {payload});
-        const viewJson = api.run("this.generate_test_view", {stringify: true, })[0]; 
-        return api.run("slack.views_open", { $body: { trigger_id: payload.trigger_id, view: viewJson }}, { asGroup: body.team_id });
       case "loading":
         return {status_code: 400};
       default:
