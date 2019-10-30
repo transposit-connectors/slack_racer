@@ -12,13 +12,11 @@
       table: "Meta",
       recordId: env.get("recordId")
     })[0];
-    const idx = Math.floor(Math.random() * list.fields.count);
-    let recordId = list.fields.texts[idx];
-    
+    const idx = Math.floor(Math.random() * list.fields.count);    
     rec = api.run("airtable.get_record", {
       baseId: env.get("baseId"),
       table: "Texts",
-      recordId: recordId
+      recordId: list.fields.texts[idx]
   	})[0];
   } else {
     rec = api.run("airtable.get_records", {
@@ -28,8 +26,8 @@
     })[0];
   }
   
-  let text = rec.fields.text;
   textId = rec.fields.id;
+  let text = rec.fields.text;
 
   // create blocks for modal
   const blocks = [
