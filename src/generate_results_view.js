@@ -38,7 +38,7 @@
   }
 
   let blocks = [
-    view.block[0], // test's text section
+    view.blocks[0], // test's text section
     {
       type: "divider"
     },
