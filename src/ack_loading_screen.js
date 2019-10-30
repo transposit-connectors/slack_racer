@@ -23,19 +23,6 @@
     blocks
   }
   
-  view = {
-	type: "modal",
-    callback_id: "loading",
-	title: {
-		type: "plain_text",
-		text: "My App"
-    },
-	"close": {
-		"type": "plain_text",
-		"text": "Cancel"
-    },
-	blocks
-}
   return {
     status_code: 200,
     body: {
