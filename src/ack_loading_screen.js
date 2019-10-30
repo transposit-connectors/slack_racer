@@ -6,11 +6,11 @@
 				"type": "mrkdwn",
 				"text": "*Loading ...*"
 			},
-            "accessory": {
-                  "type": "image",
-                  "image_url": "https://d33wubrfki0l68.cloudfront.net/19e6962f9c321e8d902fca41dba9b0635720cbce/cbbd0/img/iggy-building.png",
-                  "alt_text": "boo!"
-              }
+            // "accessory": {
+            //       "type": "image",
+            //       "image_url": "https://d33wubrfki0l68.cloudfront.net/19e6962f9c321e8d902fca41dba9b0635720cbce/cbbd0/img/iggy-building.png",
+            //       "alt_text": "boo!"
+            //   }
 		}
 	]
   
