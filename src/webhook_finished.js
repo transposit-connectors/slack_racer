@@ -14,6 +14,7 @@
   setImmediate(() => {
     switch (type) {
       case "test":
+        api.run("this.process_test_response");
         break;
       case "results":
         break;

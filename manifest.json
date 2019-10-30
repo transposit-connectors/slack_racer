@@ -149,7 +149,18 @@
           "lang": "js"
         }
       }, {
-        "id": "generate_results_view",
+        "id": "ack_loading_screen",
+        "function": {
+          "parameters": [{
+            "name": "title",
+            "type": "OBJECT",
+            "required": true
+          }],
+          "js": "ack_loading_screen.js",
+          "lang": "js"
+        }
+      }, {
+        "id": "process_test_response",
         "function": {
           "parameters": [{
             "name": "testView",
@@ -165,17 +176,6 @@
             "required": true
           }],
           "js": "generate_results_view.js",
-          "lang": "js"
-        }
-      }, {
-        "id": "ack_loading_screen",
-        "function": {
-          "parameters": [{
-            "name": "title",
-            "type": "OBJECT",
-            "required": true
-          }],
-          "js": "ack_loading_screen.js",
           "lang": "js"
         }
       }],
