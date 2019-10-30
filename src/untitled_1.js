@@ -45,7 +45,7 @@
     if (oldName === "") {
       message = `Congratulations! You now hold the record for text *#${textId}* with a speed of *${wpm} wpm*! :crown: :tada:`;
     } else {
-      message = `:crown: Congratulations, you beat *${oldName}* and now hold the record for text *#${textId}* with a speed of *${wpm} wpm*!`;
+      message = `:crown: Congratulations, you beat *${oldName}* and now hold the record for text *#${textId}* with a speed of *${wpm} wpm*! :crown:`;
     }
     return { updated: true, message };
   }
