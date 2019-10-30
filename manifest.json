@@ -117,12 +117,6 @@
         "description": "generate the dialog object to send to Slack",
         "function": {
           "parameters": [{
-            "name": "stringify",
-            "default": {
-              "text": "false"
-            },
-            "type": "BOOLEAN"
-          }, {
             "name": "textId",
             "type": "NUMBER"
           }],
