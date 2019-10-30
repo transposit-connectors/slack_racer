@@ -79,18 +79,18 @@
       text: "Retry"
   };
   
-	// let view = {
-	// type: "modal",
-	// callback_id: "results",
-	// title: view.title,
-	// "close": {
-	// "type": "plain_text",
-	// "text": "Cancel"
-	// },
-	// blocks: resultBlocks,
-	// };
+  let resultView = {
+  type: "modal",
+  callback_id: "results",
+  title: view.title,
+  "close": {
+  "type": "plain_text",
+  "text": "Cancel"
+  },
+  blocks: resultBlocks,
+  };
   
-  return api.run("slack.views_update", {$body: {view_id: view.id, view}}, {asGroup: payload.team.id})
+  return api.run("slack.views_update", {$body: {view_id: view.id, view: resultView}}, {asGroup: payload.team.id})
 }
 
 /*
