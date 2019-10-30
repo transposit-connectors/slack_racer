@@ -27,7 +27,7 @@
   return {
     status_code: 200,
     body: {
-      response_action: "open",
+      response_action: "update",
       view: view,
     }
   };
