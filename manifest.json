@@ -7,6 +7,9 @@
       }, {
         "name": "transposit/slack:v3.*.*",
         "alias": "slack"
+      }, {
+        "name": "transposit/dog_ceo:v1.*.*",
+        "alias": "dog_ceo"
       }],
       "operations": [{
         "id": "slash_race_webhook",
