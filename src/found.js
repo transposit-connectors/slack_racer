@@ -29,7 +29,7 @@
       block_id: "original",
       text: {
         type: "mrkdwn",
-        text: `stack*Overflow*\n${text}`
+        text: `\n${text}`
       }
     },
     {
