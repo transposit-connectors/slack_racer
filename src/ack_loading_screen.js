@@ -23,6 +23,7 @@
     blocks
   }
   
+  return {status_code: 200}
   return {
     status_code: 200,
     body: {
