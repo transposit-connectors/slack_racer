@@ -70,7 +70,7 @@
       text: "Cancel"
     },
     blocks: resultBlocks,
-    private_metadata: view.private_metadat,
+    private_metadata: view.private_metadata,
   };
 
   return api.run("slack.views_update", { $body: { view_id: view.id, view: resultView } }, { asGroup: payload.team.id });
