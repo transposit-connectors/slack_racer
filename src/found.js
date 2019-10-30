@@ -64,7 +64,7 @@
 
   let view = {
     type: "modal",
-    callback_id: "race",
+    callback_id: "test",
     title: {
       type: "plain_text",
       text: `SlackRacer: Text ${textId}`

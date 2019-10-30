@@ -12,6 +12,10 @@
   let metadata = JSON.parse(view.private_metadata);
   
   setImmediate(() => {
+    switch (type) {
+      case "test":
+      case "result"
+    }
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
     let original = view.blocks[0].text.text;
