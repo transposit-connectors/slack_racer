@@ -152,11 +152,6 @@
           "lang": "js"
         }
       }, {
-        "id": "get_random_dog",
-        "tql": {
-          "tql": "SELECT * FROM dog_ceo.get_random_dog\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
-        }
-      }, {
         "id": "zzz_notes",
         "function": {
           "js": "zzz_notes.js",

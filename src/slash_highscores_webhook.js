@@ -8,6 +8,7 @@
   setImmediate(() => {
     var _ = require("underscore.js");
     let body = http_event.parsed_body;
+    let blocks = [];
     console.log(body);
 
     // get workspace record from airtable
@@ -19,21 +20,18 @@
 
     // if no runs, return immediately
     if (rec == null) {
-      return api.run(
-        "slack.post_chat_ephemeral",
+      blocks.push(
         {
-          $body: {
-            channel: body.channel_id,
-            user: body.user_id,
-            text: "No high scores! Please finish a race first."
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: `No high scores! Please finish a race first.`
           }
-        },
-        { asGroup: body.team_id }
-      );
+        }
+      )
     }
 
     // parse record and marshall data into blocks
-    let blocks = [];
     for (key in rec.fields) {
       if (parseInt(key)) {
         let blob = JSON.parse(rec.fields[key]);
