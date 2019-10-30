@@ -10,6 +10,7 @@
   let view = payload.view;
   let type = view.callback_id;
   let metadata = JSON.parse(view.private_metadata);
+  
   setImmediate(() => {
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
@@ -46,7 +47,7 @@
         result
       })[0]
     api.run("slack.views_update", {view_id: view.id, view: resultView}, {asGroup: payload.team.id})
-  })
+  });
 
   // using response_action, must respond with everything within 3 seconds
   return api.run("this.ack_loading_screen", {title: view.title})[0];
