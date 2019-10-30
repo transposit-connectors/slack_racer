@@ -41,7 +41,9 @@
   let blocks = view.blocks;
   let resultBlocks = [
     blocks[0],	// text section
-    blocks[1],  // divider
+    {
+      type: "divider"
+    },
     {
       type: "section",
       block_id: "input",
