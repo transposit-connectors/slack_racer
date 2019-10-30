@@ -124,17 +124,6 @@
           "lang": "js"
         }
       }, {
-        "id": "ack_loading_screen",
-        "function": {
-          "parameters": [{
-            "name": "title",
-            "type": "OBJECT",
-            "required": true
-          }],
-          "js": "ack_loading_screen.js",
-          "lang": "js"
-        }
-      }, {
         "id": "process_test_response",
         "function": {
           "parameters": [{
@@ -149,6 +138,17 @@
         "id": "zzz_notes",
         "function": {
           "js": "zzz_notes.js",
+          "lang": "js"
+        }
+      }, {
+        "id": "generate_loading_screen",
+        "function": {
+          "parameters": [{
+            "name": "title",
+            "type": "OBJECT",
+            "required": true
+          }],
+          "js": "ack_loading_screen.js",
           "lang": "js"
         }
       }],

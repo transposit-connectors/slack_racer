@@ -24,5 +24,5 @@
   });
 
   // using response_action, must respond with everything within 3 seconds
-  return api.run("this.ack_loading_screen", {title: payload.view.title})[0];
+  return api.run("this.generate_loading_screen", {title: payload.view.title})[0];
 }
