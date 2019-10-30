@@ -23,6 +23,34 @@
     blocks
   }
   
+  view = {
+	"type": "modal",
+	"title": {
+		"type": "plain_text",
+		"text": "My App",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Submit",
+		"emoji": true
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "plain_text",
+				"text": "This is a plain text section block.",
+				"emoji": true
+			}
+		}
+	]
+}
   return {
     status_code: 200,
     body: {
