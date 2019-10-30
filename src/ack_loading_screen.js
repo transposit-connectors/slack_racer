@@ -8,7 +8,7 @@
 			},
             "accessory": {
                   "type": "image",
-                  "image_url": "https://d33wubrfki0l68.cloudfront.net/19e6962f9c321e8d902fca41dba9b0635720cbce/cbbd0/img/iggy-building.png",
+                  "image_url": api.run("dog_ceo.get_random_dog")[0].message,
                   "alt_text": "boo!"
               }
 		}
