@@ -34,7 +34,7 @@
 		"type": "plain_text",
 		"text": "Cancel"
     },
-blocks
+	blocks
 }
   return {
     status_code: 200,
