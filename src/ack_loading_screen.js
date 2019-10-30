@@ -16,12 +16,7 @@
     status_code: 200,
     body: {
       response_action: "update",
-      view: api.run("this.generate_results_view", {
-        testView: view,
-        input,
-        result
-      })[0]
-    }
+      view: view,
   };
 }
 
