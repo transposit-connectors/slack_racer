@@ -40,7 +40,12 @@
       /* generate diff here */
     }
     
-    api.run("slack.views_update", {view_id: view.id}, {asGroup: payload.team.id})
+    let resultView = api.run("this.generate_results_view", {
+        testView: view,
+        input,
+        result
+      })[0]
+    api.run("slack.views_update", {view_id: view.id, view: resultView}, {asGroup: payload.team.id})
   })
 
   // using response_action, must respond with everything within 3 seconds
