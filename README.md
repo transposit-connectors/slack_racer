@@ -17,7 +17,7 @@ Simply click the **Add to Slack** button above and authorize the app.
 
 ## Commands
 
-**/race [id]**: starts a race; can supply specific test id
+**/race \[id\]**: starts a race; can supply specific test id
 
 **/race_highscores**: displays high scores for the workspace
 
