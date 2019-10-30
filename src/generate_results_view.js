@@ -71,10 +71,6 @@
         }
     }
   ]
-  	
-  view.callback_id = "results";
-  view.blocks = resultBlocks;
-
   
   let resultView = {
     type: "modal",
