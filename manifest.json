@@ -98,7 +98,7 @@
         }
       }, {
         "id": "interactive_components_webhook",
-        "description": "called by Slack when dialog box is submitted",
+        "description": "called by Slack when interacting with components",
         "function": {
           "parameters": [{
             "name": "http_event",
@@ -114,7 +114,7 @@
         }
       }, {
         "id": "generate_test_view",
-        "description": "generate the dialog object to send to Slack",
+        "description": "generates the test view payload",
         "function": {
           "parameters": [{
             "name": "textId",
@@ -125,6 +125,7 @@
         }
       }, {
         "id": "process_test_response",
+        "description": "processes response from submitting a test, then reponds with the results view payload",
         "function": {
           "parameters": [{
             "name": "payload",
@@ -142,6 +143,7 @@
         }
       }, {
         "id": "generate_loading_screen",
+        "description": "generates the loading screen view payload",
         "function": {
           "parameters": [{
             "name": "title",

@@ -10,7 +10,7 @@
     filterByFormula: `id="${workspaceId}"`
   })[0];
 
-  // create main record for this workspace if first time and just return
+  // create main record for this workspace if first time
   if (rec == null) {
     let fields = {};
     fields.id = workspaceId;
