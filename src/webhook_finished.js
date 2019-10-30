@@ -40,7 +40,7 @@
       /* generate diff here */
     }
     
-    api.run("slack.views_update", {}, {asGroup: payload.team.id})
+    api.run("slack.views_update", {view_id: view.id}, {asGroup: payload.team.id})
   })
 
   // using response_action, must respond with everything within 3 seconds
