@@ -50,7 +50,7 @@
   });
 
   // using response_action, must respond with everything within 3 seconds
-  console.log(api.run("this.ack_loading_screen", {title: view.title})[0];)
+  console.log(api.run("this.ack_loading_screen", {title: view.title})[0])
   return api.run("this.ack_loading_screen", {title: view.title})[0];
   // return {
   //   status_code: 200,
