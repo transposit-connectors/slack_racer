@@ -13,8 +13,10 @@
       case "test":
         return api.run("this.process_test_response", {payload});
       case "results":
-        // retry
-        return api.run("this.process_retry_response", {payload});
+        let view = payload.view;
+        let metadata = JSON.parse(view.private_metadata);
+        const viewJson = api.run("this.generate_test_view", {textId: metadata.textId})[0]; 
+        return api.run("slack.views_update", { $body: { view_id: view.id, view: viewJson }}, { asGroup: payload.team.id });
       case "loading":
         return {status_code: 400};
       default:
