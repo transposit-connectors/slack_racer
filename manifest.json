@@ -172,7 +172,7 @@
         "function": {
           "parameters": [{
             "name": "title",
-            "type": "STRING",
+            "type": "OBJECT",
             "required": true
           }],
           "js": "ack_loading_screen.js",
