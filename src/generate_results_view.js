@@ -72,6 +72,12 @@
     }
   ]
   	
+  view.callback_id = "results";
+  view.blocks = resultBlocks;
+  view.submit =  {
+      type: "plain_text",
+      text: "Retry"
+    },
   let view = {
 	type: "modal",
     callback_id: "results",
