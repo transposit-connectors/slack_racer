@@ -1,5 +1,5 @@
 /*
- * Loading screen to acknowledges incoming Slack responses
+ * Loading screen for acknowledging incoming Slack responses
  */
 
 ({title}) => {
