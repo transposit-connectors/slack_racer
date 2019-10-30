@@ -84,6 +84,7 @@
       type: "plain_text",
       text: "Save"
     },
+    private_metadata,
     blocks
   };
 
