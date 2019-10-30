@@ -13,6 +13,7 @@
       case "test":
         return api.run("this.process_test_response", {payload});
       case "results":
+        // retry
         return api.run("this.generate")
         break;
       case "loading":
