@@ -20,15 +20,13 @@
 
     // check if no runs
     if (rec == null) {
-      blocks.push(
-        {
-          type: "section",
-          text: {
-            type: "mrkdwn",
-            text: `No high scores! Please finish a race first.`
-          }
+      blocks.push({
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: `No high scores! Please finish a race first.`
         }
-      )
+      });
     } else {
       // parse record and marshall data into blocks
       for (key in rec.fields) {
@@ -62,11 +60,7 @@
       blocks
     };
 
-    return api.run(
-      "slack.views_open",
-      { $body: { trigger_id: body.trigger_id, view } },
-      { asGroup: body.team_id }
-    );
+    return api.run("slack.views_open", { $body: { trigger_id: body.trigger_id, view } }, { asGroup: body.team_id });
   });
 
   // return 200 immediately to prevent Slack timeout
