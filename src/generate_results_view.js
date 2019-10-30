@@ -7,7 +7,7 @@
   let view = payload.view;
   let type = view.callback_id;
   let metadata = JSON.parse(view.private_metadata);
-  
+
   // pull out submission (dependent on order of blocks; for speed)
   let input = view.state.values.input.input.value;
   let original = view.blocks[0].text.text;
@@ -38,7 +38,7 @@
   }
 
   let blocks = [
-    view.block[0],	// test's text section
+    view.block[0], // test's text section
     {
       type: "divider"
     },
@@ -75,7 +75,7 @@
       text: "Cancel"
     },
     blocks,
-    private_metadata: view.private_metadata,
+    private_metadata: view.private_metadata
   };
 
   return api.run("slack.views_update", { $body: { view_id: view.id, view: resultView } }, { asGroup: payload.team.id });
