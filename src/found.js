@@ -89,7 +89,7 @@
 
   if (stringify) {
     view.private_metadata = JSON.stringify(private_metadata);
-    return JSON.stringify(view);
+    return view;
   }
 
   view.private_metadata = private_metadata;
