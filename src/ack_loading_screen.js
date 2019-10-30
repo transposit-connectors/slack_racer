@@ -3,8 +3,8 @@
 		{
 			"type": "section",
 			"text": {
-				"type": "plain_text",
-				"text": "Loading ..."
+				"type": "mrkdwn",
+				"text": "*Loading ...*"
 			}
 		}
 	]
