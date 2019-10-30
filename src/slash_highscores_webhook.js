@@ -29,22 +29,22 @@
           }
         }
       )
-    }
-
-    // parse record and marshall data into blocks
-    for (key in rec.fields) {
-      if (parseInt(key)) {
-        let blob = JSON.parse(rec.fields[key]);
-        blocks.push({
-          type: "section",
-          text: {
-            type: "mrkdwn",
-            text: `*Text*: ${key} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`
-          }
-        });
-        blocks.push({
-          type: "divider"
-        });
+    } else {
+      // parse record and marshall data into blocks
+      for (key in rec.fields) {
+        if (parseInt(key)) {
+          let blob = JSON.parse(rec.fields[key]);
+          blocks.push({
+            type: "section",
+            text: {
+              type: "mrkdwn",
+              text: `*Text*: ${key} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`
+            }
+          });
+          blocks.push({
+            type: "divider"
+          });
+        }
       }
     }
 
