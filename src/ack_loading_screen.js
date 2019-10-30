@@ -34,16 +34,7 @@
 		"type": "plain_text",
 		"text": "Cancel"
     },
-	"blocks": [
-		{
-			"type": "section",
-			"text": {
-				"type": "plain_text",
-				"text": "This is a plain text section block.",
-				"emoji": true
-			}
-		}
-	]
+blocks
 }
   return {
     status_code: 200,
