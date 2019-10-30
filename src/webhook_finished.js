@@ -6,7 +6,7 @@
     // parse submission
   let qs = require("qs.js");
   let payload = JSON.parse(http_event.parsed_body.payload);
-  console.log(payload)
+  console.log(payload);
   
   setImmediate(() => {
     switch (type) {

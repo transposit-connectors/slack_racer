@@ -1,5 +1,9 @@
 ({ payload }) => {
-  // pull out submission (dependent on order of blocks; for speed)
+    let view = payload.view;
+  	let type = view.callback_id;
+  	let metadata = JSON.parse(view.private_metadata);
+  
+  	// pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
     let original = view.blocks[0].text.text;
 
