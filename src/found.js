@@ -36,7 +36,7 @@
       block_id: "original",
       text: {
         type: "mrkdwn",
-        text: `\n${text}`
+        text: `${text}`
       }
     },
     {
