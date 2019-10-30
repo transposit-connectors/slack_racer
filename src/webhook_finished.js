@@ -11,8 +11,7 @@
   setImmediate(() => {
     switch (payload.view.callback_id) {
       case "test":
-        api.run("this.process_test_response", {payload});
-        break;
+        return api.run("this.process_test_response", {payload});
       case "results":
         break;
       case "loading":
