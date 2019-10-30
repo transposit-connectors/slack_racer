@@ -1,3 +1,4 @@
+# Slack Racer
 ## Summary
 
 SlackRacer uses the **commands** and **chat:write:bot** scopes to provide a light copy of the popular TypeRacer game. 
