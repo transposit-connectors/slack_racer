@@ -19,7 +19,11 @@
       recordId: recordId
   	})[0];
   } else {
-    
+    rec = api.run("airtable.get_records", {
+      baseId: env.get("baseId"),
+      table: "Texts",
+      filterByFormula: `id=${textId}`
+    })
   }
 
   
