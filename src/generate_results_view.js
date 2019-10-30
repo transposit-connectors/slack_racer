@@ -40,7 +40,7 @@
   /* TODO: clean this up */
   let blocks = view.blocks;
   let resultBlocks = [
-    blocks[0],	// text section
+    blocks[0],	// test's text section
     {
       type: "divider"
     },
