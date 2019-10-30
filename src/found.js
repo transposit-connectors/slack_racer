@@ -35,7 +35,7 @@
   // fetch paragraph text from Airtable
   
   let text = rec.fields.text;
-  let textId = rec.fields.id;
+  textId = rec.fields.id;
 
   // create blocks for modal
   const blocks = [
