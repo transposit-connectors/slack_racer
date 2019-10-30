@@ -18,7 +18,7 @@
       filterByFormula: `id="${body.team_id}"`
     })[0];
 
-    // if no runs, return immediately
+    // check if no runs
     if (rec == null) {
       blocks.push(
         {
