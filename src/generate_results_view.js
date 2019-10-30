@@ -75,7 +75,7 @@
   let view = {
 	type: "modal",
     callback_id: "results",
-    title: testView.title,
+    title: view.title,
     "close": {
     "type": "plain_text",
     "text": "Cancel"
