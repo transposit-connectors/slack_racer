@@ -1,4 +1,14 @@
 ({title}) => {
+  let blocks = [
+		{
+			"type": "section",
+			"text": {
+				"type": "plain_text",
+				"text": "Loading ..."
+			}
+		}
+	]
+  
   let view = {
     type: "modal",
     callback_id: "results",
