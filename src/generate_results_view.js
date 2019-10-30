@@ -32,12 +32,6 @@
       /* generate diff here */
     }
     
-    let resultView = api.run("this.generate_results_view", {
-        testView: view,
-        input,
-        result
-      })[0]
-    api.run("slack.views_update", {$body: {view_id: view.id, view: resultView}}, {asGroup: payload.team.id})
   
   
   
@@ -89,7 +83,7 @@
     blocks: resultBlocks,
   };
   
-  return view;
+  return api.run("slack.views_update", {$body: {view_id: view.id, view: resultView}}, {asGroup: payload.team.id})
 }
 
 /*
