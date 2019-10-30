@@ -4,7 +4,7 @@
 
 ({ stringify, textId }) => {
   let rec;
-  if (!textId || textId < 0) {
+  if (textId < 0) {
     const list = api.run("airtable.get_record", {
       baseId: env.get("baseId"),
       table: "Meta",
