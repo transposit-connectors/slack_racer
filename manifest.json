@@ -163,16 +163,8 @@
         "id": "process_test_response",
         "function": {
           "parameters": [{
-            "name": "testView",
+            "name": "payload",
             "type": "OBJECT",
-            "required": true
-          }, {
-            "name": "result",
-            "type": "STRING",
-            "required": true
-          }, {
-            "name": "input",
-            "type": "STRING",
             "required": true
           }],
           "js": "generate_results_view.js",

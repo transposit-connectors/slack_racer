@@ -6,10 +6,7 @@
     // parse submission
   let qs = require("qs.js");
   let payload = JSON.parse(http_event.parsed_body.payload);
-  console.log(payload);
-  let view = payload.view;
-  let type = view.callback_id;
-  let metadata = JSON.parse(view.private_metadata);
+  console.log(payload)
   
   setImmediate(() => {
     switch (type) {
