@@ -82,7 +82,7 @@
     },
     submit: {
       type: "plain_text",
-      text: "Save"
+      text: "Submit"
     },
     private_metadata,
     blocks
