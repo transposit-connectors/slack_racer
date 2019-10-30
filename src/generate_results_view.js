@@ -1,3 +1,8 @@
+/*
+ * Process response from Slack when user submits test, and
+ * generate the "results" view
+ */
+
 ({ payload }) => {
   let view = payload.view;
   let type = view.callback_id;
