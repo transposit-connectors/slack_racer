@@ -11,7 +11,7 @@
   
   let view = {
     type: "modal",
-    callback_id: "results",
+    callback_id: "loading",
     title: {
       type: "plain_text",
       text: title,
