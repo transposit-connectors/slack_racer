@@ -63,11 +63,11 @@
   ];
 
   // record start time
-  const private_metadata = {
+  const private_metadata = JSON.stringify({
     ts: Date.now(),
     recordId: rec.id,
     textId: textId
-  };
+  });
 
   let view = {
     type: "modal",
@@ -87,6 +87,6 @@
     blocks
   };
 
-  view.private_metadata = stringify ? JSON.stringify(private_metadata) : private_metadata
+  // view.private_metadata = stringify ? JSON.stringify(private_metadata) : private_metadata
   return view;
 }
