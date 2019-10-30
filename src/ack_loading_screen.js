@@ -12,7 +12,6 @@
     },
   }
   
-  
   return {
     status_code: 200,
     body: {
