@@ -1,4 +1,4 @@
-(params) => {
+({payload}) => {
   let view = payload.view;
   let type = view.callback_id;
   let metadata = JSON.parse(view.private_metadata);
