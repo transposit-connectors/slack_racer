@@ -87,11 +87,6 @@
     blocks
   };
 
-  if (stringify) {
-    view.private_metadata = JSON.stringify(private_metadata);
-    return view;
-  }
-
-  view.private_metadata = private_metadata;
+  view.private_metadata = stringify ? JSON.stringify(private_metadata) : private_metadata
   return view;
 }
