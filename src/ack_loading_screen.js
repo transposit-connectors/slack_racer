@@ -12,10 +12,7 @@
   let view = {
     type: "modal",
     callback_id: "loading",
-    title: {
-      type: "plain_text",
-      text: title,
-    },
+    title,
     "close": {
     	"type": "plain_text",
     	"text": "Cancel"
