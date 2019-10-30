@@ -123,9 +123,6 @@
             },
             "type": "BOOLEAN"
           }, {
-            "name": "recordId",
-            "type": "STRING"
-          }, {
             "name": "textId",
             "type": "NUMBER"
           }],
