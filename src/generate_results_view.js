@@ -40,8 +40,8 @@
   /* TODO: clean this up */
   let blocks = view.blocks;
   let resultBlocks = [
-    blocks[0],
-    blocks[1],
+    blocks[0],	// text section
+    blocks[1],  // divider
     {
       type: "section",
       block_id: "input",
