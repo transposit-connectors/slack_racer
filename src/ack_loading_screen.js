@@ -1,3 +1,7 @@
+/*
+ * Loading screen to acknowledges incoming Slack responses
+ */
+
 ({title}) => {
   let blocks = [
 		{
