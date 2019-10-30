@@ -90,7 +90,7 @@
 	// blocks: resultBlocks,
 	// };
   
-  return api.run("slack.views_update", {$body: {view_id: view.id, view: resultView}}, {asGroup: payload.team.id})
+  return api.run("slack.views_update", {$body: {view_id: view.id, view}}, {asGroup: payload.team.id})
 }
 
 /*
