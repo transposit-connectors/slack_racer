@@ -24,15 +24,7 @@
       table: "Texts",
       filterByFormula: `id=${textId}`
     })[0];
-    console.log(rec);
   }
-
-  
-  
-  
-  
-  
-  // fetch paragraph text from Airtable
   
   let text = rec.fields.text;
   textId = rec.fields.id;
