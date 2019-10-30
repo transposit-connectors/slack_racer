@@ -14,7 +14,9 @@
   setImmediate(() => {
     switch (type) {
       case "test":
-      case "result"
+        break;
+      case "results":
+        break;
     }
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
