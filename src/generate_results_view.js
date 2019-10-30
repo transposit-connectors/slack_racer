@@ -69,7 +69,8 @@
       type: "plain_text",
       text: "Cancel"
     },
-    blocks: resultBlocks
+    blocks: resultBlocks,
+    private_metadata: view.private_metadat,
   };
 
   return api.run("slack.views_update", { $body: { view_id: view.id, view: resultView } }, { asGroup: payload.team.id });
