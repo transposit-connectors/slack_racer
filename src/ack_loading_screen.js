@@ -8,7 +8,7 @@
 			},
             // "accessory": {
             //       "type": "image",
-            //       "image_url": api.run("dog_ceo.get_random_dog")[0].message,
+            //       "image_url": api.run("dog_ceo.get_random_dog")[0].message, //api takes too long, other call will try to update
             //       "alt_text": "henlo!"
             //   }
 		}
