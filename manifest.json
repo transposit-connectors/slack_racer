@@ -97,25 +97,6 @@
           "lang": "js"
         }
       }, {
-        "id": "generate_diff",
-        "description": "on incorrect submits, returns input and prompt for user to look at if they want",
-        "function": {
-          "parameters": [{
-            "name": "input",
-            "type": "STRING",
-            "required": true
-          }, {
-            "name": "original",
-            "type": "STRING"
-          }, {
-            "name": "wpm",
-            "type": "STRING",
-            "required": true
-          }],
-          "js": "generate_diff.js",
-          "lang": "js"
-        }
-      }, {
         "id": "interactive_components_webhook",
         "description": "called by Slack when dialog box is submitted",
         "function": {
