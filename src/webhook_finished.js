@@ -20,7 +20,7 @@
       case "loading":
         break;
       default:
-        return;
+        return {status_code: 400};
     }
     // pull out submission (dependent on order of blocks; for speed)
     let input = view.state.values.input.input.value;
