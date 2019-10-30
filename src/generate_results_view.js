@@ -32,6 +32,7 @@
     /* generate diff here */
   }
 
+  /* TODO: clean this up */
   let blocks = view.blocks;
   let resultBlocks = [
     blocks[0],
