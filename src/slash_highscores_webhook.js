@@ -38,7 +38,7 @@
             type: "section",
             text: {
               type: "mrkdwn",
-              text: `*Text*: ${key} | *User*: ${blob.username} | *Wpm*: ${blob.wpm}`
+              text: `*Text*: ${key} |\t*User*: ${blob.username} |\t*Wpm*: ${blob.wpm}`
             }
           });
           blocks.push({
