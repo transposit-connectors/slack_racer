@@ -51,7 +51,7 @@
       },
       hint: {
         type: "plain_text",
-        text: "Copy the text into this box"
+        text: "Shift + Shift to get to input field quickly, and again to submit quickly"
       },
       element: {
         type: "plain_text_input",
