@@ -81,22 +81,6 @@
           "webhook": true
         }
       }, {
-        "id": "generate_diff_experimental",
-        "description": "generate a diff of the text to give as feedback",
-        "function": {
-          "parameters": [{
-            "name": "input",
-            "type": "STRING",
-            "required": true
-          }, {
-            "name": "original",
-            "type": "STRING",
-            "required": true
-          }],
-          "js": "untitled.js",
-          "lang": "js"
-        }
-      }, {
         "id": "interactive_components_webhook",
         "description": "called by Slack when interacting with components",
         "function": {
@@ -133,12 +117,6 @@
             "required": true
           }],
           "js": "generate_results_view.js",
-          "lang": "js"
-        }
-      }, {
-        "id": "zzz_notes",
-        "function": {
-          "js": "zzz_notes.js",
           "lang": "js"
         }
       }, {

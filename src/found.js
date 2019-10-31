@@ -57,7 +57,6 @@
         type: "plain_text_input",
         multiline: true,
         action_id: "input"
-        // min_length
       }
     }
   ];
